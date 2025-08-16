@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Administrator Dashboard - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+
+<!-- ========== GOVERNMENT BANNER ========== -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-sys-admin">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-sys-admin" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br/>
+              A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKIP NAVIGATION ========== -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- ========== HEADER ========== -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a href="/" title="Federal Agency System">
+          System Administrator Portal
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link usa-current">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Systems</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Security</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Reports</span>
+          </a>
+        </li>
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <a href="#">Documentation</a>
+          </li>
+        </ul>
+        <section aria-label="User account menu">
+          <span class="usa-tag">Admin: John Smith</span>
+        </section>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row margin-top-2">
+      <div class="grid-col-12">
+        <h1 class="margin-bottom-0">System Administrator Dashboard</h1>
+        <p class="usa-intro">System health monitoring and management console</p>
+      </div>
+    </div>
+
+    <!-- Date Range Selector -->
+    <div class="grid-row margin-top-3">
+      <div class="grid-col-12 tablet:grid-col-8">
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-start">From</label>
+              <input class="usa-input" id="date-start" name="date-start" type="date" value="2025-01-01">
+            </div>
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-end">To</label>
+              <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-16">
+            </div>
+            <div class="grid-col-auto display-flex flex-align-end">
+              <button class="usa-button" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-4 text-right">
+        <button class="usa-button usa-button--outline">
+          Export Dashboard
+        </button>
+      </div>
+    </div>
+
+    <!-- Key Metrics Cards -->
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">System Uptime</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">99.98%</span>
+                <span class="usa-tag bg-green margin-left-1">↑ 0.02%</span>
+              </div>
+              <p class="margin-top-1 text-base">Last 30 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Active Users</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">15,423</span>
+                <span class="usa-tag bg-green margin-left-1">↑ 523</span>
+              </div>
+              <p class="margin-top-1 text-base">Currently online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Security Alerts</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">7</span>
+                <span class="usa-tag bg-red margin-left-1">Critical: 2</span>
+              </div>
+              <p class="margin-top-1 text-base">Requires attention</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">API Response Time</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">142ms</span>
+                <span class="usa-tag bg-green margin-left-1">↓ 18ms</span>
+              </div>
+              <p class="margin-top-1 text-base">Average today</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Server Status Table -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Server Status</h2>
+        <div class="usa-table-container--scrollable" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <caption>Live server health monitoring</caption>
+            <thead>
+              <tr>
+                <th scope="col" role="columnheader">Server Name</th>
+                <th scope="col" role="columnheader">Status</th>
+                <th scope="col" role="columnheader">CPU Usage</th>
+                <th scope="col" role="columnheader">Memory</th>
+                <th scope="col" role="columnheader">Disk Space</th>
+                <th scope="col" role="columnheader">Network I/O</th>
+                <th scope="col" role="columnheader">Last Check</th>
+                <th scope="col" role="columnheader">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">PROD-WEB-01</th>
+                <td><span class="usa-tag bg-green">Operational</span></td>
+                <td>42%</td>
+                <td>8.2 GB / 16 GB</td>
+                <td>124 GB / 500 GB</td>
+                <td>152 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+              <tr>
+                <th scope="row">PROD-WEB-02</th>
+                <td><span class="usa-tag bg-green">Operational</span></td>
+                <td>38%</td>
+                <td>7.8 GB / 16 GB</td>
+                <td>132 GB / 500 GB</td>
+                <td>148 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+              <tr>
+                <th scope="row">PROD-DB-01</th>
+                <td><span class="usa-tag bg-yellow">Warning</span></td>
+                <td>78%</td>
+                <td>28.5 GB / 32 GB</td>
+                <td>1.2 TB / 2 TB</td>
+                <td>285 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+              <tr>
+                <th scope="row">PROD-DB-02</th>
+                <td><span class="usa-tag bg-green">Operational</span></td>
+                <td>52%</td>
+                <td>18.2 GB / 32 GB</td>
+                <td>987 GB / 2 TB</td>
+                <td>198 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+              <tr>
+                <th scope="row">PROD-CACHE-01</th>
+                <td><span class="usa-tag bg-red">Critical</span></td>
+                <td>95%</td>
+                <td>7.8 GB / 8 GB</td>
+                <td>45 GB / 100 GB</td>
+                <td>412 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+              <tr>
+                <th scope="row">PROD-LOAD-01</th>
+                <td><span class="usa-tag bg-green">Operational</span></td>
+                <td>22%</td>
+                <td>3.2 GB / 8 GB</td>
+                <td>28 GB / 200 GB</td>
+                <td>842 Mbps</td>
+                <td>2 min ago</td>
+                <td><a href="#" class="usa-link">Manage</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity Section -->
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6">
+        <h2>Recent Security Events</h2>
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__body">
+              <ul class="usa-list usa-list--unstyled">
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Failed login attempts detected</span>
+                    <span class="usa-tag bg-red">High</span>
+                  </div>
+                  <p class="margin-top-05 text-base">IP: 192.168.1.42 - 5 attempts in 2 minutes</p>
+                  <p class="margin-top-05 text-base text-italic">10 minutes ago</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">SSL Certificate expiring soon</span>
+                    <span class="usa-tag bg-yellow">Medium</span>
+                  </div>
+                  <p class="margin-top-05 text-base">api.agency.gov expires in 14 days</p>
+                  <p class="margin-top-05 text-base text-italic">1 hour ago</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Unusual data transfer detected</span>
+                    <span class="usa-tag bg-yellow">Medium</span>
+                  </div>
+                  <p class="margin-top-05 text-base">2.3 GB transferred to external IP</p>
+                  <p class="margin-top-05 text-base text-italic">2 hours ago</p>
+                </li>
+                <li class="padding-y-1">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Firewall rule updated</span>
+                    <span class="usa-tag bg-base">Info</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Port 8080 opened for maintenance</p>
+                  <p class="margin-top-05 text-base text-italic">3 hours ago</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6">
+        <h2>System Maintenance Schedule</h2>
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__body">
+              <ul class="usa-list usa-list--unstyled">
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Database backup</span>
+                    <span class="usa-tag">Scheduled</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Full backup of production databases</p>
+                  <p class="margin-top-05 text-base text-italic">Tonight 2:00 AM - 4:00 AM EST</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Security patches</span>
+                    <span class="usa-tag">Scheduled</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Critical OS updates for all servers</p>
+                  <p class="margin-top-05 text-base text-italic">Jan 18, 2025 - 3:00 AM EST</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Load balancer update</span>
+                    <span class="usa-tag">Scheduled</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Firmware update and configuration</p>
+                  <p class="margin-top-05 text-base text-italic">Jan 20, 2025 - 4:00 AM EST</p>
+                </li>
+                <li class="padding-y-1">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Disaster recovery test</span>
+                    <span class="usa-tag bg-base">Planning</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Quarterly DR simulation</p>
+                  <p class="margin-top-05 text-base text-italic">Jan 25, 2025 - 6:00 AM EST</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Filter System Logs</h2>
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="log-level">Log Level</label>
+              <select class="usa-select" id="log-level" name="log-level">
+                <option value="">All Levels</option>
+                <option value="critical">Critical</option>
+                <option value="error">Error</option>
+                <option value="warning">Warning</option>
+                <option value="info">Info</option>
+                <option value="debug">Debug</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="server-filter">Server</label>
+              <select class="usa-select" id="server-filter" name="server-filter">
+                <option value="">All Servers</option>
+                <option value="web">Web Servers</option>
+                <option value="db">Database Servers</option>
+                <option value="cache">Cache Servers</option>
+                <option value="load">Load Balancers</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="time-range">Time Range</label>
+              <select class="usa-select" id="time-range" name="time-range">
+                <option value="1h">Last Hour</option>
+                <option value="24h" selected>Last 24 Hours</option>
+                <option value="7d">Last 7 Days</option>
+                <option value="30d">Last 30 Days</option>
+                <option value="custom">Custom Range</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3 display-flex flex-align-end">
+              <button class="usa-button width-full" type="submit">Apply Filters</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="usa-footer">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">System Documentation</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">API Reference</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Support Center</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Security Policies</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">Federal Agency Name</p>
+            <p class="text-base-light">System Administration Division</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <p class="usa-footer__contact-heading">Agency Contact Center</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-5555">(800) 555-5555</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:sysadmin@agency.gov">sysadmin@agency.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Management Dashboard - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+
+<!-- ========== GOVERNMENT BANNER ========== -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-cms">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-cms" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br/>
+              A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKIP NAVIGATION ========== -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- ========== HEADER ========== -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a href="/" title="Content Management System">
+          CMS Dashboard
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link usa-current">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Content</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Media</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Workflows</span>
+          </a>
+        </li>
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <a href="#">Style Guide</a>
+          </li>
+        </ul>
+        <section aria-label="User account menu">
+          <span class="usa-tag">Editor: Sarah Johnson</span>
+        </section>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row margin-top-2">
+      <div class="grid-col-12">
+        <h1 class="margin-bottom-0">Content Management Dashboard</h1>
+        <p class="usa-intro">Manage published articles, drafts, and editorial calendar</p>
+      </div>
+    </div>
+
+    <!-- Date Range and Export -->
+    <div class="grid-row margin-top-3">
+      <div class="grid-col-12 tablet:grid-col-8">
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-start">From</label>
+              <input class="usa-input" id="date-start" name="date-start" type="date" value="2025-01-01">
+            </div>
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-end">To</label>
+              <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-16">
+            </div>
+            <div class="grid-col-auto display-flex flex-align-end">
+              <button class="usa-button" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-4 text-right">
+        <button class="usa-button usa-button--outline">Export Report</button>
+      </div>
+    </div>
+
+    <!-- Key Metrics Cards -->
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Published Articles</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">2,847</span>
+                <span class="usa-tag bg-green margin-left-1">↑ 142</span>
+              </div>
+              <p class="margin-top-1 text-base">This month</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Draft Content</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">384</span>
+                <span class="usa-tag bg-yellow margin-left-1">In Progress</span>
+              </div>
+              <p class="margin-top-1 text-base">Awaiting review</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Page Views</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">1.2M</span>
+                <span class="usa-tag bg-green margin-left-1">↑ 15%</span>
+              </div>
+              <p class="margin-top-1 text-base">Last 30 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Active Authors</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="display-flex flex-align-center">
+                <span class="font-sans-3xl text-bold">87</span>
+                <span class="usa-tag margin-left-1">Contributing</span>
+              </div>
+              <p class="margin-top-1 text-base">This week</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Content Table -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Recent Content Activity</h2>
+        <div class="usa-table-container--scrollable" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <caption>Recently published and updated content</caption>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Status</th>
+                <th scope="col">Category</th>
+                <th scope="col">Views</th>
+                <th scope="col">Last Modified</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">New Federal Guidelines for Climate Action</th>
+                <td>Michael Chen</td>
+                <td><span class="usa-tag bg-green">Published</span></td>
+                <td>Policy</td>
+                <td>45,230</td>
+                <td>Jan 16, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2025 Healthcare Benefits Update</th>
+                <td>Emily Rodriguez</td>
+                <td><span class="usa-tag bg-green">Published</span></td>
+                <td>Benefits</td>
+                <td>38,912</td>
+                <td>Jan 15, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Small Business Grant Program Announcement</th>
+                <td>James Wilson</td>
+                <td><span class="usa-tag bg-yellow">Review</span></td>
+                <td>Grants</td>
+                <td>—</td>
+                <td>Jan 15, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">Review</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Updated Privacy Policy Requirements</th>
+                <td>Lisa Thompson</td>
+                <td><span class="usa-tag bg-base">Draft</span></td>
+                <td>Legal</td>
+                <td>—</td>
+                <td>Jan 14, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">Preview</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Veterans Services Expansion</th>
+                <td>Robert Martinez</td>
+                <td><span class="usa-tag bg-green">Published</span></td>
+                <td>Services</td>
+                <td>28,445</td>
+                <td>Jan 14, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Emergency Response Procedures Update</th>
+                <td>Patricia Davis</td>
+                <td><span class="usa-tag bg-yellow">Review</span></td>
+                <td>Safety</td>
+                <td>—</td>
+                <td>Jan 13, 2025</td>
+                <td><a href="#" class="usa-link">Edit</a> | <a href="#" class="usa-link">Review</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial Calendar and Activity -->
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6">
+        <h2>Editorial Calendar</h2>
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__body">
+              <ul class="usa-list usa-list--unstyled">
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">State of the Union Coverage</span>
+                    <span class="usa-tag bg-red">High Priority</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Multiple articles planned</p>
+                  <p class="margin-top-05 text-base text-italic">Due: Jan 20, 2025</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Budget Proposal Analysis</span>
+                    <span class="usa-tag bg-yellow">Medium</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Finance team collaboration</p>
+                  <p class="margin-top-05 text-base text-italic">Due: Jan 25, 2025</p>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Quarterly Benefits Review</span>
+                    <span class="usa-tag">Scheduled</span>
+                  </div>
+                  <p class="margin-top-05 text-base">Standard quarterly update</p>
+                  <p class="margin-top-05 text-base text-italic">Due: Feb 1, 2025</p>
+                </li>
+                <li class="padding-y-1">
+                  <div class="display-flex flex-justify">
+                    <span class="text-bold">Infrastructure Week Series</span>
+                    <span class="usa-tag">Planning</span>
+                  </div>
+                  <p class="margin-top-05 text-base">5-part article series</p>
+                  <p class="margin-top-05 text-base text-italic">Due: Feb 15, 2025</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6">
+        <h2>Content Performance</h2>
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__body">
+              <h3 class="margin-top-0">Top Performing Content</h3>
+              <ul class="usa-list usa-list--unstyled">
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span>Tax Filing Guidelines 2025</span>
+                    <span class="text-bold">285K views</span>
+                  </div>
+                  <div class="display-flex margin-top-05">
+                    <span class="usa-tag bg-green">↑ 45%</span>
+                    <span class="margin-left-1 text-base">Engagement rate: 8.2%</span>
+                  </div>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span>Medicare Enrollment Guide</span>
+                    <span class="text-bold">198K views</span>
+                  </div>
+                  <div class="display-flex margin-top-05">
+                    <span class="usa-tag bg-green">↑ 32%</span>
+                    <span class="margin-left-1 text-base">Engagement rate: 7.5%</span>
+                  </div>
+                </li>
+                <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <div class="display-flex flex-justify">
+                    <span>Small Business Resources</span>
+                    <span class="text-bold">142K views</span>
+                  </div>
+                  <div class="display-flex margin-top-05">
+                    <span class="usa-tag bg-green">↑ 28%</span>
+                    <span class="margin-left-1 text-base">Engagement rate: 6.8%</span>
+                  </div>
+                </li>
+                <li class="padding-y-1">
+                  <div class="display-flex flex-justify">
+                    <span>Immigration Services Update</span>
+                    <span class="text-bold">96K views</span>
+                  </div>
+                  <div class="display-flex margin-top-05">
+                    <span class="usa-tag bg-yellow">↑ 5%</span>
+                    <span class="margin-left-1 text-base">Engagement rate: 5.2%</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Filter Content</h2>
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="content-type">Content Type</label>
+              <select class="usa-select" id="content-type" name="content-type">
+                <option value="">All Types</option>
+                <option value="article">Article</option>
+                <option value="page">Page</option>
+                <option value="announcement">Announcement</option>
+                <option value="guide">Guide</option>
+                <option value="form">Form</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="status-filter">Status</label>
+              <select class="usa-select" id="status-filter" name="status-filter">
+                <option value="">All Statuses</option>
+                <option value="published">Published</option>
+                <option value="draft">Draft</option>
+                <option value="review">Under Review</option>
+                <option value="scheduled">Scheduled</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="author-filter">Author</label>
+              <select class="usa-select" id="author-filter" name="author-filter">
+                <option value="">All Authors</option>
+                <option value="chen">Michael Chen</option>
+                <option value="rodriguez">Emily Rodriguez</option>
+                <option value="wilson">James Wilson</option>
+                <option value="thompson">Lisa Thompson</option>
+                <option value="martinez">Robert Martinez</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3 display-flex flex-align-end">
+              <button class="usa-button width-full" type="submit">Apply Filters</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="usa-footer">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Content Guidelines</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Editorial Standards</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Accessibility</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">Federal Agency Name</p>
+            <p class="text-base-light">Office of Digital Communications</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <p class="usa-footer__contact-heading">Content Support</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-5556">(800) 555-5556</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:content@agency.gov">content@agency.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+</body>
+</html>

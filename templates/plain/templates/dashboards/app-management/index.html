@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Management Console - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+
+<!-- ========== GOVERNMENT BANNER ========== -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-app-management">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-app-management" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p><strong>Official websites use .gov</strong><br/>A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p><strong>Secure .gov websites use HTTPS</strong><br/>A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKIP NAVIGATION ========== -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- ========== HEADER ========== -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text"><a href="/" title="Home">Application Management Console</a></em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link usa-current"><span>Dashboard</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Reports</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Analytics</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Settings</span></a>
+        </li>
+      </ul>
+      <div class="usa-nav__secondary">
+        <section aria-label="User account menu">
+          <span class="usa-tag">Logged In</span>
+        </section>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row margin-top-2">
+      <div class="grid-col-12">
+        <h1 class="margin-bottom-0">Application Management Console</h1>
+        <p class="usa-intro">Monitor deployed applications and system health</p>
+      </div>
+    </div>
+
+    <!-- Date Range Selector -->
+    <div class="grid-row margin-top-3">
+      <div class="grid-col-12 tablet:grid-col-8">
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-start">From</label>
+              <input class="usa-input" id="date-start" name="date-start" type="date" value="2025-01-01">
+            </div>
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-end">To</label>
+              <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-16">
+            </div>
+            <div class="grid-col-auto display-flex flex-align-end">
+              <button class="usa-button" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-4 text-right">
+        <button class="usa-button usa-button--outline">Export Dashboard</button>
+      </div>
+    </div>
+
+    <!-- Key Metrics Cards -->
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Applications</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">METRIC1_VALUE</span>
+              <p class="margin-top-1 text-base">METRIC1_DESC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Deployments</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">METRIC2_VALUE</span>
+              <p class="margin-top-1 text-base">METRIC2_DESC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Health Score</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">METRIC3_VALUE</span>
+              <p class="margin-top-1 text-base">METRIC3_DESC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">API Calls</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">METRIC4_VALUE</span>
+              <p class="margin-top-1 text-base">METRIC4_DESC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Recent Activity</h2>
+        <div class="usa-table-container--scrollable" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <caption>Dashboard data overview</caption>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Status</th>
+                <th scope="col">Value</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sample Item 1</th>
+                <td><span class="usa-tag bg-green">Active</span></td>
+                <td>$125,000</td>
+                <td>Jan 16, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Sample Item 2</th>
+                <td><span class="usa-tag bg-yellow">Pending</span></td>
+                <td>$85,500</td>
+                <td>Jan 15, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Sample Item 3</th>
+                <td><span class="usa-tag bg-green">Active</span></td>
+                <td>$210,000</td>
+                <td>Jan 14, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Filter Options</h2>
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="filter-status">Status</label>
+              <select class="usa-select" id="filter-status" name="filter-status">
+                <option value="">All</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="filter-type">Type</label>
+              <select class="usa-select" id="filter-type" name="filter-type">
+                <option value="">All Types</option>
+                <option value="standard">Standard</option>
+                <option value="priority">Priority</option>
+                <option value="urgent">Urgent</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3">
+              <label class="usa-label" for="filter-range">Date Range</label>
+              <select class="usa-select" id="filter-range" name="filter-range">
+                <option value="7">Last 7 Days</option>
+                <option value="30" selected>Last 30 Days</option>
+                <option value="90">Last 90 Days</option>
+                <option value="365">Last Year</option>
+              </select>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-3 display-flex flex-align-end">
+              <button class="usa-button width-full" type="submit">Apply Filters</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="usa-footer">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Documentation</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Support</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Privacy</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">Federal Agency Name</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <p class="usa-footer__contact-heading">Contact Center</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-5555">(800) 555-5555</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:info@agency.gov">info@agency.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+</body>
+</html>
