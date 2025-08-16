@@ -1,0 +1,43 @@
+{
+  "dashboards": {
+    "federal-analytics": {
+      "name": "Federal Analytics",
+      "description": "Analytics dashboard for federal programs",
+      "available": ["plain", "react", "trussworks"]
+    },
+    "citizen-portal": {
+      "name": "Citizen Portal",
+      "description": "Self-service portal for citizens",
+      "available": ["plain", "react"]
+    },
+    "case-management": {
+      "name": "Case Management",
+      "description": "Track and manage cases",
+      "available": ["plain", "react", "trussworks"]
+    }
+  },
+  "forms": {
+    "benefits-application": {
+      "name": "Benefits Application",
+      "description": "Multi-step benefits application form",
+      "available": ["plain", "react", "trussworks"]
+    },
+    "permit-request": {
+      "name": "Permit Request",
+      "description": "Submit permit requests",
+      "available": ["plain"]
+    }
+  },
+  "landing": {
+    "agency-home": {
+      "name": "Agency Homepage",
+      "description": "Main agency landing page",
+      "available": ["plain", "react"]
+    },
+    "program-overview": {
+      "name": "Program Overview",
+      "description": "Program information page",
+      "available": ["plain", "react", "trussworks"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@uswds-templates/plain",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview",
+    "postinstall": "npm run copy-uswds-assets",
+    "copy-uswds-assets": "mkdir -p public/assets && cp -r node_modules/@uswds/uswds/dist/img public/assets/ 2>/dev/null || true"
+  },
+  "dependencies": {
+    "@uswds/uswds": "^3.9.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.19"
+  }
+}

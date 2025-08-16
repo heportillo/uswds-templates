@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plain USWDS Templates</title>
+  <!-- USWDS CSS from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <script src="/src/router.js" type="module"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Content will be loaded here -->
+  </div>
+  <!-- USWDS JS from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+  <script>
+    // Initialize USWDS when content loads
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.USWDS) window.USWDS.init();
+    });
+  </script>
+</body>
+</html>

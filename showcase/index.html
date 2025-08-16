@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USWDS Templates Showcase</title>
+  <link rel="stylesheet" href="/src/showcase.css">
+</head>
+<body>
+  <div class="dsx-container">
+    <!-- ========== LEFT SIDEBAR ========== -->
+    <aside class="dsx-sidebar" id="sidebar">
+      <div class="dsx-header">
+        <button class="dsx-toggle" id="toggle" aria-label="Toggle sidebar">
+          <span class="dsx-toggle-icon">☰</span>
+        </button>
+        <h1 class="dsx-title">USWDS Templates</h1>
+      </div>
+
+      <!-- === Variant Selector === -->
+      <div class="dsx-variants">
+        <h2 class="dsx-section-title">Framework</h2>
+        <label class="dsx-radio">
+          <input type="radio" name="variant" value="3000" checked>
+          <span>Plain USWDS</span>
+        </label>
+        <label class="dsx-radio">
+          <input type="radio" name="variant" value="3001">
+          <span>React</span>
+        </label>
+        <label class="dsx-radio">
+          <input type="radio" name="variant" value="3002">
+          <span>Trussworks</span>
+        </label>
+      </div>
+
+      <!-- === Template Navigation === -->
+      <nav class="dsx-nav" id="nav">
+        <div class="dsx-loading">Loading templates...</div>
+      </nav>
+
+      <!-- === Actions === -->
+      <div class="dsx-actions">
+        <button class="dsx-btn dsx-btn-copy" id="copyCode">
+          <span class="dsx-btn-icon">📋</span>
+          <span class="dsx-btn-text">Copy Code</span>
+        </button>
+        <button class="dsx-btn dsx-btn-fullscreen" id="fullscreen">
+          <span class="dsx-btn-icon">⛶</span>
+          <span class="dsx-btn-text">Fullscreen</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ========== MAIN PREVIEW AREA ========== -->
+    <main class="dsx-main">
+      <div class="dsx-preview-container">
+        <iframe 
+          id="preview" 
+          src="http://localhost:3000"
+          class="dsx-iframe"
+          title="Template Preview">
+        </iframe>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

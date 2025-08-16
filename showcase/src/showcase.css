@@ -1,0 +1,264 @@
+/* ========== SHOWCASE DESIGN SYSTEM (dsx-) ========== */
+/* Minimal, modern chrome for template browsing */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+/* ========== CONTAINER ========== */
+.dsx-container {
+  display: flex;
+  height: 100vh;
+  background: #ffffff;
+}
+
+/* ========== SIDEBAR ========== */
+.dsx-sidebar {
+  width: 280px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.dsx-sidebar.collapsed {
+  width: 60px;
+}
+
+.dsx-sidebar.collapsed .dsx-title,
+.dsx-sidebar.collapsed .dsx-section-title,
+.dsx-sidebar.collapsed .dsx-radio span,
+.dsx-sidebar.collapsed .dsx-nav,
+.dsx-sidebar.collapsed .dsx-btn-text {
+  display: none;
+}
+
+/* === Header === */
+.dsx-header {
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dsx-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  color: #495057;
+  transition: color 0.2s;
+}
+
+.dsx-toggle:hover {
+  color: #212529;
+}
+
+.dsx-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  white-space: nowrap;
+}
+
+/* === Variants Section === */
+.dsx-variants {
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.dsx-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.dsx-radio {
+  display: flex;
+  align-items: center;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 4px;
+}
+
+.dsx-radio:hover {
+  background: #e9ecef;
+}
+
+.dsx-radio input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.dsx-radio span {
+  font-size: 14px;
+  color: #495057;
+}
+
+.dsx-radio input[type="radio"]:checked + span {
+  color: #212529;
+  font-weight: 500;
+}
+
+/* === Navigation === */
+.dsx-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.dsx-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dsx-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dsx-nav::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 3px;
+}
+
+.dsx-category {
+  margin-bottom: 24px;
+}
+
+.dsx-category-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  padding: 4px 0;
+}
+
+.dsx-template-link {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #495057;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+}
+
+.dsx-template-link:hover {
+  background: #e9ecef;
+  color: #212529;
+}
+
+.dsx-template-link.active {
+  background: #0066cc;
+  color: white;
+}
+
+.dsx-template-unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dsx-loading {
+  padding: 20px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* === Actions === */
+.dsx-actions {
+  padding: 16px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  gap: 8px;
+}
+
+.dsx-btn {
+  flex: 1;
+  padding: 8px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #495057;
+  transition: all 0.2s;
+}
+
+.dsx-btn:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  color: #212529;
+}
+
+.dsx-btn-icon {
+  font-size: 16px;
+}
+
+.dsx-sidebar.collapsed .dsx-actions {
+  flex-direction: column;
+}
+
+/* ========== MAIN CONTENT ========== */
+.dsx-main {
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+}
+
+.dsx-preview-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dsx-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* === Fullscreen Mode === */
+.dsx-main.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .dsx-sidebar {
+    position: absolute;
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  }
+  
+  .dsx-sidebar.collapsed {
+    box-shadow: none;
+  }
+}

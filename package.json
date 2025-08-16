@@ -1,0 +1,24 @@
+{
+  "name": "@uswds-templates/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n \"showcase,plain,react,trussworks\" -c \"magenta,blue,green,yellow\" \"npm:dev:*\"",
+    "dev:showcase": "cd showcase && npm run dev",
+    "dev:plain": "cd templates/plain && npm run dev",
+    "dev:react": "cd templates/react && npm run dev",
+    "dev:trussworks": "cd templates/trussworks && npm run dev",
+    "install:all": "npm install && cd showcase && npm install && cd ../templates/plain && npm install && cd ../react && npm install && cd ../trussworks && npm install",
+    "setup": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "showcase",
+    "templates/plain",
+    "templates/react",
+    "templates/trussworks"
+  ]
+}

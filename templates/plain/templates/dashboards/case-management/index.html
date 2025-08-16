@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Management Dashboard - Federal Case Tracking System</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+
+<!-- ========== GOVERNMENT BANNER ========== -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-case-mgmt">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-case-mgmt" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br/>
+              A lock (<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false"><title id="banner-lock-description">Lock</title><desc>Locked padlock icon</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg></span>) or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HEADER SECTION ========== -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a href="/" title="Home">Federal Case Management System</a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link usa-current">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link">
+            <span>Cases</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link">
+            <span>Reports</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link">
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+      <section aria-label="Search component">
+        <form class="usa-search usa-search--small" role="search">
+          <label class="usa-sr-only" for="search-field">Search</label>
+          <input class="usa-input" id="search-field" type="search" name="search" placeholder="Search cases...">
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </form>
+      </section>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main-content">
+  
+  <!-- === Dashboard Header === -->
+  <section class="usa-section padding-y-3">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <h1 class="margin-0">Case Management Dashboard</h1>
+          <p class="usa-intro margin-top-1">Monitor and manage active cases across departments</p>
+        </div>
+        <div class="tablet:grid-col-4 text-right">
+          <button class="usa-button">New Case</button>
+          <button class="usa-button usa-button--outline">Export Data</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Key Metrics Section === -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <!-- Total Cases Card -->
+        <div class="tablet:grid-col-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Total Cases</h3>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-heading-3xl margin-y-0">2,847</p>
+                <p class="text-base margin-y-0">
+                  <span class="text-success">↑ 8%</span> from last week
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Cases Card -->
+        <div class="tablet:grid-col-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Active Cases</h3>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-heading-3xl margin-y-0">1,234</p>
+                <p class="text-base margin-y-0">
+                  43% of total cases
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Review Card -->
+        <div class="tablet:grid-col-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Pending Review</h3>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-heading-3xl margin-y-0">342</p>
+                <p class="text-base margin-y-0">
+                  <span class="text-warning">↑ 15%</span> from yesterday
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avg Resolution Time Card -->
+        <div class="tablet:grid-col-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Avg Resolution</h3>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-heading-3xl margin-y-0">4.2</p>
+                <p class="text-base margin-y-0">
+                  days (↓ 0.5 from avg)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Case Status Distribution === -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Case Status Distribution</h3>
+              </div>
+              <div class="usa-card__body">
+                <div class="grid-row grid-gap-2">
+                  <div class="grid-col-6">
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-primary">New</span>
+                      <span class="margin-left-2">423 cases (15%)</span>
+                    </div>
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-info">In Progress</span>
+                      <span class="margin-left-2">811 cases (28%)</span>
+                    </div>
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-warning">Under Review</span>
+                      <span class="margin-left-2">342 cases (12%)</span>
+                    </div>
+                  </div>
+                  <div class="grid-col-6">
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-secondary">On Hold</span>
+                      <span class="margin-left-2">198 cases (7%)</span>
+                    </div>
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-success">Resolved</span>
+                      <span class="margin-left-2">897 cases (31%)</span>
+                    </div>
+                    <div class="display-flex flex-align-center margin-bottom-2">
+                      <span class="usa-tag bg-base-dark">Closed</span>
+                      <span class="margin-left-2">176 cases (6%)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button usa-button--outline">View Detailed Report</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Priority Cases -->
+        <div class="tablet:grid-col-4">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Priority Cases</h3>
+              </div>
+              <div class="usa-card__body">
+                <ul class="usa-list usa-list--unstyled">
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <span class="text-bold">High Priority</span>
+                      <span class="usa-tag bg-error">87</span>
+                    </div>
+                  </li>
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <span class="text-bold">Urgent</span>
+                      <span class="usa-tag bg-warning">124</span>
+                    </div>
+                  </li>
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <span class="text-bold">Normal</span>
+                      <span class="usa-tag bg-info">1,023</span>
+                    </div>
+                  </li>
+                  <li class="padding-y-1">
+                    <div class="display-flex flex-justify">
+                      <span class="text-bold">Low</span>
+                      <span class="usa-tag bg-base-lighter">342</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button usa-button--outline width-full">Manage Priorities</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Recent Cases Table === -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="usa-card">
+        <div class="usa-card__container">
+          <div class="usa-card__header">
+            <h3 class="usa-card__heading">Recent Cases</h3>
+          </div>
+          <div class="usa-card__body">
+            <div class="usa-table-container--scrollable" tabindex="0">
+              <table class="usa-table usa-table--borderless width-full">
+                <thead>
+                  <tr>
+                    <th scope="col">Case ID</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Assigned To</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">#CM-2024-0847</a></td>
+                    <td>Benefits Application Review</td>
+                    <td>Application</td>
+                    <td><span class="usa-tag bg-error">High</span></td>
+                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td>Sarah Johnson</td>
+                    <td>2024-01-15</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0846</a></td>
+                    <td>Immigration Status Update</td>
+                    <td>Immigration</td>
+                    <td><span class="usa-tag bg-warning">Urgent</span></td>
+                    <td><span class="usa-tag bg-primary">New</span></td>
+                    <td>Michael Chen</td>
+                    <td>2024-01-15</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0845</a></td>
+                    <td>Tax Document Verification</td>
+                    <td>Tax</td>
+                    <td><span class="usa-tag bg-info">Normal</span></td>
+                    <td><span class="usa-tag bg-warning">Under Review</span></td>
+                    <td>Emily Rodriguez</td>
+                    <td>2024-01-14</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0844</a></td>
+                    <td>License Renewal Request</td>
+                    <td>Licensing</td>
+                    <td><span class="usa-tag bg-base-lighter">Low</span></td>
+                    <td><span class="usa-tag bg-success">Resolved</span></td>
+                    <td>James Wilson</td>
+                    <td>2024-01-14</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0843</a></td>
+                    <td>Healthcare Coverage Appeal</td>
+                    <td>Healthcare</td>
+                    <td><span class="usa-tag bg-error">High</span></td>
+                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td>David Martinez</td>
+                    <td>2024-01-13</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0842</a></td>
+                    <td>Permit Application</td>
+                    <td>Permits</td>
+                    <td><span class="usa-tag bg-info">Normal</span></td>
+                    <td><span class="usa-tag bg-secondary">On Hold</span></td>
+                    <td>Lisa Anderson</td>
+                    <td>2024-01-13</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0841</a></td>
+                    <td>Complaint Investigation</td>
+                    <td>Complaint</td>
+                    <td><span class="usa-tag bg-warning">Urgent</span></td>
+                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td>Robert Taylor</td>
+                    <td>2024-01-12</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">#CM-2024-0840</a></td>
+                    <td>Grant Application Review</td>
+                    <td>Grants</td>
+                    <td><span class="usa-tag bg-info">Normal</span></td>
+                    <td><span class="usa-tag bg-warning">Under Review</span></td>
+                    <td>Jennifer Lee</td>
+                    <td>2024-01-12</td>
+                    <td>
+                      <button class="usa-button usa-button--unstyled">View</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="usa-card__footer">
+            <nav aria-label="Pagination" class="usa-pagination">
+              <ul class="usa-pagination__list">
+                <li class="usa-pagination__item usa-pagination__arrow">
+                  <a href="#" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                    <span class="usa-pagination__link-text">Previous</span>
+                  </a>
+                </li>
+                <li class="usa-pagination__item usa-pagination__page-no">
+                  <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1">1</a>
+                </li>
+                <li class="usa-pagination__item usa-pagination__page-no">
+                  <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+                </li>
+                <li class="usa-pagination__item usa-pagination__page-no">
+                  <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+                </li>
+                <li class="usa-pagination__item usa-pagination__arrow">
+                  <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                    <span class="usa-pagination__link-text">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Department Performance === -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-6">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Department Performance</h3>
+              </div>
+              <div class="usa-card__body">
+                <table class="usa-table usa-table--borderless width-full">
+                  <thead>
+                    <tr>
+                      <th scope="col">Department</th>
+                      <th scope="col">Cases</th>
+                      <th scope="col">Avg Time</th>
+                      <th scope="col">Efficiency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Immigration Services</td>
+                      <td>432</td>
+                      <td>3.2 days</td>
+                      <td><span class="text-success">92%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Benefits Administration</td>
+                      <td>567</td>
+                      <td>4.1 days</td>
+                      <td><span class="text-success">88%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Tax Services</td>
+                      <td>312</td>
+                      <td>5.3 days</td>
+                      <td><span class="text-warning">76%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Healthcare Services</td>
+                      <td>289</td>
+                      <td>2.8 days</td>
+                      <td><span class="text-success">94%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Licensing Bureau</td>
+                      <td>198</td>
+                      <td>6.2 days</td>
+                      <td><span class="text-error">68%</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button usa-button--outline">View Full Report</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="tablet:grid-col-6">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Recent Activity</h3>
+              </div>
+              <div class="usa-card__body">
+                <ul class="usa-list usa-list--unstyled">
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <div>
+                        <strong>Case #CM-2024-0847</strong> status updated
+                        <br><small class="text-base">By Sarah Johnson • 5 min ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <div>
+                        <strong>New case</strong> assigned to Michael Chen
+                        <br><small class="text-base">System • 12 min ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <div>
+                        <strong>Case #CM-2024-0844</strong> marked as resolved
+                        <br><small class="text-base">By James Wilson • 28 min ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                    <div class="display-flex flex-justify">
+                      <div>
+                        <strong>Priority changed</strong> for Case #CM-2024-0843
+                        <br><small class="text-base">By David Martinez • 45 min ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="padding-y-1">
+                    <div class="display-flex flex-justify">
+                      <div>
+                        <strong>3 new cases</strong> added to queue
+                        <br><small class="text-base">System • 1 hour ago</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="usa-card__footer">
+                <button class="usa-button usa-button--outline width-full">View All Activity</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Quick Actions === -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="usa-card">
+        <div class="usa-card__container">
+          <div class="usa-card__header">
+            <h3 class="usa-card__heading">Quick Actions</h3>
+          </div>
+          <div class="usa-card__body">
+            <div class="grid-row grid-gap">
+              <div class="tablet:grid-col-3">
+                <button class="usa-button width-full">Create New Case</button>
+              </div>
+              <div class="tablet:grid-col-3">
+                <button class="usa-button usa-button--outline width-full">Assign Cases</button>
+              </div>
+              <div class="tablet:grid-col-3">
+                <button class="usa-button usa-button--outline width-full">Generate Report</button>
+              </div>
+              <div class="tablet:grid-col-3">
+                <button class="usa-button usa-button--outline width-full">Export Data</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER SECTION ========== -->
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-container">
+      <div class="usa-footer__contact-links">
+        <a class="usa-footer__contact-heading" href="#">Case Management Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">Federal Case Management System</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body>
+</html>
