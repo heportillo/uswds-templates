@@ -45,6 +45,12 @@ class Router {
       '/forms/job-application': '/templates/forms/job-application/index.html',
       '/forms/vendor-registration': '/templates/forms/vendor-registration/index.html',
       '/forms/maintenance-request': '/templates/forms/maintenance-request/index.html',
+      '/forms/voter-registration': '/templates/forms/voter-registration/index.html',
+      '/forms/financial-aid': '/templates/forms/financial-aid/index.html',
+      '/forms/complaint-submission': '/templates/forms/complaint-submission/index.html',
+      '/forms/foia-request': '/templates/forms/foia-request/index.html',
+      '/forms/clinical-trial': '/templates/forms/clinical-trial/index.html',
+      '/forms/environmental-assessment': '/templates/forms/environmental-assessment/index.html',
       
       // Search Templates
       '/search/advanced-search': '/templates/search/advanced-search/index.html',
@@ -76,9 +82,59 @@ class Router {
       '/utility/privacy-policy': '/templates/utility/privacy-policy/index.html',
       '/utility/accessibility-statement': '/templates/utility/accessibility-statement/index.html',
       
+      // Workflow Templates
+      '/workflows/immigration-wizard': '/templates/workflows/immigration-wizard/index.html',
+      '/workflows/business-registration': '/templates/workflows/business-registration/index.html',
+      '/workflows/benefits-enrollment': '/templates/workflows/benefits-enrollment/index.html',
+      '/workflows/permit-application': '/templates/workflows/permit-application/index.html',
+      '/workflows/contract-negotiation': '/templates/workflows/contract-negotiation/index.html',
+      '/workflows/grant-review': '/templates/workflows/grant-review/index.html',
+      '/workflows/procurement-evaluation': '/templates/workflows/procurement-evaluation/index.html',
+      '/workflows/case-review': '/templates/workflows/case-review/index.html',
+      '/workflows/budget-planning': '/templates/workflows/budget-planning/index.html',
+      '/workflows/document-assembly': '/templates/workflows/document-assembly/index.html',
+      
+      // Mobile Templates
+      '/mobile/mobile-dashboard': '/templates/mobile/mobile-dashboard/index.html',
+      '/mobile/mobile-form': '/templates/mobile/mobile-form/index.html',
+      '/mobile/mobile-search': '/templates/mobile/mobile-search/index.html',
+      '/mobile/mobile-directory': '/templates/mobile/mobile-directory/index.html',
+      '/mobile/mobile-scanner': '/templates/mobile/mobile-scanner/index.html',
+      '/mobile/mobile-notifications': '/templates/mobile/mobile-notifications/index.html',
+      '/mobile/mobile-profile': '/templates/mobile/mobile-profile/index.html',
+      '/mobile/mobile-checklist': '/templates/mobile/mobile-checklist/index.html',
+      
+      // Security Templates
+      '/security/security-dashboard': '/templates/security/security-dashboard/index.html',
+      '/security/privacy-center': '/templates/security/privacy-center/index.html',
+      '/security/consent-management': '/templates/security/consent-management/index.html',
+      '/security/audit-log-viewer': '/templates/security/audit-log-viewer/index.html',
+      '/security/incident-response': '/templates/security/incident-response/index.html',
+      '/security/access-control': '/templates/security/access-control/index.html',
+      '/security/vulnerability-tracker': '/templates/security/vulnerability-tracker/index.html',
+      '/security/compliance-monitor': '/templates/security/compliance-monitor/index.html',
+      
+      // Analytics Templates
+      '/analytics/web-analytics': '/templates/analytics/web-analytics/index.html',
+      '/analytics/ab-testing': '/templates/analytics/ab-testing/index.html',
+      '/analytics/user-feedback': '/templates/analytics/user-feedback/index.html',
+      '/analytics/performance-analytics': '/templates/analytics/performance-analytics/index.html',
+      '/analytics/business-intelligence': '/templates/analytics/business-intelligence/index.html',
+      '/analytics/data-visualization': '/templates/analytics/data-visualization/index.html',
+      '/analytics/reporting-engine': '/templates/analytics/reporting-engine/index.html',
+      '/analytics/metrics-tracker': '/templates/analytics/metrics-tracker/index.html',
+      
       // Landing Page Templates
       '/landing/agency-home': '/templates/landing/agency-home/index.html',
-      '/landing/federal-department': '/templates/landing/federal-department/index.html'
+      '/landing/federal-department': '/templates/landing/federal-department/index.html',
+      '/landing/state-portal': '/templates/landing/state-portal/index.html',
+      '/landing/city-government': '/templates/landing/city-government/index.html',
+      '/landing/benefits-program': '/templates/landing/benefits-program/index.html',
+      '/landing/healthcare-program': '/templates/landing/healthcare-program/index.html',
+      '/landing/emergency-services': '/templates/landing/emergency-services/index.html',
+      '/landing/veterans-portal': '/templates/landing/veterans-portal/index.html',
+      '/landing/public-health': '/templates/landing/public-health/index.html',
+      '/landing/small-business': '/templates/landing/small-business/index.html'
     };
     
     this.init();
