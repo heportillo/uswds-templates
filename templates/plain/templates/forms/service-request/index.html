@@ -1,0 +1,383 @@
+<!-- ========== SERVICE REQUEST FORM ========== -->
+
+<!-- ========== GOVERNMENT BANNER ========== -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-service">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-service" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br/>
+              A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HEADER SECTION ========== -->
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="Home">City Services Portal</a>
+        </em>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main-content">
+  <!-- === Header Section === -->
+  <section class="usa-section padding-y-3">
+    <div class="grid-container">
+      <h1 class="usa-heading">Submit a Service Request</h1>
+      <p class="usa-intro">Report issues or request services from your local government</p>
+    </div>
+  </section>
+
+  <!-- === Form Section === -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap-4">
+        <div class="tablet:grid-col-8">
+          <form class="usa-form usa-form--large">
+            <!-- Request Type -->
+            <fieldset class="usa-fieldset margin-bottom-4">
+              <legend class="usa-legend usa-legend--large">What type of service do you need?</legend>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="pothole" type="radio" name="request-type" value="pothole">
+                <label class="usa-radio__label" for="pothole">
+                  <strong>Road Maintenance</strong>
+                  <span class="usa-hint">Potholes, damaged roads, traffic signs</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="streetlight" type="radio" name="request-type" value="streetlight">
+                <label class="usa-radio__label" for="streetlight">
+                  <strong>Street Lighting</strong>
+                  <span class="usa-hint">Broken or dim street lights</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="parks" type="radio" name="request-type" value="parks">
+                <label class="usa-radio__label" for="parks">
+                  <strong>Parks & Recreation</strong>
+                  <span class="usa-hint">Playground equipment, landscaping, facilities</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="sanitation" type="radio" name="request-type" value="sanitation">
+                <label class="usa-radio__label" for="sanitation">
+                  <strong>Sanitation</strong>
+                  <span class="usa-hint">Missed pickup, illegal dumping, recycling</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="water" type="radio" name="request-type" value="water">
+                <label class="usa-radio__label" for="water">
+                  <strong>Water & Sewer</strong>
+                  <span class="usa-hint">Water leaks, sewer problems, water quality</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="other" type="radio" name="request-type" value="other">
+                <label class="usa-radio__label" for="other">
+                  <strong>Other</strong>
+                  <span class="usa-hint">General city services not listed above</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Priority Level -->
+            <fieldset class="usa-fieldset margin-bottom-4">
+              <legend class="usa-legend">Priority Level</legend>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="emergency" type="radio" name="priority" value="emergency">
+                <label class="usa-radio__label" for="emergency">
+                  <strong>Emergency</strong>
+                  <span class="usa-hint">Immediate safety hazard requiring immediate attention</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="high" type="radio" name="priority" value="high">
+                <label class="usa-radio__label" for="high">
+                  <strong>High</strong>
+                  <span class="usa-hint">Urgent issue that should be addressed within 24-48 hours</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="medium" type="radio" name="priority" value="medium" checked>
+                <label class="usa-radio__label" for="medium">
+                  <strong>Medium</strong>
+                  <span class="usa-hint">Standard service request (5-10 business days)</span>
+                </label>
+              </div>
+              
+              <div class="usa-radio">
+                <input class="usa-radio__input" id="low" type="radio" name="priority" value="low">
+                <label class="usa-radio__label" for="low">
+                  <strong>Low</strong>
+                  <span class="usa-hint">Non-urgent improvement or suggestion</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Location Information -->
+            <div class="usa-card margin-bottom-4">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h2 class="usa-card__heading">Location Information</h2>
+                </div>
+                <div class="usa-card__body">
+                  <div class="grid-row grid-gap-2">
+                    <div class="tablet:grid-col-12">
+                      <label class="usa-label" for="address">
+                        Street Address <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="address" name="address" type="text" required>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-row grid-gap-2">
+                    <div class="tablet:grid-col-6">
+                      <label class="usa-label" for="city">
+                        City <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="city" name="city" type="text" required>
+                    </div>
+                    <div class="tablet:grid-col-3">
+                      <label class="usa-label" for="state">
+                        State <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <select class="usa-select" id="state" name="state" required>
+                        <option value="">- Select -</option>
+                        <option value="AL">Alabama</option>
+                        <option value="CA">California</option>
+                        <option value="FL">Florida</option>
+                        <option value="NY">New York</option>
+                        <option value="TX">Texas</option>
+                      </select>
+                    </div>
+                    <div class="tablet:grid-col-3">
+                      <label class="usa-label" for="zip">
+                        ZIP Code <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="zip" name="zip" type="text" pattern="[0-9]{5}(-[0-9]{4})?" required>
+                    </div>
+                  </div>
+                  
+                  <div class="margin-top-2">
+                    <label class="usa-label" for="landmarks">
+                      Nearby Landmarks or Cross Streets
+                    </label>
+                    <span class="usa-hint">Help us locate the issue more easily</span>
+                    <input class="usa-input" id="landmarks" name="landmarks" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Issue Description -->
+            <div class="usa-card margin-bottom-4">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h2 class="usa-card__heading">Issue Description</h2>
+                </div>
+                <div class="usa-card__body">
+                  <label class="usa-label" for="description">
+                    Describe the issue in detail <span class="usa-required" aria-label="required">*</span>
+                  </label>
+                  <span class="usa-hint">Please provide as much detail as possible to help us understand and address your request</span>
+                  <textarea class="usa-textarea" id="description" name="description" rows="5" required></textarea>
+                  
+                  <div class="margin-top-2">
+                    <label class="usa-label" for="file-upload">
+                      Upload Photos or Documents
+                    </label>
+                    <span class="usa-hint">Photos can help us assess the issue (JPG, PNG, PDF - max 10MB)</span>
+                    <input class="usa-file-input" id="file-upload" type="file" name="file-upload" multiple accept="image/*,.pdf">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="usa-card margin-bottom-4">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h2 class="usa-card__heading">Contact Information</h2>
+                </div>
+                <div class="usa-card__body">
+                  <div class="grid-row grid-gap-2">
+                    <div class="tablet:grid-col-6">
+                      <label class="usa-label" for="first-name">
+                        First Name <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="first-name" name="first-name" type="text" required>
+                    </div>
+                    <div class="tablet:grid-col-6">
+                      <label class="usa-label" for="last-name">
+                        Last Name <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="last-name" name="last-name" type="text" required>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-row grid-gap-2">
+                    <div class="tablet:grid-col-6">
+                      <label class="usa-label" for="email">
+                        Email Address <span class="usa-required" aria-label="required">*</span>
+                      </label>
+                      <input class="usa-input" id="email" name="email" type="email" required>
+                    </div>
+                    <div class="tablet:grid-col-6">
+                      <label class="usa-label" for="phone">
+                        Phone Number
+                      </label>
+                      <input class="usa-input" id="phone" name="phone" type="tel">
+                    </div>
+                  </div>
+                  
+                  <div class="margin-top-2">
+                    <fieldset class="usa-fieldset">
+                      <legend class="usa-legend">Preferred Contact Method</legend>
+                      
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="contact-email" type="checkbox" name="contact-method" value="email" checked>
+                        <label class="usa-checkbox__label" for="contact-email">Email updates</label>
+                      </div>
+                      
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="contact-phone" type="checkbox" name="contact-method" value="phone">
+                        <label class="usa-checkbox__label" for="contact-phone">Phone updates</label>
+                      </div>
+                      
+                      <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="contact-sms" type="checkbox" name="contact-method" value="sms">
+                        <label class="usa-checkbox__label" for="contact-sms">Text message updates</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="grid-row grid-gap-2">
+              <div class="tablet:grid-col-6">
+                <button type="submit" class="usa-button width-full">
+                  Submit Service Request
+                </button>
+              </div>
+              <div class="tablet:grid-col-6">
+                <button type="button" class="usa-button usa-button--outline width-full">
+                  Save as Draft
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Sidebar Information -->
+        <div class="tablet:grid-col-4">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">What to Expect</h3>
+              </div>
+              <div class="usa-card__body">
+                <ol class="usa-list">
+                  <li><strong>Confirmation:</strong> You'll receive a confirmation email with your request number</li>
+                  <li><strong>Review:</strong> We'll review your request within 1 business day</li>
+                  <li><strong>Assignment:</strong> Your request will be assigned to the appropriate department</li>
+                  <li><strong>Updates:</strong> You'll receive status updates via your preferred contact method</li>
+                  <li><strong>Resolution:</strong> We'll notify you when the issue is resolved</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="usa-card margin-top-3">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Emergency Services</h3>
+              </div>
+              <div class="usa-card__body">
+                <div class="usa-alert usa-alert--warning usa-alert--no-icon">
+                  <div class="usa-alert__body">
+                    <p class="usa-alert__text">
+                      <strong>For life-threatening emergencies, call 911</strong>
+                    </p>
+                  </div>
+                </div>
+                <ul class="usa-list usa-list--unstyled margin-top-2">
+                  <li><strong>Police:</strong> (555) 123-4567</li>
+                  <li><strong>Fire Dept:</strong> (555) 123-4568</li>
+                  <li><strong>Utilities Emergency:</strong> (555) 123-4569</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== FOOTER SECTION ========== -->
+<footer class="usa-footer usa-footer--slim">
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-container">
+      <div class="usa-footer__primary-content">
+        <address class="usa-footer__address">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-auto">
+              <div class="usa-footer__contact-info">
+                Service Requests: services@city.gov | (555) 311-CITY
+              </div>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
