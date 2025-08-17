@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Monitoring Dashboard - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text"><a href="/">Election Monitoring Dashboard</a></em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link usa-current"><span>Dashboard</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Reports</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Analytics</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row margin-top-2">
+      <div class="grid-col-12">
+        <h1>Election Monitoring Dashboard</h1>
+        <p class="usa-intro">Monitor and analyze key metrics and performance indicators.</p>
+      </div>
+    </div>
+
+    <div class="grid-row margin-top-3">
+      <div class="grid-col-12 tablet:grid-col-8">
+        <form class="usa-form">
+          <div class="grid-row grid-gap">
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-start">From</label>
+              <input class="usa-input" id="date-start" name="date-start" type="date" value="2025-01-01">
+            </div>
+            <div class="grid-col-auto">
+              <label class="usa-label" for="date-end">To</label>
+              <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-17">
+            </div>
+            <div class="grid-col-auto display-flex flex-align-end">
+              <button class="usa-button" type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-4 text-right">
+        <button class="usa-button usa-button--outline">Export Dashboard</button>
+      </div>
+    </div>
+
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Metric 1</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">12,345</span>
+              <p class="margin-top-1 text-base">Total items</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Metric 2</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">98.5%</span>
+              <p class="margin-top-1 text-base">Success rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Metric 3</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">$2.5M</span>
+              <p class="margin-top-1 text-base">Total value</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Metric 4</h2>
+            </div>
+            <div class="usa-card__body">
+              <span class="font-sans-3xl text-bold">567</span>
+              <p class="margin-top-1 text-base">Active users</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-row margin-top-4">
+      <div class="grid-col-12">
+        <h2>Recent Data</h2>
+        <div class="usa-table-container--scrollable" tabindex="0">
+          <table class="usa-table usa-table--striped">
+            <caption>Dashboard data overview</caption>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Status</th>
+                <th scope="col">Value</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sample Item 1</th>
+                <td><span class="usa-tag bg-green">Active</span></td>
+                <td>125,000</td>
+                <td>Jan 17, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Sample Item 2</th>
+                <td><span class="usa-tag bg-yellow">Pending</span></td>
+                <td>85,500</td>
+                <td>Jan 16, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Sample Item 3</th>
+                <td><span class="usa-tag bg-green">Active</span></td>
+                <td>210,000</td>
+                <td>Jan 15, 2025</td>
+                <td><a href="#" class="usa-link">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="usa-footer">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Documentation</a>
+        </li>
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="#">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+</body>
+</html>
