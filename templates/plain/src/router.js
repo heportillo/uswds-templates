@@ -25,12 +25,56 @@ class Router {
       '/dashboards/healthcare-portal': '/templates/dashboards/healthcare-portal/index.html',
       '/dashboards/veterans-affairs': '/templates/dashboards/veterans-affairs/index.html',
       '/dashboards/emergency-response': '/templates/dashboards/emergency-response/index.html',
+      '/dashboards/education-dashboard': '/templates/dashboards/education-dashboard/index.html',
+      '/dashboards/immigration-status': '/templates/dashboards/immigration-status/index.html',
+      '/dashboards/social-security': '/templates/dashboards/social-security/index.html',
+      '/dashboards/business-owner': '/templates/dashboards/business-owner/index.html',
+      '/dashboards/grant-management': '/templates/dashboards/grant-management/index.html',
+      '/dashboards/contractor-dashboard': '/templates/dashboards/contractor-dashboard/index.html',
       
       // Form Templates
       '/forms/benefits-application': '/templates/forms/benefits-application/index.html',
       '/forms/permit-request': '/templates/forms/permit-request/index.html',
       '/forms/tax-filing-wizard': '/templates/forms/tax-filing-wizard/index.html',
       '/forms/service-request': '/templates/forms/service-request/index.html',
+      '/forms/passport-application': '/templates/forms/passport-application/index.html',
+      '/forms/drivers-license-renewal': '/templates/forms/drivers-license-renewal/index.html',
+      '/forms/business-license': '/templates/forms/business-license/index.html',
+      '/forms/building-permit': '/templates/forms/building-permit/index.html',
+      '/forms/grant-application': '/templates/forms/grant-application/index.html',
+      '/forms/job-application': '/templates/forms/job-application/index.html',
+      '/forms/vendor-registration': '/templates/forms/vendor-registration/index.html',
+      '/forms/maintenance-request': '/templates/forms/maintenance-request/index.html',
+      
+      // Search Templates
+      '/search/advanced-search': '/templates/search/advanced-search/index.html',
+      '/search/document-search': '/templates/search/document-search/index.html',
+      '/search/people-finder': '/templates/search/people-finder/index.html',
+      '/search/location-search': '/templates/search/location-search/index.html',
+      '/search/search-results-grid': '/templates/search/search-results-grid/index.html',
+      '/search/search-results-list': '/templates/search/search-results-list/index.html',
+      
+      // User Management Templates
+      '/user-management/user-profile': '/templates/user-management/user-profile/index.html',
+      '/user-management/account-settings': '/templates/user-management/account-settings/index.html',
+      '/user-management/role-management': '/templates/user-management/role-management/index.html',
+      '/user-management/multi-factor-login': '/templates/user-management/multi-factor-login/index.html',
+      '/user-management/password-reset': '/templates/user-management/password-reset/index.html',
+      '/user-management/employee-directory': '/templates/user-management/employee-directory/index.html',
+      
+      // Data Display Templates
+      '/data-displays/sortable-data-table': '/templates/data-displays/sortable-data-table/index.html',
+      '/data-displays/interactive-charts': '/templates/data-displays/interactive-charts/index.html',
+      '/data-displays/annual-report': '/templates/data-displays/annual-report/index.html',
+      '/data-displays/real-time-grid': '/templates/data-displays/real-time-grid/index.html',
+      
+      // Utility Templates
+      '/utility/system-status': '/templates/utility/system-status/index.html',
+      '/utility/404-error': '/templates/utility/404-error/index.html',
+      '/utility/500-error': '/templates/utility/500-error/index.html',
+      '/utility/maintenance-mode': '/templates/utility/maintenance-mode/index.html',
+      '/utility/privacy-policy': '/templates/utility/privacy-policy/index.html',
+      '/utility/accessibility-statement': '/templates/utility/accessibility-statement/index.html',
       
       // Landing Page Templates
       '/landing/agency-home': '/templates/landing/agency-home/index.html',
