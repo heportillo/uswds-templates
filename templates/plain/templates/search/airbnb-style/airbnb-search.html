@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USWDS — Airbnb‑style Search</title>
+
+  <!-- USWDS CDN -->
+  <link rel="stylesheet" href="https://designsystem.digital.gov/assets/css/uswds.min.css">
+  <script src="https://designsystem.digital.gov/assets/js/uswds-init.min.js"></script>
+  <script defer="" src="https://designsystem.digital.gov/assets/js/uswds.min.js"></script>
+
+  <link rel="stylesheet" href="./airbnb-search.css">
+</head>
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo" id="basic-logo">
+          <em class="usa-logo__text"><a href="#" title="Home">USWDS Airbnb‑style Search</a></em>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="grid-container">
+      <h1 class="font-sans-2xl">Find a place</h1>
+      <div class="usa-alert usa-alert--info">
+        <div class="usa-alert__body">
+          <p class="usa-alert__text">This is a demo built with USWDS. Try typing “b”, “den”, or “wash” in the destination field.</p>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <form id="search-form" class="usa-form usa-form--large">
+        <fieldset class="usa-fieldset">
+          <legend class="usa-sr-only">Search parameters</legend>
+          <div class="grid-row grid-gap">
+            <div class="grid-col-12 tablet:grid-col-4">
+              <label class="usa-label" for="destination">Destination</label>
+              <div class="usa-combo-box" data-default-value="">
+                <select class="usa-select" name="destination" id="destination" aria-describedby="dest-help">
+                  <option value="">Type to search…</option>
+                  <!-- JS injects options -->
+                </select>
+              </div>
+              <span class="usa-hint" id="dest-help">Start typing to see suggestions.</span>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-3">
+              <label class="usa-label" for="start-date">Start date</label>
+              <div class="usa-date-picker" data-default-value="" data-min-date="2024-01-01" data-max-date="2027-12-31">
+                <input class="usa-input" id="start-date" name="start-date" type="text" placeholder="YYYY-MM-DD" inputmode="numeric">
+              </div>
+            </div>
+            <div class="grid-col-6 tablet:grid-col-3">
+              <label class="usa-label" for="end-date">End date</label>
+              <div class="usa-date-picker" data-default-value="" data-min-date="2024-01-01" data-max-date="2027-12-31">
+                <input class="usa-input" id="end-date" name="end-date" type="text" placeholder="YYYY-MM-DD" inputmode="numeric">
+              </div>
+            </div>
+            <div class="grid-col-12 tablet:grid-col-2 display-flex">
+              <button type="button" class="usa-button" data-open-modal="filters-modal">Filters</button>
+              <button type="submit" class="usa-button usa-button--outline">Search</button>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="usa-button usa-button--unstyled" id="reset-all">Reset all</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Results toolbar -->
+      <div class="display-flex flex-justify-space-between flex-align-center">
+        <div class="usa-button-group" role="group" aria-label="View toggle">
+          <button class="usa-button" id="view-list" aria-pressed="true">List</button>
+          <button class="usa-button usa-button--outline" id="view-map" aria-pressed="false">Map</button>
+        </div>
+        <div>
+          <label class="usa-label" for="sort-select">Sort</label>
+          <select class="usa-select" id="sort-select">
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating-desc">Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results-list" class="usa-card-group"></div>
+
+      <!-- Map view -->
+      <div id="results-map" role="img" aria-label="Map with result pins">
+        <div>Map placeholder</div>
+        <div id="map-pins" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Filters Modal -->
+  <div class="usa-modal" id="filters-modal" aria-labelledby="filters-heading" aria-describedby="filters-desc">
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="filters-heading">Filters</h2>
+        <div class="usa-prose">
+          <p id="filters-desc">Choose the amenities and options that matter to you.</p>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Type</h3>
+            <ul class="usa-checklist usa-list--unstyled">
+              <li><input class="usa-checkbox__input" id="type-house" type="checkbox" value="house"><label class="usa-checkbox__label" for="type-house">House</label></li>
+              <li><input class="usa-checkbox__input" id="type-apartment" type="checkbox" value="apartment"><label class="usa-checkbox__label" for="type-apartment">Apartment</label></li>
+              <li><input class="usa-checkbox__input" id="type-studio" type="checkbox" value="studio"><label class="usa-checkbox__label" for="type-studio">Studio</label></li>
+            </ul>
+          </div>
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Beds</h3>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="beds-any" type="radio" name="beds" value="" checked="">
+              <label class="usa-radio__label" for="beds-any">Any</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="beds-1" type="radio" name="beds" value="1">
+              <label class="usa-radio__label" for="beds-1">1+</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="beds-2" type="radio" name="beds" value="2">
+              <label class="usa-radio__label" for="beds-2">2+</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="beds-3" type="radio" name="beds" value="3">
+              <label class="usa-radio__label" for="beds-3">3+</label>
+            </div>
+          </div>
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Price (per night)</h3>
+            <label class="usa-label" for="price-range">Max price: <span id="price-output">$500</span></label>
+            <input type="range" id="price-range" min="50" max="500" step="10" value="500" class="usa-range">
+          </div>
+        </div>
+      </div>
+      <div class="usa-modal__footer">
+        <ul class="usa-button-group">
+          <li class="usa-button-group__item">
+            <button type="button" class="usa-button" id="apply-filters">Apply</button>
+          </li>
+          <li class="usa-button-group__item">
+            <button type="button" class="usa-button usa-button--outline" data-close-modal="">Cancel</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./airbnb-search.js"></script>
+
+
+</body></html>

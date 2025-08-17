@@ -19,7 +19,7 @@ function Home() {
           Browse and preview templates built with Trussworks React USWDS components.
         </p>
         
-        <Alert type="info" heading="Getting Started">
+        <Alert type="info" heading="Getting Started" headingLevel="h4">
           Select a template from the sidebar to preview it. Each template uses Trussworks React USWDS components with TypeScript.
         </Alert>
 

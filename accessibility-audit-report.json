@@ -1,0 +1,4274 @@
+{
+  "totalFiles": 259,
+  "filesWithIssues": 249,
+  "totalIssues": 419,
+  "criticalIssues": 7,
+  "warnings": 412,
+  "issuesByType": {
+    "missing-skip-nav": 52,
+    "custom-css": 249,
+    "missing-link-text": 4,
+    "missing-aria-required": 111,
+    "missing-button-text": 2,
+    "missing-main": 1
+  },
+  "fileIssues": [
+    {
+      "path": "templates/plain/templates/dashboards/tax-dashboard/index.html",
+      "issues": [
+        {
+          "type": "critical",
+          "category": "missing-link-text",
+          "message": "Link missing accessible text or aria-label",
+          "element": "<a href=\"#\" class=\"usa-button usa-button--unstyled focus-ring-enhanced\">\n                        <sv"
+        },
+        {
+          "type": "critical",
+          "category": "missing-link-text",
+          "message": "Link missing accessible text or aria-label",
+          "element": "<a href=\"#\" class=\"usa-button usa-button--unstyled focus-ring-enhanced\">\n                        <sv"
+        },
+        {
+          "type": "critical",
+          "category": "missing-link-text",
+          "message": "Link missing accessible text or aria-label",
+          "element": "<a href=\"#\" class=\"usa-button usa-button--unstyled focus-ring-enhanced\">\n                        <sv"
+        },
+        {
+          "type": "critical",
+          "category": "missing-link-text",
+          "message": "Link missing accessible text or aria-label",
+          "element": "<a href=\"#\" class=\"usa-button usa-button--unstyled focus-ring-enhanced\">\n                        <sv"
+        },
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, text-right, margin-bottom-3, margin-bottom-2, animate-on-load, font-heading-xl, margin-y-0, text-base, margin-top-2, bg-success, bg-info, width-full, padding-y-1, border-bottom-1px, border-base-lighter, display-flex, flex-justify, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 4,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/emergency-contact-form.html",
+      "issues": [
+        {
+          "type": "critical",
+          "category": "missing-button-text",
+          "message": "Button missing accessible text or aria-label",
+          "element": "<button type=\"button\" class=\"usa-nav__close\">\n          <img src=\"https://cdn.jsdelivr.net/npm/@uswd"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, font-sans-2xl, margin-bottom-2, margin-bottom-3, mobile-lg:grid-col-8, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        }
+      ],
+      "criticalCount": 1,
+      "warningCount": 4
+    },
+    {
+      "path": "templates/plain/templates/home.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "critical",
+          "category": "missing-main",
+          "message": "Page missing main landmark",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, margin-top-6, bg-primary, font-body-lg, margin-top-3, margin-bottom-2, animate-on-load, focus-ring-enhanced, bg-secondary, bg-base-lighter, text-ink, bg-accent-warm, padding-top-4, border-top-1px, border-base-light",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 1,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/federal-facility-finder/index.html",
+      "issues": [
+        {
+          "type": "critical",
+          "category": "missing-button-text",
+          "message": "Button missing accessible text or aria-label",
+          "element": "<button type=\"button\" class=\"usa-nav__close\">\n          <img src=\"https://cdn.jsdelivr.net/npm/@uswd"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, font-sans-2xl, margin-bottom-2, margin-bottom-3, margin-left-1, display-flex, flex-justify, flex-align-center, margin-left-auto, margin-0, width-auto, margin-bottom-1, bg-primary, bg-base-lighter, text-base-dark, text-base, text-bold, text-success, width-full, bg-indigo-warm-60v, bg-violet-60v, text-error, bg-blue-60v, bg-cyan-40v, margin-top-5, bg-base-lightest, margin-top-3, mobile-lg:grid-col-8, mobile-lg:grid-col-auto, mobile-lg:grid-col-4, mobile-lg:grid-col-12, margin-top-05, font-sans-lg",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 1,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/analytics/ab-testing/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/business-intelligence/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/data-visualization/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/metrics-tracker/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/performance-analytics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/reporting-engine/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/user-feedback/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/analytics/web-analytics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/agricultural-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/app-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/benefits-overview/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, text-right, margin-bottom-3, margin-bottom-2, animate-on-load, font-heading-2xl, margin-y-0, text-base, margin-top-2, bg-success, width-full, padding-y-1, border-bottom-1px, border-base-lighter, display-flex, flex-justify, bg-warning, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/border-control/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/business-owner/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/call-center/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/case-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: icon-lock, focus-ring-enhanced, padding-y-3, margin-0, margin-top-1, text-right, padding-y-2, animate-on-load, font-heading-3xl, margin-y-0, text-base, text-success, text-warning, display-flex, flex-align-center, margin-bottom-2, bg-primary, margin-left-2, bg-info, bg-warning, bg-secondary, bg-success, bg-base-dark, padding-y-1, border-bottom-1px, border-base-lighter, flex-justify, text-bold, bg-error, bg-base-lighter, width-full, text-error",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/census-data/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/citizen-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, padding-y-3, bg-base-lightest, padding-top-4, padding-bottom-2, margin-bottom-2, animate-on-load, width-full, padding-y-4, text-right, bg-info, margin-y-1, text-base, margin-y-0, margin-top-3, bg-warning, text-ink, margin-top-2, border-bottom-1px, border-base-lighter, display-flex, text-info, margin-right-1, flex-align-self-start, text-bold, font-body-3xs, padding-y-2, text-success, padding-top-2, text-warning, margin-bottom-1",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/compliance-monitoring/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/content-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, flex-align-center, font-sans-3xl, text-bold, metric-value, bg-green, margin-left-1, margin-top-1, text-base, bg-yellow, bg-base, padding-y-1, border-bottom-1px, border-base-lighter, flex-justify, bg-red, margin-top-05, text-italic, margin-top-0, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto, text-base-light",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/contractor-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/crime-statistics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/disaster-recovery/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/economic-indicators/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/education-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/election-monitoring/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/emergency-response/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, padding-y-2, pulse-critical, padding-y-3, margin-bottom-3, incident-grid, animate-on-load, font-sans-3xl, text-bold, margin-y-0, metric-value, text-base, text-error, margin-top-2, bg-error, bg-warning, bg-info, text-truncate-elegant, bg-success, text-success, mobile-scroll-table, width-full, text-no-wrap, text-wrap, maxw-card, padding-y-1, border-bottom-1px, border-base-lighter, display-flex, flex-justify, font-sans-xs, text-base-dark, flex-align-center, font-sans-3xs, margin-top-05, bg-base-lightest, command-grid, margin-right-05, margin-0, text-right",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/energy-consumption/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/environmental-monitoring/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/facility-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/federal-analytics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, live-indicator, live-dot, font-sans-xs, alert-ticker, ticker-content, margin-right-4, padding-y-3, margin-0, margin-top-1, margin-bottom-0, text-right, text-base-dark, padding-top-0, padding-bottom-3, font-heading-lg, margin-bottom-3, dashboard-grid, dashboard-grid-4, metric-card, padding-bottom-1, font-sans-md, font-sans-3xl, text-bold, margin-top-05, margin-bottom-1, metric-trend, trend-up, performance-bar, performance-fill, trend-neutral, bg-base-lightest, animate-on-load, responsive-table-container, responsive-table, width-full, trend-down, padding-y-1, border-bottom-1px, border-base-lighter, display-flex, flex-justify, flex-align-center, status-badge, status-operational, status-degraded, margin-top-3, dashboard-grid-3, text-uppercase, text-ls-1, font-sans-2xl, margin-bottom-2, text-success, chart-placeholder, margin-top-2, mobile-lg:grid-col-6",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/fleet-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/grant-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/healthcare-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, text-right, margin-bottom-3, margin-bottom-2, animate-on-load, font-heading-xl, margin-y-0, text-base, margin-top-2, bg-success, bg-warning, bg-info, width-full, padding-y-1, border-bottom-1px, border-base-lighter, display-flex, flex-justify, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/immigration-status/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/inventory-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/performance-metrics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/procurement-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/project-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/public-health/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/quality-assurance/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/research-metrics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/resource-allocation/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/security-operations/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/social-security/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/dashboards/system-admin/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, flex-align-center, font-sans-3xl, text-bold, metric-value, bg-green, margin-left-1, margin-top-1, text-base, bg-red, bg-yellow, padding-y-1, border-bottom-1px, border-base-lighter, flex-justify, margin-top-05, text-italic, bg-base, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto, text-base-light",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/tourism-analytics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/training-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/transportation-analytics/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, mobile-lg:grid-col-4",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/user-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-2, margin-bottom-0, margin-top-3, display-flex, flex-align-end, text-right, margin-top-4, animate-on-load, font-sans-3xl, text-bold, metric-value, margin-top-1, text-base, bg-green, bg-yellow, width-full, mobile-lg:grid-col-4, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/dashboards/veterans-affairs/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: padding-y-3, text-right, margin-bottom-3, margin-bottom-2, font-heading-3xl, margin-y-0, text-base, margin-top-2, bg-green, bg-blue, width-full, bg-gold, padding-y-1, border-bottom-1px, border-base-lighter, font-heading-md, margin-bottom-05",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/annual-report/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/batch-entry/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/chart-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/comparison-table/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/compliance-report/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/data-export/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/data-import/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/data-lineage/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/data-quality/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/executive-summary/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/expandable-table/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/financial-statement/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/geographic-map/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/inspection-checklist/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/interactive-charts/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/data-displays/inventory-count/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/master-data/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/network-diagram/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/performance-report/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/pivot-table/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/real-time-grid/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/data-displays/realtime-grid/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/sortable-data-table/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/data-displays/sortable-table/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/survey-collection/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/time-entry/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/timeline-view/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/data-displays/tree-view/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/accommodation-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/appointment-scheduling/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/audit-response/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/benefits-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, margin-x-auto, margin-bottom-0, margin-top-3, margin-bottom-3, form-progress, form-progress-step, completed, active, text-base-dark, focus-ring-enhanced, margin-bottom-2, animate-on-load, bg-green, margin-top-2, text-right, text-center, text-underline, margin-top-6, margin-bottom-4, font-sans-md, margin-top-1",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: household-size",
+          "element": "<select class=\"usa-select\" id=\"household-size\" name=\"household-size\" required=\"\">\n              <opt"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: member2-name",
+          "element": "<input class=\"usa-input\" id=\"member2-name\" name=\"member2-name\" type=\"text\" required=\"\" value=\"Sofia "
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: member2-dob",
+          "element": "<input class=\"usa-input\" id=\"member2-dob\" name=\"member2-dob\" type=\"date\" required=\"\" value=\"2012-08-"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: member2-relationship",
+          "element": "<select class=\"usa-select\" id=\"member2-relationship\" name=\"member2-relationship\" required=\"\">\n      "
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: housing",
+          "element": "<select class=\"usa-select\" id=\"housing\" name=\"housing\" required=\"\">\n            <option value=\"\">- S"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 6
+    },
+    {
+      "path": "templates/plain/templates/forms/budget-proposal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/building-permit/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/business-license/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/certification-renewal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/change-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/clinical-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/clinical-trial/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/complaint-submission/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/direct-deposit/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/disclosure-statement/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/drivers-license/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/drivers-license-renewal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/emergency-assistance/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/environmental-assessment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/event-registration/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/exception-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/feedback-survey/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/financial-aid/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/foia-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/grant-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/incident-report/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/insurance-claim/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/invoice-submission/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/it-support/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/job-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/loan-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/maintenance-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/membership-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/newsletter-subscription/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/passport-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/patent-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/payment-plan/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/permit-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, margin-top-3, text-bold, focus-ring-enhanced, font-sans-lg, margin-top-5, margin-top-2, text-base-dark, margin-top-6, margin-bottom-4, animate-on-load, font-sans-md",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: permit-type",
+          "element": "<select class=\"usa-select\" id=\"permit-type\" name=\"permit-type\" required=\"\">\n              <option va"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: project-value",
+          "element": "<input class=\"usa-input\" id=\"project-value\" name=\"project-value\" type=\"number\" min=\"0\" required=\"\" v"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: property-address",
+          "element": "<input class=\"usa-input\" id=\"property-address\" name=\"property-address\" type=\"text\" required=\"\" value"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: city",
+          "element": "<input class=\"usa-input\" id=\"city\" name=\"city\" type=\"text\" required=\"\" value=\"Arlington\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: state",
+          "element": "<select class=\"usa-select\" id=\"state\" name=\"state\" required=\"\">\n              <option value=\"\">- Sel"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: zip",
+          "element": "<input class=\"usa-input usa-input--medium\" id=\"zip\" name=\"zip\" type=\"text\" pattern=\"[0-9]{5}\" requir"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: project-description",
+          "element": "<textarea class=\"usa-textarea\" id=\"project-description\" name=\"project-description\" rows=\"4\" required"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: start-date",
+          "element": "<input class=\"usa-input\" id=\"start-date\" name=\"start-date\" type=\"date\" required=\"\" value=\"2025-03-01"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: completion-date",
+          "element": "<input class=\"usa-input\" id=\"completion-date\" name=\"completion-date\" type=\"date\" required=\"\" value=\""
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: site-plan",
+          "element": "<input class=\"usa-file-input\" id=\"site-plan\" name=\"site-plan\" type=\"file\" accept=\".pdf\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: construction-drawings",
+          "element": "<input class=\"usa-file-input\" id=\"construction-drawings\" name=\"construction-drawings\" type=\"file\" ac"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: certification",
+          "element": "<input class=\"usa-checkbox__input\" id=\"certification\" name=\"certification\" type=\"checkbox\" value=\"ce"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: property-owner",
+          "element": "<input class=\"usa-checkbox__input\" id=\"property-owner\" name=\"property-owner\" type=\"checkbox\" value=\""
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: signature-name",
+          "element": "<input class=\"usa-input\" id=\"signature-name\" name=\"signature-name\" type=\"text\" required=\"\" value=\"Ro"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: signature-date",
+          "element": "<input class=\"usa-input\" id=\"signature-date\" name=\"signature-date\" type=\"date\" required=\"\" value=\"20"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 16
+    },
+    {
+      "path": "templates/plain/templates/forms/privacy-assessment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/program-participation/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/records-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/reimbursement/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/research-participant/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/retirement-calculator/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/risk-assessment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/safety-inspection/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/school-enrollment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/service-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/tax-filing/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/tax-filing-wizard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, auto-save-indicator, saving, progress-tracker, padding-top-4, padding-bottom-2, margin-0, margin-top-1, text-right, padding-top-0, tax-summary-card, font-heading-md, font-sans-2xl, refund-amount, deduction-comparison, font-heading-lg, margin-bottom-3, margin-bottom-2, help-tooltip, margin-left-4, display-none, margin-top-4, deduction-grid, animate-on-load, bg-base-lighter, text-base-darker, float-right, slim, margin-top-2, bg-warning-lighter, text-base-darkest, bg-success-lighter, margin-top-5, font-sans-xs, width-full, bg-base-lightest, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/training-enrollment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/translation-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, margin-top-3",
+          "element": "Various elements"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: first-name",
+          "element": "<input class=\"usa-input\" id=\"first-name\" name=\"first-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: last-name",
+          "element": "<input class=\"usa-input\" id=\"last-name\" name=\"last-name\" type=\"text\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: email",
+          "element": "<input class=\"usa-input\" id=\"email\" name=\"email\" type=\"email\" required=\"\">"
+        },
+        {
+          "type": "warning",
+          "category": "missing-aria-required",
+          "message": "Required field missing aria-required attribute: agreement",
+          "element": "<input class=\"usa-checkbox__input\" id=\"agreement\" type=\"checkbox\" name=\"agreement\" value=\"agree\" req"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "path": "templates/plain/templates/forms/vendor-registration/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/forms/volunteer-registration/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/forms/voter-registration/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/agency-home/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, hero-content, padding-y-2, bg-base-lightest, font-heading-xl, margin-bottom-4, service-grid, animate-on-load, margin-bottom-3, text-no-underline, margin-top-3, margin-bottom-2, display-flex, flex-align-center, margin-right-1, font-sans-xl, text-bold, text-primary, font-sans-xs, font-sans-lg, margin-bottom-0, text-center, margin-top-2, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/benefits-program/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/census-campaign/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/city-government/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/climate-action/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/county-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/covid-info/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/digital-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/disaster-response/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/economic-recovery/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/education-initiative/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/emergency-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/environmental-initiative/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/federal-department/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: focus-ring-enhanced, font-heading-xl, animate-on-load, margin-bottom-3, text-base-dark, margin-bottom-2, margin-top-3, margin-top-2, text-center, font-heading-3xl, text-accent-warm, font-heading-md, mobile-lg:grid-col-6, mobile-lg:grid-gap-2, mobile-lg:grid-col-auto",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/landing/federal-homepage/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/healthcare-program/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/legal-aid/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/library-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/new-residents/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/parks-recreation/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/public-health/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/landing/public-health-campaign/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/recruitment-campaign/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/regulatory-agency/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/research-program/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/safety-awareness/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/senior-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/small-business/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/state-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: animate-on-load, focus-ring-enhanced, font-heading-xl, margin-y-0",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/tourist-info/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/transportation-services/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/veterans-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/landing/youth-programs/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/mobile/mobile-checklist/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/mobile/mobile-notifications/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/mobile/mobile-profile/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/advanced-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/airbnb-style/airbnb-search.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: bg-base-lightest, padding-y-3, font-sans-2xl, margin-bottom-2, display-flex, flex-align-end, margin-right-1, margin-top-2, text-underline, flex-justify, flex-align-center, margin-left-auto, margin-0, width-auto, map-shell, display-none, map-placeholder, margin-top-05, font-sans-lg",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/api-catalog/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/archive-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/benefits-checker/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/case-law/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/cola-finder/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/contract-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/data-browser/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/document-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/legislative-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/location-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/media-library/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/patent-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/people-finder/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/provider-directory/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/public-records/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/regulation-search/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, display-flex, flex-justify, text-bold, border-bottom-1px, border-base-lighter, padding-bottom-2, margin-bottom-2, focus-ring-enhanced, margin-y-1, text-base-dark, text-italic",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/research-repository/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/resource-discovery/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/search/search-results-grid/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/search/search-results-list/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/access-control/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/audit-log-viewer/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/compliance-monitor/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/consent-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/incident-response/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/privacy-center/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/security-dashboard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/security/vulnerability-tracker/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/user-management/access-request/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/account-recovery/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/account-settings/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/community-directory/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/contractor-directory/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/employee-directory/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/expert-network/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/multi-factor-login/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/password-reset/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/role-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/session-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/sso-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/stakeholder-registry/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/team-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/user-management/user-profile/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/404-error/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: bg-base-lightest, margin-x-auto, text-center, font-sans-3xl, margin-bottom-2, font-sans-xl, margin-bottom-3, margin-bottom-4, width-full, margin-right-1, font-sans-lg, mobile-lg:grid-col-8, mobile-lg:grid-col-auto, mobile-lg:grid-col-4, mobile-lg:grid-col-12",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/500-error/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: bg-base-lightest, margin-x-auto, text-center, font-sans-3xl, margin-bottom-2, font-sans-xl, margin-bottom-3, margin-bottom-4, margin-right-1, text-bold, text-base, mobile-lg:grid-col-8, mobile-lg:grid-col-auto, mobile-lg:grid-col-4, mobile-lg:grid-col-12",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/accessibility/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/accessibility-statement/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/utility/api-docs/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/bug-report/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/cookie-consent/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/feedback-portal/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/foia-reading/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/help-center/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/maintenance-mode/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/privacy-policy/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/release-notes/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/sitemap/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/system-status/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/utility/terms-service/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/benefits-enrollment/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/budget-planning/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/business-registration/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/case-review/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/contract-negotiation/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/document-assembly/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/grant-review/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/immigration-wizard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/investigation-management/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/permit-application/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "missing-skip-nav",
+          "message": "Page missing skip navigation link",
+          "element": "N/A"
+        },
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, margin-bottom-2, width-full, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 2
+    },
+    {
+      "path": "templates/plain/templates/workflows/permit-wizard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/procurement-evaluation/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/report-builder/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/scheduling-coordinator/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/tax-filing-wizard/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    },
+    {
+      "path": "templates/plain/templates/workflows/workflow-designer/index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "category": "custom-css",
+          "message": "Non-USWDS classes found: margin-top-4, animate-on-load, focus-ring-enhanced",
+          "element": "Various elements"
+        }
+      ],
+      "criticalCount": 0,
+      "warningCount": 1
+    }
+  ]
+}

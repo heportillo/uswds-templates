@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Content Management Dashboard - U.S. Government</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
 </head>
 <body>
 
@@ -25,13 +24,13 @@
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-cms" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-cms" hidden="">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -40,7 +39,7 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
+              <strong>Secure .gov websites use HTTPS</strong><br>
               A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
             </p>
           </div>
@@ -67,9 +66,7 @@
   </div>
   <nav aria-label="Primary navigation" class="usa-nav">
     <div class="usa-nav__inner">
-      <button type="button" class="usa-nav__close">
-        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
-      </button>
+      <button type="button" class="usa-nav__close" aria-label="Close"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close"></button>
       <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
           <a href="#" class="usa-nav-link usa-current">
@@ -109,15 +106,15 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
   <div class="grid-container">
-    <div class="grid-row margin-top-2">
-      <div class="grid-col-12">
-        <h1 class="margin-bottom-0">Content Management Dashboard</h1>
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+        <h1>Content Management Dashboard</h1>
         <p class="usa-intro">Manage published articles, drafts, and editorial calendar</p>
       </div>
     </div>
 
     <!-- Date Range and Export -->
-    <div class="grid-row margin-top-3">
+    <div class="grid-row">
       <div class="grid-col-12 tablet:grid-col-8">
         <form class="usa-form">
           <div class="grid-row grid-gap">
@@ -129,7 +126,7 @@
               <label class="usa-label" for="date-end">To</label>
               <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-16">
             </div>
-            <div class="grid-col-auto display-flex flex-align-end">
+            <div class="grid-col-auto display-flex">
               <button class="usa-button" type="submit">Update</button>
             </div>
           </div>
@@ -141,7 +138,7 @@
     </div>
 
     <!-- Key Metrics Cards -->
-    <div class="grid-row grid-gap margin-top-4">
+    <div class="grid-row grid-gap">
       <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
         <div class="usa-card">
           <div class="usa-card__container">
@@ -150,10 +147,10 @@
             </div>
             <div class="usa-card__body">
               <div class="display-flex flex-align-center">
-                <span class="font-sans-3xl text-bold">2,847</span>
-                <span class="usa-tag bg-green margin-left-1">↑ 142</span>
+                <span class="font-sans-3xl">2,847</span>
+                <span class="usa-tag">↑ 142</span>
               </div>
-              <p class="margin-top-1 text-base">This month</p>
+              <p>This month</p>
             </div>
           </div>
         </div>
@@ -166,10 +163,10 @@
             </div>
             <div class="usa-card__body">
               <div class="display-flex flex-align-center">
-                <span class="font-sans-3xl text-bold">384</span>
-                <span class="usa-tag bg-yellow margin-left-1">In Progress</span>
+                <span class="font-sans-3xl">384</span>
+                <span class="usa-tag">In Progress</span>
               </div>
-              <p class="margin-top-1 text-base">Awaiting review</p>
+              <p>Awaiting review</p>
             </div>
           </div>
         </div>
@@ -182,10 +179,10 @@
             </div>
             <div class="usa-card__body">
               <div class="display-flex flex-align-center">
-                <span class="font-sans-3xl text-bold">1.2M</span>
-                <span class="usa-tag bg-green margin-left-1">↑ 15%</span>
+                <span class="font-sans-3xl">1.2M</span>
+                <span class="usa-tag">↑ 15%</span>
               </div>
-              <p class="margin-top-1 text-base">Last 30 days</p>
+              <p>Last 30 days</p>
             </div>
           </div>
         </div>
@@ -198,10 +195,10 @@
             </div>
             <div class="usa-card__body">
               <div class="display-flex flex-align-center">
-                <span class="font-sans-3xl text-bold">87</span>
-                <span class="usa-tag margin-left-1">Contributing</span>
+                <span class="font-sans-3xl">87</span>
+                <span class="usa-tag">Contributing</span>
               </div>
-              <p class="margin-top-1 text-base">This week</p>
+              <p>This week</p>
             </div>
           </div>
         </div>
@@ -209,8 +206,8 @@
     </div>
 
     <!-- Recent Content Table -->
-    <div class="grid-row margin-top-4">
-      <div class="grid-col-12">
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
         <h2>Recent Content Activity</h2>
         <div class="usa-table-container--scrollable" tabindex="0">
           <table class="usa-table usa-table--striped">
@@ -230,7 +227,7 @@
               <tr>
                 <th scope="row">New Federal Guidelines for Climate Action</th>
                 <td>Michael Chen</td>
-                <td><span class="usa-tag bg-green">Published</span></td>
+                <td><span class="usa-tag">Published</span></td>
                 <td>Policy</td>
                 <td>45,230</td>
                 <td>Jan 16, 2025</td>
@@ -239,7 +236,7 @@
               <tr>
                 <th scope="row">2025 Healthcare Benefits Update</th>
                 <td>Emily Rodriguez</td>
-                <td><span class="usa-tag bg-green">Published</span></td>
+                <td><span class="usa-tag">Published</span></td>
                 <td>Benefits</td>
                 <td>38,912</td>
                 <td>Jan 15, 2025</td>
@@ -248,7 +245,7 @@
               <tr>
                 <th scope="row">Small Business Grant Program Announcement</th>
                 <td>James Wilson</td>
-                <td><span class="usa-tag bg-yellow">Review</span></td>
+                <td><span class="usa-tag">Review</span></td>
                 <td>Grants</td>
                 <td>—</td>
                 <td>Jan 15, 2025</td>
@@ -257,7 +254,7 @@
               <tr>
                 <th scope="row">Updated Privacy Policy Requirements</th>
                 <td>Lisa Thompson</td>
-                <td><span class="usa-tag bg-base">Draft</span></td>
+                <td><span class="usa-tag">Draft</span></td>
                 <td>Legal</td>
                 <td>—</td>
                 <td>Jan 14, 2025</td>
@@ -266,7 +263,7 @@
               <tr>
                 <th scope="row">Veterans Services Expansion</th>
                 <td>Robert Martinez</td>
-                <td><span class="usa-tag bg-green">Published</span></td>
+                <td><span class="usa-tag">Published</span></td>
                 <td>Services</td>
                 <td>28,445</td>
                 <td>Jan 14, 2025</td>
@@ -275,7 +272,7 @@
               <tr>
                 <th scope="row">Emergency Response Procedures Update</th>
                 <td>Patricia Davis</td>
-                <td><span class="usa-tag bg-yellow">Review</span></td>
+                <td><span class="usa-tag">Review</span></td>
                 <td>Safety</td>
                 <td>—</td>
                 <td>Jan 13, 2025</td>
@@ -288,44 +285,44 @@
     </div>
 
     <!-- Editorial Calendar and Activity -->
-    <div class="grid-row grid-gap margin-top-4">
+    <div class="grid-row grid-gap">
       <div class="grid-col-12 tablet:grid-col-6">
         <h2>Editorial Calendar</h2>
         <div class="usa-card">
           <div class="usa-card__container">
             <div class="usa-card__body">
               <ul class="usa-list usa-list--unstyled">
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
-                    <span class="text-bold">State of the Union Coverage</span>
-                    <span class="usa-tag bg-red">High Priority</span>
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
+                    <span>State of the Union Coverage</span>
+                    <span class="usa-tag">High Priority</span>
                   </div>
-                  <p class="margin-top-05 text-base">Multiple articles planned</p>
-                  <p class="margin-top-05 text-base text-italic">Due: Jan 20, 2025</p>
+                  <p>Multiple articles planned</p>
+                  <p>Due: Jan 20, 2025</p>
                 </li>
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
-                    <span class="text-bold">Budget Proposal Analysis</span>
-                    <span class="usa-tag bg-yellow">Medium</span>
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
+                    <span>Budget Proposal Analysis</span>
+                    <span class="usa-tag">Medium</span>
                   </div>
-                  <p class="margin-top-05 text-base">Finance team collaboration</p>
-                  <p class="margin-top-05 text-base text-italic">Due: Jan 25, 2025</p>
+                  <p>Finance team collaboration</p>
+                  <p>Due: Jan 25, 2025</p>
                 </li>
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
-                    <span class="text-bold">Quarterly Benefits Review</span>
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
+                    <span>Quarterly Benefits Review</span>
                     <span class="usa-tag">Scheduled</span>
                   </div>
-                  <p class="margin-top-05 text-base">Standard quarterly update</p>
-                  <p class="margin-top-05 text-base text-italic">Due: Feb 1, 2025</p>
+                  <p>Standard quarterly update</p>
+                  <p>Due: Feb 1, 2025</p>
                 </li>
                 <li class="padding-y-1">
-                  <div class="display-flex flex-justify">
-                    <span class="text-bold">Infrastructure Week Series</span>
+                  <div class="display-flex flex-justify-space-between">
+                    <span>Infrastructure Week Series</span>
                     <span class="usa-tag">Planning</span>
                   </div>
-                  <p class="margin-top-05 text-base">5-part article series</p>
-                  <p class="margin-top-05 text-base text-italic">Due: Feb 15, 2025</p>
+                  <p>5-part article series</p>
+                  <p>Due: Feb 15, 2025</p>
                 </li>
               </ul>
             </div>
@@ -337,46 +334,46 @@
         <div class="usa-card">
           <div class="usa-card__container">
             <div class="usa-card__body">
-              <h3 class="margin-top-0">Top Performing Content</h3>
+              <h3>Top Performing Content</h3>
               <ul class="usa-list usa-list--unstyled">
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
                     <span>Tax Filing Guidelines 2025</span>
-                    <span class="text-bold">285K views</span>
+                    <span>285K views</span>
                   </div>
-                  <div class="display-flex margin-top-05">
-                    <span class="usa-tag bg-green">↑ 45%</span>
-                    <span class="margin-left-1 text-base">Engagement rate: 8.2%</span>
+                  <div class="display-flex">
+                    <span class="usa-tag">↑ 45%</span>
+                    <span>Engagement rate: 8.2%</span>
                   </div>
                 </li>
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
                     <span>Medicare Enrollment Guide</span>
-                    <span class="text-bold">198K views</span>
+                    <span>198K views</span>
                   </div>
-                  <div class="display-flex margin-top-05">
-                    <span class="usa-tag bg-green">↑ 32%</span>
-                    <span class="margin-left-1 text-base">Engagement rate: 7.5%</span>
+                  <div class="display-flex">
+                    <span class="usa-tag">↑ 32%</span>
+                    <span>Engagement rate: 7.5%</span>
                   </div>
                 </li>
-                <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                  <div class="display-flex flex-justify">
+                <li class="padding-y-1 border-bottom">
+                  <div class="display-flex flex-justify-space-between">
                     <span>Small Business Resources</span>
-                    <span class="text-bold">142K views</span>
+                    <span>142K views</span>
                   </div>
-                  <div class="display-flex margin-top-05">
-                    <span class="usa-tag bg-green">↑ 28%</span>
-                    <span class="margin-left-1 text-base">Engagement rate: 6.8%</span>
+                  <div class="display-flex">
+                    <span class="usa-tag">↑ 28%</span>
+                    <span>Engagement rate: 6.8%</span>
                   </div>
                 </li>
                 <li class="padding-y-1">
-                  <div class="display-flex flex-justify">
+                  <div class="display-flex flex-justify-space-between">
                     <span>Immigration Services Update</span>
-                    <span class="text-bold">96K views</span>
+                    <span>96K views</span>
                   </div>
-                  <div class="display-flex margin-top-05">
-                    <span class="usa-tag bg-yellow">↑ 5%</span>
-                    <span class="margin-left-1 text-base">Engagement rate: 5.2%</span>
+                  <div class="display-flex">
+                    <span class="usa-tag">↑ 5%</span>
+                    <span>Engagement rate: 5.2%</span>
                   </div>
                 </li>
               </ul>
@@ -387,8 +384,8 @@
     </div>
 
     <!-- Filter Controls -->
-    <div class="grid-row margin-top-4">
-      <div class="grid-col-12">
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
         <h2>Filter Content</h2>
         <form class="usa-form">
           <div class="grid-row grid-gap">
@@ -425,8 +422,8 @@
                 <option value="martinez">Robert Martinez</option>
               </select>
             </div>
-            <div class="grid-col-12 tablet:grid-col-3 display-flex flex-align-end">
-              <button class="usa-button width-full" type="submit">Apply Filters</button>
+            <div class="grid-col-12 tablet:grid-col-3 display-flex">
+              <button class="usa-button" type="submit">Apply Filters</button>
             </div>
           </div>
         </form>
@@ -443,16 +440,16 @@
   <div class="usa-footer__primary-section">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
       <ul class="grid-row grid-gap">
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+        <li class="tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
           <a class="usa-footer__primary-link" href="#">Content Guidelines</a>
         </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+        <li class="tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
           <a class="usa-footer__primary-link" href="#">Editorial Standards</a>
         </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+        <li class="tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
           <a class="usa-footer__primary-link" href="#">Accessibility</a>
         </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+        <li class="tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
           <a class="usa-footer__primary-link" href="#">Support</a>
         </li>
       </ul>
@@ -461,16 +458,16 @@
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-          <div class="mobile-lg:grid-col-auto">
+        <div class="usa-footer__logo grid-row">
+          <div class="tablet:grid-col-auto">
             <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
           </div>
-          <div class="mobile-lg:grid-col-auto">
+          <div class="tablet:grid-col-auto">
             <p class="usa-footer__logo-heading">Federal Agency Name</p>
-            <p class="text-base-light">Office of Digital Communications</p>
+            <p>Office of Digital Communications</p>
           </div>
         </div>
-        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+        <div class="usa-footer__contact-links">
           <p class="usa-footer__contact-heading">Content Support</p>
           <address class="usa-footer__address">
             <div class="usa-footer__contact-info grid-row grid-gap">
@@ -490,5 +487,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
-</body>
-</html>
+
+</body></html>

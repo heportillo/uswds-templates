@@ -1,7 +1,4 @@
-<!-- ========== BENEFITS OVERVIEW DASHBOARD ========== -->
-
-<!-- ========== GOVERNMENT BANNER ========== -->
-<section class="usa-banner" aria-label="Official website of the United States government">
+<!-- ========== BENEFITS OVERVIEW DASHBOARD ========== --><!-- ========== GOVERNMENT BANNER ========== --><html><head></head><body><section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">
@@ -17,13 +14,13 @@
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-benefits" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-benefits" hidden="">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -32,7 +29,7 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
+              <strong>Secure .gov websites use HTTPS</strong><br>
               A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
             </p>
           </div>
@@ -58,7 +55,7 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
   <!-- === Hero/Welcome Section === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="tablet:grid-col-8">
@@ -73,61 +70,61 @@
   </section>
 
   <!-- === Active Benefits Cards === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
-      <h2 class="margin-bottom-3">Your Active Benefits</h2>
+      <h2>Your Active Benefits</h2>
       <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-4 margin-bottom-2">
+        <div class="tablet:grid-col-4">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Social Security</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-2xl margin-y-0">$1,847/month</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">$1,847/month</p>
+                <p class="margin-y-0">
                   Next payment: <strong>March 3, 2024</strong>
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">Active</span>
+                <div>
+                  <span class="usa-tag">Active</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-4 margin-bottom-2">
+        <div class="tablet:grid-col-4">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Medicare Part B</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-2xl margin-y-0">$174.70/month</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">$174.70/month</p>
+                <p class="margin-y-0">
                   Premium deducted from SS
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">Active</span>
+                <div>
+                  <span class="usa-tag">Active</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-4 margin-bottom-2">
+        <div class="tablet:grid-col-4">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Supplemental Nutrition</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-2xl margin-y-0">$281/month</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">$281/month</p>
+                <p class="margin-y-0">
                   Loaded on EBT card monthly
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">Active</span>
+                <div>
+                  <span class="usa-tag">Active</span>
                 </div>
               </div>
             </div>
@@ -138,7 +135,7 @@
   </section>
 
   <!-- === Payment History and Eligibility === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap-4">
         <!-- Recent Payments -->
@@ -149,7 +146,9 @@
                 <h2 class="usa-card__heading">Recent Payments</h2>
               </div>
               <div class="usa-card__body">
-                <table class="usa-table usa-table--borderless width-full">
+                <div class="usa-table-container--scrollable" tabindex="0">
+  <table class="usa-table usa-table--borderless">
+  <caption class="usa-sr-only">Recent activity and updates</caption>
                   <thead>
                     <tr>
                       <th scope="col">Date</th>
@@ -163,31 +162,31 @@
                       <th scope="row">Feb 3, 2024</th>
                       <td>Social Security</td>
                       <td class="text-right">$1,847.00</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Deposited</span></td>
+                      <td><span class="usa-tag usa-tag--big">Deposited</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Feb 1, 2024</th>
                       <td>SNAP Benefits</td>
                       <td class="text-right">$281.00</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Loaded</span></td>
+                      <td><span class="usa-tag usa-tag--big">Loaded</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Jan 24, 2024</th>
                       <td>Medicare Reimbursement</td>
                       <td class="text-right">$127.50</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Deposited</span></td>
+                      <td><span class="usa-tag usa-tag--big">Deposited</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Jan 3, 2024</th>
                       <td>Social Security</td>
                       <td class="text-right">$1,847.00</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Deposited</span></td>
+                      <td><span class="usa-tag usa-tag--big">Deposited</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Jan 1, 2024</th>
                       <td>SNAP Benefits</td>
                       <td class="text-right">$281.00</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Loaded</span></td>
+                      <td><span class="usa-tag usa-tag--big">Loaded</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -198,33 +197,33 @@
 
         <!-- Eligibility & Actions -->
         <div class="tablet:grid-col-4">
-          <div class="usa-card margin-bottom-3">
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">Eligibility Status</h2>
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <span><strong>Social Security</strong></span>
-                      <span class="usa-tag bg-success">Eligible</span>
+                      <span class="usa-tag">Eligible</span>
                     </div>
-                    <span class="text-base">Until age 67</span>
+                    <span>Until age 67</span>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <span><strong>Medicare</strong></span>
-                      <span class="usa-tag bg-success">Eligible</span>
+                      <span class="usa-tag">Eligible</span>
                     </div>
-                    <span class="text-base">Lifetime coverage</span>
+                    <span>Lifetime coverage</span>
                   </li>
                   <li class="padding-y-1">
-                    <div class="display-flex flex-justify">
+                    <div class="display-flex flex-justify-space-between">
                       <span><strong>SNAP</strong></span>
-                      <span class="usa-tag bg-warning">Review due</span>
+                      <span class="usa-tag">Review due</span>
                     </div>
-                    <span class="text-base">Recertify by March 15</span>
+                    <span>Recertify by March 15</span>
                   </li>
                 </ul>
               </div>
@@ -238,23 +237,23 @@
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       Update Direct Deposit
                     </a>
                   </li>
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       Request Benefit Verification
                     </a>
                   </li>
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       Report Address Change
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                    <a href="#" class="usa-button usa-button--outline">
                       Download Tax Documents
                     </a>
                   </li>
@@ -265,7 +264,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div></section>
 
   <!-- === Important Notices === -->
   <section class="usa-section">
@@ -300,4 +299,4 @@
       </div>
     </div>
   </div>
-</footer>
+</footer></body></html>

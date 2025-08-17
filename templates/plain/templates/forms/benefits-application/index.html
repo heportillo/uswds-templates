@@ -1,47 +1,328 @@
-<!-- ========== BENEFITS APPLICATION FORM (PLACEHOLDER) ========== -->
-<div class="usa-section">
-  <div class="grid-container">
-    <div class="usa-alert usa-alert--info">
-      <div class="usa-alert__body">
-        <h4 class="usa-alert__heading">Template Coming Soon</h4>
-        <p class="usa-alert__text">
-          The Benefits Application Form template will be created here.
-        </p>
-      </div>
-    </div>
-    
-    <div class="margin-top-4">
-      <h1 class="usa-heading">Benefits Application Form</h1>
-      <p class="usa-intro">This will be a multi-step form for applying for federal benefits.</p>
-      
-      <div class="usa-card margin-top-4">
-        <div class="usa-card__container">
-          <div class="usa-card__header">
-            <h2 class="usa-card__heading">Planned Features</h2>
-          </div>
-          <div class="usa-card__body">
-            <ul class="usa-list">
-              <li>Multi-step wizard navigation</li>
-              <li>Form validation</li>
-              <li>Progress indicator</li>
-              <li>Save and continue later</li>
-              <li>Document upload</li>
-              <li>Review and submit</li>
-            </ul>
-          </div>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Benefits Application - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
+</head>
+<body>
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
         </div>
       </div>
-      
-      <div class="margin-top-4">
-        <p>To create this template, use Claude Code with a prompt like:</p>
-        <div class="usa-alert usa-alert--slim">
+    </header>
+  </div>
+</section>
+
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="Home">Federal Benefits Portal</a>
+        </em>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
+        <h1>Application for Federal Benefits</h1>
+        <p class="usa-intro">Complete this application to determine your eligibility for federal assistance programs.</p>
+      </div>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
+        <div>
+          <span>1. Personal Info</span>
+          <span>2. Household</span>
+          <span>3. Income</span>
+          <span>4. Documents</span>
+          <span>5. Review</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Save Progress Alert -->
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
+        <div class="usa-alert usa-alert--info usa-alert--slim">
           <div class="usa-alert__body">
             <p class="usa-alert__text">
-              "Create a multi-step benefits application form with personal info, household info, income details, document upload, and review steps"
+              <strong>Your progress is automatically saved.</strong> You can return anytime using your application ID: <strong>BEN-2025-847392</strong>
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
+        <form class="usa-form usa-form usa-form--large--large">
+          <!-- Step 2: Household Information (Active) -->
+          <fieldset class="usa-fieldset">
+        <legend class="usa-legend usa-legend--large">Household Information</legend>
+        <p>Tell us about the people living in your household. This helps us determine the right benefits for your situation.</p>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="household-size">Number of people in household <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <select class="usa-select" id="household-size" name="household-size" required="" aria-required="true">
+              <option value="">- Select -</option>
+              <option value="1">1 person</option>
+              <option value="2" selected="">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6+">6 or more people</option>
+            </select>
+          </div>
+
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="dependents">Number of dependents</label>
+            <span class="usa-hint">Children under 18 or adults unable to care for themselves</span>
+            <input class="usa-input" id="dependents" name="dependents" type="number" min="0" value="1">
+          </div>
+        </div>
+
+        <!-- Household Members -->
+        <div>
+          <h3>Household Members</h3>
+          
+          <!-- Primary Applicant (Pre-filled from Step 1) -->
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h4 class="usa-card__heading">Member 1 (You)</h4>
+              </div>
+              <div class="usa-card__body">
+                <div class="grid-row grid-gap">
+                  <div class="grid-col-12 tablet:grid-col-6">
+                    <strong>Name:</strong> Maria Rodriguez<br>
+                    <strong>Date of Birth:</strong> 03/15/1978<br>
+                    <strong>Relationship:</strong> Self
+                  </div>
+                  <div class="grid-col-12 tablet:grid-col-6">
+                    <strong>Employment Status:</strong> Employed Part-Time<br>
+                    <strong>Insurance:</strong> None<br>
+                    <span class="usa-tag">Primary Applicant</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Member -->
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h4 class="usa-card__heading">Member 2</h4>
+              </div>
+              <div class="usa-card__body">
+                <div class="grid-row grid-gap">
+                  <div class="grid-col-12 tablet:grid-col-4">
+                    <label class="usa-label" for="member2-name">Full name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+                    <input class="usa-input" id="member2-name" name="member2-name" type="text" required="" value="Sofia Rodriguez" aria-required="true">
+                  </div>
+                  <div class="grid-col-12 tablet:grid-col-4">
+                    <label class="usa-label" for="member2-dob">Date of birth <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+                    <input class="usa-input" id="member2-dob" name="member2-dob" type="date" required="" value="2012-08-22" aria-required="true">
+                  </div>
+                  <div class="grid-col-12 tablet:grid-col-4">
+                    <label class="usa-label" for="member2-relationship">Relationship <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+                    <select class="usa-select" id="member2-relationship" name="member2-relationship" required="" aria-required="true">
+                      <option value="">- Select -</option>
+                      <option value="spouse">Spouse</option>
+                      <option value="child" selected="">Child</option>
+                      <option value="parent">Parent</option>
+                      <option value="sibling">Sibling</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button aria-label="Perform action" type="button" class="usa-button usa-button--outline">
+            <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/add_circle.svg" alt="Add icon" class="usa-icon">
+            Add another household member
+          </button>
+        </div>
+
+        <!-- Special Circumstances -->
+        <fieldset class="usa-fieldset">
+          <legend class="usa-legend">Special Circumstances</legend>
+          <p class="usa-hint">Check all that apply to anyone in your household</p>
+          
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="pregnant" name="circumstances" type="checkbox" value="pregnant">
+            <label class="usa-checkbox__label" for="pregnant">Someone is pregnant</label>
+          </div>
+          
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="disabled" name="circumstances" type="checkbox" value="disabled" checked="">
+            <label class="usa-checkbox__label" for="disabled">Someone has a disability</label>
+          </div>
+          
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="veteran" name="circumstances" type="checkbox" value="veteran">
+            <label class="usa-checkbox__label" for="veteran">Someone is a veteran</label>
+          </div>
+          
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="student" name="circumstances" type="checkbox" value="student" checked="">
+            <label class="usa-checkbox__label" for="student">Someone is a full-time student</label>
+          </div>
+        </fieldset>
+
+        <!-- Housing Situation -->
+        <div>
+          <label class="usa-label" for="housing">Current housing situation <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+          <select class="usa-select" id="housing" name="housing" required="" aria-required="true">
+            <option value="">- Select -</option>
+            <option value="rent" selected="">Renting</option>
+            <option value="own">Own home</option>
+            <option value="family">Living with family/friends</option>
+            <option value="shelter">Temporary shelter</option>
+            <option value="none">No permanent address</option>
+          </select>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="monthly-rent">Monthly rent/mortgage payment</label>
+            <div class="usa-input-group">
+              <div class="usa-input-prefix" aria-hidden="true">$</div>
+              <input class="usa-input" id="monthly-rent" name="monthly-rent" type="number" value="1850">
+            </div>
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="utilities">Average monthly utilities</label>
+            <div class="usa-input-group">
+              <div class="usa-input-prefix" aria-hidden="true">$</div>
+              <input class="usa-input" id="utilities" name="utilities" type="number" value="245">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Help Text -->
+      <div class="usa-alert usa-alert--info usa-alert--slim">
+        <div class="usa-alert__body">
+          <p class="usa-alert__text">
+            <strong>Why we ask:</strong> Household information helps us calculate the correct benefit amount and identify all programs you may qualify for. All information is kept strictly confidential.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="grid-row">
+        <div class="grid-col-12 tablet:grid-col-6">
+          <button type="button" class="usa-button usa-button--outline">
+            Previous: Personal Information
+          </button>
+        </div>
+        <div class="grid-col-12 tablet:grid-col-6 text-right">
+          <button type="submit" class="usa-button">
+            Continue to Income Information
+          </button>
+        </div>
+      </div>
+
+      <!-- Save and Exit -->
+      <div class="grid-row">
+        <div class="grid-col-12 text-center">
+          <button type="button" class="usa-button usa-button--unstyled">
+            Save and exit application
+          </button>
+        </div>
+      </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Additional Resources -->
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Need Help?</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">Call Us</h3>
+                  <p>
+                    <a href="tel:1-800-555-0123" class="usa-link">1-800-555-0123</a><br>
+                    Monday-Friday, 8am-8pm ET<br>
+                    <span>Average wait time: 3 minutes</span>
+                  </p>
+                </div>
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">Live Chat</h3>
+                  <p>
+                    <button class="usa-button usa-button--outline">Start chat</button><br>
+                    <span>Available 24/7</span>
+                  </p>
+                </div>
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">Find Local Office</h3>
+                  <p>
+                    <a href="#" class="usa-link">Locate nearest office</a><br>
+                    <span>In-person assistance available</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</main>
+
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-container">
+      <div class="usa-footer__contact-links">
+        <p class="usa-footer__contact-heading">Contact the Benefits Office</p>
+        <address class="usa-footer__address">
+          <div class="usa-footer__contact-info grid-row grid-gap">
+            <div class="grid-col-auto">
+              <a href="tel:1-800-555-0123">1-800-555-0123</a>
+            </div>
+            <div class="grid-col-auto">
+              <a href="mailto:benefits@agency.gov">benefits@agency.gov</a>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body></html>

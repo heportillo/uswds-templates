@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment Plan Application - U.S. Government</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
 </head>
 <body>
 <section class="usa-banner" aria-label="Official website of the United States government">
@@ -33,20 +32,20 @@
 </header>
 <main id="main-content">
   <div class="grid-container">
-    <div class="grid-row">
-      <div class="grid-col-12">
+    <div class="grid-row grid-gap">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
         <h1>Payment Plan Application</h1>
-        <form class="usa-form">
+        <form class="usa-form usa-form--large">
           <fieldset class="usa-fieldset">
             <legend class="usa-legend usa-legend--large">Personal Information</legend>
             <label class="usa-label" for="first-name">First name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-            <input class="usa-input" id="first-name" name="first-name" type="text" required>
+            <input class="usa-input" id="first-name" name="first-name" type="text" required="" aria-required="true">
             
             <label class="usa-label" for="last-name">Last name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-            <input class="usa-input" id="last-name" name="last-name" type="text" required>
+            <input class="usa-input" id="last-name" name="last-name" type="text" required="" aria-required="true">
             
             <label class="usa-label" for="email">Email address <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-            <input class="usa-input" id="email" name="email" type="email" required>
+            <input class="usa-input" id="email" name="email" type="email" required="" aria-required="true">
             
             <label class="usa-label" for="phone">Phone number</label>
             <input class="usa-input" id="phone" name="phone" type="tel">
@@ -58,12 +57,12 @@
             <textarea class="usa-textarea" id="comments" name="comments"></textarea>
             
             <div class="usa-checkbox">
-              <input class="usa-checkbox__input" id="agreement" type="checkbox" name="agreement" value="agree" required>
+              <input class="usa-checkbox__input" id="agreement" type="checkbox" name="agreement" value="agree" required="" aria-required="true">
               <label class="usa-checkbox__label" for="agreement">I agree to the terms and conditions</label>
             </div>
           </fieldset>
           
-          <div class="margin-top-3">
+          <div>
             <button type="submit" class="usa-button">Submit</button>
             <button type="button" class="usa-button usa-button--outline">Save draft</button>
             <button type="reset" class="usa-button usa-button--unstyled">Clear form</button>
@@ -79,5 +78,6 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
-</body>
-</html>
+
+
+</body></html>

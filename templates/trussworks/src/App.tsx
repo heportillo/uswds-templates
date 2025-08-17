@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { GridContainer } from '@trussworks/react-uswds';
 import Home from './templates/Home';
 import TemplatePlaceholder from './components/TemplatePlaceholder';
+import AgriculturalDashboard from './templates/dashboards/AgriculturalDashboard';
 
 /* ========== TRUSSWORKS REACT USWDS APP ========== */
 
@@ -27,6 +28,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/dashboards/agricultural-dashboard" element={<AgriculturalDashboard />} />
       <Route path="/dashboards/federal-analytics" element={<TemplatePlaceholder path="/dashboards/federal-analytics" />} />
       <Route path="/dashboards/case-management" element={<TemplatePlaceholder path="/dashboards/case-management" />} />
       <Route path="/forms/benefits-application" element={<TemplatePlaceholder path="/forms/benefits-application" />} />

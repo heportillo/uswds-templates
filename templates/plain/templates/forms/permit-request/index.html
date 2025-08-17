@@ -1,48 +1,376 @@
-<!-- ========== PERMIT REQUEST FORM (PLACEHOLDER) ========== -->
-<div class="usa-section">
-  <div class="grid-container">
-    <div class="usa-alert usa-alert--info">
-      <div class="usa-alert__body">
-        <h4 class="usa-alert__heading">Template Coming Soon</h4>
-        <p class="usa-alert__text">
-          The Permit Request Form template will be created here.
-        </p>
-      </div>
-    </div>
-    
-    <div class="margin-top-4">
-      <h1 class="usa-heading">Permit Request Form</h1>
-      <p class="usa-intro">This will be a form for requesting various types of permits.</p>
-      
-      <div class="usa-card margin-top-4">
-        <div class="usa-card__container">
-          <div class="usa-card__header">
-            <h2 class="usa-card__heading">Planned Features</h2>
-          </div>
-          <div class="usa-card__body">
-            <ul class="usa-list">
-              <li>Permit type selection</li>
-              <li>Applicant information</li>
-              <li>Location details</li>
-              <li>Project description</li>
-              <li>Supporting documentation upload</li>
-              <li>Fee calculator</li>
-              <li>Electronic signature</li>
-            </ul>
-          </div>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permit Request Form - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
+</head>
+<body>
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
         </div>
       </div>
-      
-      <div class="margin-top-4">
-        <p>To create this template, use Claude Code with a prompt like:</p>
-        <div class="usa-alert usa-alert--slim">
+    </header>
+  </div>
+</section>
+
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="Home">Permit &amp; Licensing Portal</a>
+        </em>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="grid-container">
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+        <h1>Building Permit Application</h1>
+        <p class="usa-intro">Apply for construction, renovation, or demolition permits for your project.</p>
+      </div>
+    </div>
+
+    <!-- Application Status Card -->
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+        <div class="usa-alert usa-alert--info usa-alert--slim">
           <div class="usa-alert__body">
             <p class="usa-alert__text">
-              "Create a permit request form with permit type selection, applicant details, project information, document upload, and fee payment"
+              <strong>Estimated processing time: 10-15 business days</strong> | Most applications are reviewed within 2 weeks. Complex projects may require additional time.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <form class="usa-form usa-form--large">
+      <!-- Section 1: Permit Type -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend usa-legend--large">
+          <span>Step 1 of 4:</span> Select Permit Type
+        </legend>
+        
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="permit-type">Permit type <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <select class="usa-select" id="permit-type" name="permit-type" required="" aria-required="true">
+              <option value="">- Select permit type -</option>
+              <option value="new-construction">New Construction</option>
+              <option value="renovation" selected="">Renovation/Alteration</option>
+              <option value="demolition">Demolition</option>
+              <option value="electrical">Electrical</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="mechanical">Mechanical/HVAC</option>
+              <option value="fence">Fence Installation</option>
+              <option value="sign">Sign Installation</option>
+            </select>
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="project-value">Estimated project value <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <div class="usa-input-group">
+              <div class="usa-input-prefix" aria-hidden="true">$</div>
+              <input class="usa-input" id="project-value" name="project-value" type="number" min="0" required="" value="75000" aria-required="true">
+            </div>
+            <span class="usa-hint">Used to calculate permit fees</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Fee Calculator -->
+        <div class="usa-alert usa-alert--success">
+          <div class="usa-alert__body">
+            <h4 class="usa-alert__heading">Estimated Permit Fee</h4>
+            <p class="usa-alert__text">
+              Base fee: <strong>$850.00</strong><br>
+              Plan review fee: <strong>$425.00</strong><br>
+              <span class="font-sans-lg">Total: $1,275.00</span>
+            </p>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 2: Property Information -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend usa-legend--large">
+          <span>Step 2 of 4:</span> Property Information
+        </legend>
+        
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+            <label class="usa-label" for="property-address">Property address <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="property-address" name="property-address" type="text" required="" value="1234 Construction Ave" aria-required="true">
+          </div>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="city">City <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="city" name="city" type="text" required="" value="Arlington" aria-required="true">
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-3">
+            <label class="usa-label" for="state">State <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <select class="usa-select" id="state" name="state" required="" aria-required="true">
+              <option value="">- Select -</option>
+              <option value="VA" selected="">Virginia</option>
+              <option value="MD">Maryland</option>
+              <option value="DC">District of Columbia</option>
+            </select>
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-3">
+            <label class="usa-label" for="zip">ZIP code <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input usa-input--medium" id="zip" name="zip" type="text" pattern="[0-9]{5}" required="" value="22201" aria-required="true">
+          </div>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="parcel-number">Parcel/Tax ID number</label>
+            <input class="usa-input" id="parcel-number" name="parcel-number" type="text" value="12-345-6789">
+            <span class="usa-hint">Can be found on your property tax bill</span>
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="lot-size">Lot size (sq ft)</label>
+            <input class="usa-input" id="lot-size" name="lot-size" type="number" value="8500">
+          </div>
+        </div>
+
+        <fieldset class="usa-fieldset">
+          <legend class="usa-legend">Property type</legend>
+          <div class="usa-radio">
+            <input class="usa-radio__input" id="residential" type="radio" name="property-type" value="residential" checked="">
+            <label class="usa-radio__label" for="residential">Residential</label>
+          </div>
+          <div class="usa-radio">
+            <input class="usa-radio__input" id="commercial" type="radio" name="property-type" value="commercial">
+            <label class="usa-radio__label" for="commercial">Commercial</label>
+          </div>
+          <div class="usa-radio">
+            <input class="usa-radio__input" id="industrial" type="radio" name="property-type" value="industrial">
+            <label class="usa-radio__label" for="industrial">Industrial</label>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <!-- Section 3: Project Details -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend usa-legend--large">
+          <span>Step 3 of 4:</span> Project Details
+        </legend>
+        
+        <label class="usa-label" for="project-description">Project description <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+        <textarea class="usa-textarea" id="project-description" name="project-description" rows="4" required="" aria-required="true">Kitchen renovation including removal of non-load bearing wall between kitchen and dining room. Installation of new cabinets, countertops, and appliances. Electrical work to add new outlets and lighting fixtures. Plumbing modifications for dishwasher and sink relocation.</textarea>
+        <span class="usa-hint">Provide a detailed description of all work to be performed</span>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-4">
+            <label class="usa-label" for="start-date">Proposed start date <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="start-date" name="start-date" type="date" required="" value="2025-03-01" aria-required="true">
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-4">
+            <label class="usa-label" for="completion-date">Expected completion date <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="completion-date" name="completion-date" type="date" required="" value="2025-05-15" aria-required="true">
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-4">
+            <label class="usa-label" for="square-footage">Project square footage</label>
+            <input class="usa-input" id="square-footage" name="square-footage" type="number" value="450">
+          </div>
+        </div>
+
+        <!-- Contractor Information -->
+        <h3>Contractor Information</h3>
+        
+        <div class="usa-checkbox">
+          <input class="usa-checkbox__input" id="owner-builder" name="owner-builder" type="checkbox" value="owner-builder">
+          <label class="usa-checkbox__label" for="owner-builder">I am the owner-builder for this project</label>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="contractor-name">Contractor name</label>
+            <input class="usa-input" id="contractor-name" name="contractor-name" type="text" value="Quality Construction LLC">
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="contractor-license">Contractor license number</label>
+            <input class="usa-input" id="contractor-license" name="contractor-license" type="text" value="VA-2705123456">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Section 4: Documents -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend usa-legend--large">
+          <span>Step 4 of 4:</span> Required Documents
+        </legend>
+        
+        <p>Upload all required documents for your permit type. Files must be in PDF format and under 10MB each.</p>
+
+        <div class="usa-form-group">
+          <label class="usa-label" for="site-plan">
+            Site plan/Plot plan <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+          </label>
+          <span class="usa-hint">Shows property boundaries, existing structures, and proposed work</span>
+          <input class="usa-file-input" id="site-plan" name="site-plan" type="file" accept=".pdf" required="" aria-required="true">
+        </div>
+
+        <div class="usa-form-group">
+          <label class="usa-label" for="construction-drawings">
+            Construction drawings/Floor plans <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+          </label>
+          <span class="usa-hint">Detailed drawings showing all proposed work</span>
+          <input class="usa-file-input" id="construction-drawings" name="construction-drawings" type="file" accept=".pdf" required="" aria-required="true">
+        </div>
+
+        <div class="usa-form-group">
+          <label class="usa-label" for="additional-docs">
+            Additional documents (optional)
+          </label>
+          <span class="usa-hint">Engineering reports, surveys, or other supporting documents</span>
+          <input class="usa-file-input" id="additional-docs" name="additional-docs" type="file" accept=".pdf" multiple="">
+        </div>
+
+        <!-- Uploaded Files Display -->
+        <div class="usa-alert usa-alert--info usa-alert--slim">
+          <div class="usa-alert__body">
+            <p class="usa-alert__text">
+              <strong>Files ready for upload:</strong> site-plan.pdf (2.3 MB), floor-plans.pdf (4.1 MB)
+            </p>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Certification -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend">Certification</legend>
+        
+        <div class="usa-checkbox">
+          <input class="usa-checkbox__input" id="certification" name="certification" type="checkbox" value="certified" required="" aria-required="true">
+          <label class="usa-checkbox__label" for="certification">
+            I certify that all information provided is true and accurate to the best of my knowledge. I understand that providing false information may result in permit denial or revocation.
+          </label>
+        </div>
+
+        <div class="usa-checkbox">
+          <input class="usa-checkbox__input" id="property-owner" name="property-owner" type="checkbox" value="owner" required="" aria-required="true">
+          <label class="usa-checkbox__label" for="property-owner">
+            I am the property owner or have authorization from the property owner to apply for this permit
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Electronic Signature -->
+      <fieldset class="usa-fieldset">
+        <legend class="usa-legend">Electronic Signature</legend>
+        
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="signature-name">Full name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="signature-name" name="signature-name" type="text" required="" value="Robert Johnson" aria-required="true">
+          </div>
+          
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="signature-date">Date <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="signature-date" name="signature-date" type="date" required="" value="2025-01-17" aria-required="true">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Form Actions -->
+      <div>
+        <button type="submit" class="usa-button">Submit Application</button>
+        <button type="button" class="usa-button usa-button--outline usa-button--big">Save as Draft</button>
+      </div>
+    </form>
+
+    <!-- Help Section -->
+    <div class="grid-row">
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h2 class="usa-card__heading">Need Assistance?</h2>
+            </div>
+            <div class="usa-card__body">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">Permit Office</h3>
+                  <p>
+                    <a href="tel:703-555-0147" class="usa-link">703-555-0147</a><br>
+                    Monday-Friday, 8am-5pm<br>
+                    <a href="mailto:permits@arlington.gov" class="usa-link">permits@arlington.gov</a>
+                  </p>
+                </div>
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">In-Person Help</h3>
+                  <p>
+                    2100 Clarendon Blvd<br>
+                    Suite 800<br>
+                    Arlington, VA 22201<br>
+                    <a href="#" class="usa-link">Get directions</a>
+                  </p>
+                </div>
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <h3 class="font-sans-md">Resources</h3>
+                  <p>
+                    <a href="#" class="usa-link">Permit fee schedule</a><br>
+                    <a href="#" class="usa-link">Application checklist</a><br>
+                    <a href="#" class="usa-link">Zoning requirements</a><br>
+                    <a href="#" class="usa-link">Track existing permit</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</main>
+
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-container">
+      <div class="usa-footer__contact-links">
+        <p class="usa-footer__contact-heading">Permit &amp; Licensing Office</p>
+        <address class="usa-footer__address">
+          <div class="usa-footer__contact-info grid-row grid-gap">
+            <div class="grid-col-auto">
+              <a href="tel:703-555-0147">703-555-0147</a>
+            </div>
+            <div class="grid-col-auto">
+              <a href="mailto:permits@arlington.gov">permits@arlington.gov</a>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body></html>

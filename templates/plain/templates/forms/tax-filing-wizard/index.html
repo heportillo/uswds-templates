@@ -1,6 +1,148 @@
-<!-- ========== TAX FILING WIZARD ========== -->
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Filing Wizard - IRS E-File System</title>
+  <meta name="description" content="File your federal tax return online with our guided step-by-step wizard. Free for eligible taxpayers.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
+  <style>
+    /* Enhanced responsive styles for tax filing wizard */
+    .tax-summary-card {
+      background: linear-gradient(135deg, #005ea2 0%, #2378c3 100%);
+      color: white;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .tax-summary-card h2 {
+      color: white;
+      margin-top: 0;
+    }
+    
+    .refund-amount {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00f900;
+      text-shadow: 0 0 10px rgba(0, 249, 0, 0.3);
+    }
+    
+    .owed-amount {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fb5a47;
+      text-shadow: 0 0 10px rgba(251, 90, 71, 0.3);
+    }
+    
+    .deduction-comparison {
+      background: #f0f0f0;
+      border-left: 4px solid #005ea2;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .progress-tracker {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+    }
+    
+    .auto-save-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #00a91c;
+      font-size: 0.875rem;
+    }
+    
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    
+    .saving {
+      animation: pulse 1s infinite;
+    }
+    
+    /* Responsive grid for deduction cards */
+    .deduction-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    @media (min-width: 640px) {
+      .deduction-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .deduction-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Accessible focus indicators */
+    .form-control:focus {
+      outline: 4px solid #2491ff;
+      outline-offset: 2px;
+    }
+    
+    /* Enhanced button states */
+    .usa-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    /* Responsive tables */
+    @media (max-width: 640px) {
+      .responsive-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    
+    /* Help tooltip */
+    .help-tooltip {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #005ea2;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      cursor: help;
+      margin-left: 0.5rem;
+    }
+    
+    /* Error state styling */
+    .field-error {
+      border-left: 4px solid #e41d3d;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    
+    /* Success state styling */
+    .field-success {
+      border-left: 4px solid #00a91c;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
 
-<!-- ========== GOVERNMENT BANNER ========== -->
+<!-- Skip Navigation -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- Government Banner -->
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
@@ -12,18 +154,18 @@
           <p class="usa-banner__header-text">An official website of the United States government</p>
           <p class="usa-banner__header-action">Here's how you know</p>
         </div>
-        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-tax-filing">
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
           <span class="usa-banner__button-text">Here's how you know</span>
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-tax-filing" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -32,8 +174,8 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
-              A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+              <strong>Secure .gov websites use HTTPS</strong><br>
+              A lock (<span aria-hidden="true">🔒</span>) or https:// means you've safely connected to the .gov website.
             </p>
           </div>
         </div>
@@ -42,237 +184,408 @@
   </div>
 </section>
 
-<!-- ========== HEADER SECTION ========== -->
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text">
-          <a href="/" title="Home">IRS E-File</a>
-        </em>
+<!-- Header -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a href="/" title="IRS E-File Home">
+          IRS E-File System
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close" aria-label="Close"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close"></button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link usa-current">
+            <span>File Taxes</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Check Status</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link">
+            <span>Get Help</span>
+          </a>
+        </li>
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <circle cx="8" cy="8" r="3"></circle>
+              </svg>
+              Auto-saving enabled
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </header>
 
-<!-- ========== MAIN CONTENT ========== -->
+<!-- Main Content -->
 <main id="main-content">
-  <!-- === Progress Indicator === -->
-  <section class="usa-section padding-y-2">
+  <!-- Progress Indicator (Sticky) -->
+  <div>
     <div class="grid-container">
-      <div class="usa-step-indicator usa-step-indicator--counters-sm">
+      <div class="usa-step-indicator usa-step-indicator--counters-sm" aria-label="Filing progress">
         <ol class="usa-step-indicator__segments">
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Personal Info</span>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete" aria-label="Step 1 of 5">
+            <span class="usa-step-indicator__segment-label">Personal Info <span class="usa-sr-only">(completed)</span></span>
           </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-            <span class="usa-step-indicator__segment-label">Income</span>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--complete" aria-label="Step 2 of 5">
+            <span class="usa-step-indicator__segment-label">Income <span class="usa-sr-only">(completed)</span></span>
           </li>
-          <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
-            <span class="usa-step-indicator__segment-label">Deductions</span>
+          <li class="usa-step-indicator__segment usa-step-indicator__segment--current" aria-current="step" aria-label="Step 3 of 5">
+            <span class="usa-step-indicator__segment-label">Deductions <span class="usa-sr-only">(current step)</span></span>
           </li>
-          <li class="usa-step-indicator__segment">
+          <li class="usa-step-indicator__segment" aria-label="Step 4 of 5">
             <span class="usa-step-indicator__segment-label">Review</span>
           </li>
-          <li class="usa-step-indicator__segment">
+          <li class="usa-step-indicator__segment" aria-label="Step 5 of 5">
             <span class="usa-step-indicator__segment-label">E-File</span>
           </li>
         </ol>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- === Form Header === -->
-  <section class="usa-section padding-y-3">
+  <!-- Page Header -->
+  <section class="usa-section">
     <div class="grid-container">
-      <div class="grid-row">
+      <div class="grid-row grid-gap">
         <div class="tablet:grid-col-8">
-          <h1 class="usa-heading">Tax Year 2023 Filing</h1>
-          <p class="usa-intro">Step 3 of 5: Deductions and Credits</p>
+          <h1>2024 Tax Return - Deductions &amp; Credits</h1>
+          <p class="usa-intro">
+            Let's maximize your deductions to reduce your tax liability. We'll guide you through every option.
+          </p>
         </div>
         <div class="tablet:grid-col-4 text-right">
-          <button type="button" class="usa-button usa-button--outline">
-            Save & Exit
+          <button aria-label="Perform action" type="button" class="usa-button usa-button--outline">
+            <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/file_download.svg" role="img" alt="" aria-hidden="true" width="20" height="20">
+            Save &amp; Exit
           </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- === Form Content === -->
+  <!-- Real-time Tax Summary -->
   <section class="usa-section">
     <div class="grid-container">
-      <form class="usa-form usa-form--large">
-        <!-- Standard Deduction vs Itemized -->
-        <fieldset class="usa-fieldset margin-bottom-4">
-          <legend class="usa-legend usa-legend--large">Choose Your Deduction Method</legend>
-          
-          <div class="usa-radio">
-            <input class="usa-radio__input" id="standard-deduction" type="radio" name="deduction-type" value="standard" checked>
-            <label class="usa-radio__label" for="standard-deduction">
-              <strong>Standard Deduction - $13,850</strong>
-              <span class="usa-hint">Recommended for most taxpayers. No additional documentation required.</span>
-            </label>
+      <div role="region" aria-label="Tax calculation summary">
+        <div class="grid-row grid-gap-lg">
+          <div class="tablet:grid-col-3">
+            <h2>Adjusted Gross Income</h2>
+            <p class="font-sans-2xl">$87,432</p>
           </div>
-          
-          <div class="usa-radio">
-            <input class="usa-radio__input" id="itemized-deduction" type="radio" name="deduction-type" value="itemized">
-            <label class="usa-radio__label" for="itemized-deduction">
-              <strong>Itemized Deductions</strong>
-              <span class="usa-hint">Choose this if your total deductions exceed the standard deduction amount.</span>
-            </label>
+          <div class="tablet:grid-col-3">
+            <h2>Total Deductions</h2>
+            <p class="font-sans-2xl">$14,950</p>
           </div>
-        </fieldset>
+          <div class="tablet:grid-col-3">
+            <h2>Tax Liability</h2>
+            <p class="font-sans-2xl">$11,284</p>
+          </div>
+          <div class="tablet:grid-col-3">
+            <h2>Estimated Refund</h2>
+            <p>$2,847</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Itemized Deductions (shown when itemized is selected) -->
-        <div id="itemized-section" class="display-none">
-          <h2>Itemized Deductions</h2>
+  <!-- Deduction Method Selection -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <form class="usa-form usa-form usa-form--large--large" novalidate="">
+        
+        <!-- Standard vs Itemized Comparison -->
+        <div role="region" aria-label="Deduction comparison">
+          <h2>Choose Your Deduction Method</h2>
+          <p>Based on your income, we recommend the <strong>Standard Deduction</strong> which will save you approximately <strong>$3,361</strong> in taxes.</p>
           
-          <!-- Medical and Dental Expenses -->
-          <div class="usa-card margin-bottom-3">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-sr-only">Select deduction method</legend>
+            
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="standard-deduction" type="radio" name="deduction-method" value="standard" checked="" aria-describedby="standard-desc">
+              <label class="usa-radio__label" for="standard-deduction">
+                <strong>Standard Deduction - $14,600</strong>
+                <span role="img" aria-label="Help" title="The standard deduction is a fixed amount that reduces your taxable income">?</span>
+              </label>
+              <div id="standard-desc" class="usa-hint">
+                Recommended for your situation. No receipts or documentation required. This is the simplest option used by 87% of taxpayers.
+              </div>
+            </div>
+            
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="itemized-deduction" type="radio" name="deduction-method" value="itemized" aria-describedby="itemized-desc">
+              <label class="usa-radio__label" for="itemized-deduction">
+                <strong>Itemized Deductions - Currently $8,742</strong>
+                <span role="img" aria-label="Help" title="Itemized deductions let you deduct specific expenses like mortgage interest and charitable donations">?</span>
+              </label>
+              <div id="itemized-desc" class="usa-hint">
+                Choose this if you have significant mortgage interest, state taxes, or charitable donations. Requires documentation for all claimed expenses.
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Itemized Deductions Section (Hidden by default) -->
+        <div id="itemized-section" aria-hidden="true">
+          <h2>Enter Your Itemized Deductions</h2>
+          
+          <div>
+            <!-- Medical Expenses Card -->
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">
+                    Medical &amp; Dental Expenses
+                    <span class="usa-tag">$0 eligible</span>
+                  </h3>
+                </div>
+                <div class="usa-card__body">
+                  <div class="usa-alert usa-alert--info" role="alert">
+                    <div class="usa-alert__body">
+                      <p class="usa-alert__text">Only expenses exceeding 7.5% of AGI ($6,557) are deductible</p>
+                    </div>
+                  </div>
+                  
+                  <label class="usa-label" for="medical-expenses">
+                    Total medical and dental expenses for 2024
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="medical-expenses" name="medical-expenses" type="text" inputmode="numeric" pattern="[0-9]*" aria-describedby="medical-hint" value="3,245">
+                  </div>
+                  <span id="medical-hint" class="usa-hint">Include insurance premiums, prescriptions, and doctor visits</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- State and Local Taxes Card -->
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">
+                    State &amp; Local Taxes (SALT)
+                    <span class="usa-tag">$8,742 claimed</span>
+                  </h3>
+                </div>
+                <div class="usa-card__body">
+                  <div class="usa-alert usa-alert--warning" role="alert">
+                    <div class="usa-alert__body">
+                      <p class="usa-alert__text">SALT deduction is capped at $10,000</p>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-row grid-gap-1">
+                    <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-6">
+                      <label class="usa-label" for="state-income-tax">State income tax</label>
+                      <div class="usa-input-group">
+                        <div class="usa-input-prefix">$</div>
+                        <input class="usa-input" id="state-income-tax" name="state-income-tax" type="text" inputmode="numeric" pattern="[0-9]*" value="5,432">
+                      </div>
+                    </div>
+                    <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-6">
+                      <label class="usa-label" for="property-tax">Property tax</label>
+                      <div class="usa-input-group">
+                        <div class="usa-input-prefix">$</div>
+                        <input class="usa-input" id="property-tax" name="property-tax" type="text" inputmode="numeric" pattern="[0-9]*" value="3,310">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mortgage Interest Card -->
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">
+                    Mortgage Interest
+                    <span class="usa-tag">$0 claimed</span>
+                  </h3>
+                </div>
+                <div class="usa-card__body">
+                  <label class="usa-label" for="mortgage-interest">
+                    Mortgage interest from Form 1098
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="mortgage-interest" name="mortgage-interest" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                  </div>
+                  <span class="usa-hint">Enter the amount from box 1 of your Form 1098</span>
+                  
+                  <label class="usa-label" for="mortgage-points">
+                    Points paid (if any)
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="mortgage-points" name="mortgage-points" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Charitable Donations Card -->
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">
+                    Charitable Donations
+                    <span class="usa-tag">$0 claimed</span>
+                  </h3>
+                </div>
+                <div class="usa-card__body">
+                  <label class="usa-label" for="cash-donations">
+                    Cash donations to qualified charities
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="cash-donations" name="cash-donations" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                  </div>
+                  
+                  <label class="usa-label" for="noncash-donations">
+                    Non-cash donations (clothes, household items)
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="noncash-donations" name="noncash-donations" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                  </div>
+                  <span class="usa-hint">Use fair market value for non-cash items</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tax Credits Section -->
+        <h2>Tax Credits</h2>
+        <p>Credits directly reduce your tax bill dollar-for-dollar. Let's check if you qualify for any.</p>
+
+        <div>
+          <!-- Child Tax Credit -->
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
-                <h3 class="usa-card__heading">Medical and Dental Expenses</h3>
+                <h3 class="usa-card__heading">Child Tax Credit</h3>
               </div>
               <div class="usa-card__body">
-                <div class="grid-row grid-gap-2">
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="medical-expenses">
-                      Total medical and dental expenses
-                    </label>
-                    <span class="usa-hint">Only amounts over 7.5% of your AGI are deductible</span>
-                    <input class="usa-input" id="medical-expenses" name="medical-expenses" type="number" step="0.01" min="0">
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend">Do you have qualifying children?</legend>
+                  <div class="usa-radio">
+                    <input class="usa-radio__input" id="children-yes" type="radio" name="has-children" value="yes">
+                    <label class="usa-radio__label" for="children-yes">Yes</label>
                   </div>
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="health-insurance">
-                      Health insurance premiums (if self-employed)
-                    </label>
-                    <input class="usa-input" id="health-insurance" name="health-insurance" type="number" step="0.01" min="0">
+                  <div class="usa-radio">
+                    <input class="usa-radio__input" id="children-no" type="radio" name="has-children" value="no" checked="">
+                    <label class="usa-radio__label" for="children-no">No</label>
                   </div>
+                </fieldset>
+                
+                <div id="children-details">
+                  <label class="usa-label" for="num-children">
+                    Number of qualifying children under 17
+                  </label>
+                  <select class="usa-select" id="num-children" name="num-children">
+                    <option value="0">89</option>
+                    <option value="1">1 child - $2,000 credit</option>
+                    <option value="2">2 children - $4,000 credit</option>
+                    <option value="3">3 children - $6,000 credit</option>
+                    <option value="4">4+ children - $8,000+ credit</option>
+                  </select>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- State and Local Taxes -->
-          <div class="usa-card margin-bottom-3">
+          <!-- Earned Income Credit -->
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
-                <h3 class="usa-card__heading">State and Local Taxes (SALT)</h3>
+                <h3 class="usa-card__heading">Earned Income Credit</h3>
               </div>
               <div class="usa-card__body">
-                <div class="usa-alert usa-alert--info">
+                <div class="usa-alert usa-alert--info" role="status">
                   <div class="usa-alert__body">
                     <p class="usa-alert__text">
-                      <strong>Note:</strong> Total SALT deduction is limited to $10,000
+                      Based on your income of $87,432, you do not qualify for the Earned Income Credit.
                     </p>
                   </div>
                 </div>
-                <div class="grid-row grid-gap-2 margin-top-2">
-                  <div class="tablet:grid-col-4">
-                    <label class="usa-label" for="state-income-tax">
-                      State income tax paid
-                    </label>
-                    <input class="usa-input" id="state-income-tax" name="state-income-tax" type="number" step="0.01" min="0">
-                  </div>
-                  <div class="tablet:grid-col-4">
-                    <label class="usa-label" for="property-tax">
-                      Property taxes paid
-                    </label>
-                    <input class="usa-input" id="property-tax" name="property-tax" type="number" step="0.01" min="0">
-                  </div>
-                  <div class="tablet:grid-col-4">
-                    <label class="usa-label" for="sales-tax">
-                      Sales tax paid (if deducting instead of income tax)
-                    </label>
-                    <input class="usa-input" id="sales-tax" name="sales-tax" type="number" step="0.01" min="0">
-                  </div>
-                </div>
+                <p class="font-sans-xs">
+                  The EIC is available for working families with income under $63,398 (with children) or $17,640 (without children).
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Mortgage Interest -->
-          <div class="usa-card margin-bottom-3">
+          <!-- Education Credits -->
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
-                <h3 class="usa-card__heading">Mortgage Interest</h3>
+                <h3 class="usa-card__heading">Education Credits</h3>
               </div>
               <div class="usa-card__body">
-                <div class="grid-row grid-gap-2">
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="mortgage-interest">
-                      Mortgage interest paid (Form 1098)
+                <span class="usa-label">Did you pay for higher education in 2024?</span>
+<div class="usa-checkbox">
+                    <input class="usa-checkbox__input" id="american-opportunity" type="checkbox" name="education-credits" value="aotc">
+                    <label class="usa-checkbox__label" for="american-opportunity">
+                      American Opportunity Credit (up to $2,500)
                     </label>
-                    <input class="usa-input" id="mortgage-interest" name="mortgage-interest" type="number" step="0.01" min="0">
                   </div>
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="mortgage-points">
-                      Points paid on mortgage
+                  
+                  <div class="usa-checkbox">
+                    <input class="usa-checkbox__input" id="lifetime-learning" type="checkbox" name="education-credits" value="llc">
+                    <label class="usa-checkbox__label" for="lifetime-learning">
+                      Lifetime Learning Credit (up to $2,000)
                     </label>
-                    <input class="usa-input" id="mortgage-points" name="mortgage-points" type="number" step="0.01" min="0">
+                  </div>
+                
+                <div id="education-expenses">
+                  <label class="usa-label" for="education-amount">
+                    Qualified education expenses
+                  </label>
+                  <div class="usa-input-group">
+                    <div class="usa-input-prefix">$</div>
+                    <input class="usa-input" id="education-amount" name="education-amount" type="text" inputmode="numeric" pattern="[0-9]*">
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Charitable Contributions -->
-          <div class="usa-card margin-bottom-3">
+          <!-- Retirement Savings Credit -->
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
-                <h3 class="usa-card__heading">Charitable Contributions</h3>
+                <h3 class="usa-card__heading">Retirement Savings Credit</h3>
               </div>
               <div class="usa-card__body">
-                <div class="grid-row grid-gap-2">
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="cash-donations">
-                      Cash donations to qualified organizations
-                    </label>
-                    <input class="usa-input" id="cash-donations" name="cash-donations" type="number" step="0.01" min="0">
-                  </div>
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="noncash-donations">
-                      Non-cash donations (fair market value)
-                    </label>
-                    <input class="usa-input" id="noncash-donations" name="noncash-donations" type="number" step="0.01" min="0">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tax Credits -->
-        <h2>Tax Credits</h2>
-        
-        <!-- Child and Dependent Care Credit -->
-        <div class="usa-card margin-bottom-3">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h3 class="usa-card__heading">Child and Dependent Care Credit</h3>
-            </div>
-            <div class="usa-card__body">
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="childcare-credit" type="checkbox" name="childcare-credit" value="yes">
-                <label class="usa-checkbox__label" for="childcare-credit">
-                  I paid for childcare or dependent care to enable me to work
+                <label class="usa-label" for="retirement-contributions">
+                  Contributions to IRA or 401(k) in 2024
                 </label>
-              </div>
-              
-              <div id="childcare-details" class="display-none margin-top-2">
-                <div class="grid-row grid-gap-2">
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="childcare-expenses">
-                      Total care expenses paid
-                    </label>
-                    <input class="usa-input" id="childcare-expenses" name="childcare-expenses" type="number" step="0.01" min="0">
-                  </div>
-                  <div class="tablet:grid-col-6">
-                    <label class="usa-label" for="dependents-count">
-                      Number of qualifying dependents
-                    </label>
-                    <input class="usa-input" id="dependents-count" name="dependents-count" type="number" min="0" max="10">
+                <div class="usa-input-group">
+                  <div class="usa-input-prefix">$</div>
+                  <input class="usa-input" id="retirement-contributions" name="retirement-contributions" type="text" inputmode="numeric" pattern="[0-9]*" value="6,500">
+                </div>
+                <div class="usa-alert usa-alert--success" role="status">
+                  <div class="usa-alert__body">
+                    <p class="usa-alert__text">Great job! You may qualify for a retirement savings credit.</p>
                   </div>
                 </div>
               </div>
@@ -280,131 +593,155 @@
           </div>
         </div>
 
-        <!-- Education Credits -->
-        <div class="usa-card margin-bottom-3">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h3 class="usa-card__heading">Education Credits</h3>
+        <!-- Action Buttons -->
+        <div>
+          <div class="grid-row grid-gap-2">
+            <div class="mobile:grid-col-12 tablet:grid-col-4">
+              <button type="button" class="usa-button usa-button--outline">
+                Save Progress
+              </button>
             </div>
-            <div class="usa-card__body">
-              <fieldset class="usa-fieldset">
-                <legend class="usa-legend">Did you pay qualified education expenses?</legend>
-                
-                <div class="usa-checkbox">
-                  <input class="usa-checkbox__input" id="american-opportunity" type="checkbox" name="education-credits" value="american-opportunity">
-                  <label class="usa-checkbox__label" for="american-opportunity">
-                    American Opportunity Tax Credit (first 4 years of college)
-                  </label>
-                </div>
-                
-                <div class="usa-checkbox">
-                  <input class="usa-checkbox__input" id="lifetime-learning" type="checkbox" name="education-credits" value="lifetime-learning">
-                  <label class="usa-checkbox__label" for="lifetime-learning">
-                    Lifetime Learning Credit (any post-secondary education)
-                  </label>
-                </div>
-              </fieldset>
-              
-              <div class="margin-top-2">
-                <label class="usa-label" for="education-expenses">
-                  Total qualified education expenses
-                </label>
-                <input class="usa-input" id="education-expenses" name="education-expenses" type="number" step="0.01" min="0">
-              </div>
+            <div class="mobile:grid-col-12 tablet:grid-col-4">
+              <button type="button" class="usa-button usa-button--base">
+                Previous: Income
+              </button>
             </div>
-          </div>
-        </div>
-
-        <!-- Summary -->
-        <div class="usa-card margin-bottom-4">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h3 class="usa-card__heading">Deductions and Credits Summary</h3>
+            <div class="mobile:grid-col-12 tablet:grid-col-4">
+              <button type="submit" class="usa-button">
+                Continue to Review
+              </button>
             </div>
-            <div class="usa-card__body">
-              <div class="grid-row grid-gap-2">
-                <div class="tablet:grid-col-6">
-                  <dl>
-                    <dt class="font-heading-md">Total Deductions</dt>
-                    <dd class="font-heading-lg">$0.00</dd>
-                    <dt class="font-heading-md margin-top-2">Total Credits</dt>
-                    <dd class="font-heading-lg">$0.00</dd>
-                  </dl>
-                </div>
-                <div class="tablet:grid-col-6">
-                  <dl>
-                    <dt class="font-heading-md">Estimated Tax Savings</dt>
-                    <dd class="font-heading-lg text-success">$0.00</dd>
-                    <dt class="font-heading-md margin-top-2">Estimated Refund/Owed</dt>
-                    <dd class="font-heading-lg">Calculating...</dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form Actions -->
-        <div class="grid-row grid-gap-2">
-          <div class="tablet:grid-col-4">
-            <button type="button" class="usa-button usa-button--outline width-full">
-              Save Draft
-            </button>
-          </div>
-          <div class="tablet:grid-col-4">
-            <button type="button" class="usa-button usa-button--outline width-full">
-              Previous Step
-            </button>
-          </div>
-          <div class="tablet:grid-col-4">
-            <button type="submit" class="usa-button width-full">
-              Continue to Review
-            </button>
           </div>
         </div>
       </form>
     </div>
   </section>
 
-  <!-- === Help Section === -->
+  <!-- Help Section -->
   <section class="usa-section">
     <div class="grid-container">
-      <div class="usa-alert usa-alert--info">
-        <div class="usa-alert__body">
-          <h4 class="usa-alert__heading">Need Help?</h4>
-          <p class="usa-alert__text">
-            Contact IRS customer service at (800) 829-1040 or visit your local Taxpayer Assistance Center. 
-            <a href="#" class="usa-link">Find locations near you</a>
-          </p>
+      <div class="grid-row grid-gap-lg">
+        <div class="tablet:grid-col-8">
+          <h2>Need Help?</h2>
+          <p>Our tax experts are here to assist you through the filing process.</p>
+          
+          <div class="usa-alert usa-alert--info" role="region" aria-label="Help information">
+            <div class="usa-alert__body">
+              <h3 class="usa-alert__heading">Free Tax Assistance Available</h3>
+              <p class="usa-alert__text">
+                <strong>IRS Customer Service:</strong> (800) 829-1040<br>
+                Monday - Friday, 7:00 AM - 7:00 PM local time
+              </p>
+              <p class="usa-alert__text">
+                <strong>Live Chat:</strong> Available on this page<br>
+                <strong>Local Help:</strong> <a href="#" class="usa-link">Find a Taxpayer Assistance Center near you</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tablet:grid-col-4">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Quick Resources</h3>
+              </div>
+              <div class="usa-card__body">
+                <ul class="usa-list">
+                  <li><a href="#" class="usa-link">Deduction Calculator</a></li>
+                  <li><a href="#" class="usa-link">2024 Tax Tables</a></li>
+                  <li><a href="#" class="usa-link">Form Instructions</a></li>
+                  <li><a href="#" class="usa-link">Video Tutorials</a></li>
+                  <li><a href="#" class="usa-link">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<!-- ========== FOOTER SECTION ========== -->
-<footer class="usa-footer usa-footer--slim">
+<!-- Footer -->
+<footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  
   <div class="usa-footer__primary-section">
-    <div class="usa-footer__primary-container grid-container">
-      <div class="usa-footer__primary-content">
-        <address class="usa-footer__address">
-          <div class="grid-row grid-gap">
-            <div class="grid-col-auto">
-              <div class="usa-footer__contact-info">
-                IRS E-File Support: efile@irs.gov | (800) 829-1040
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <ul class="grid-row grid-gap">
+        <li class="desktop:grid-col-3 usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="javascript:void(0);">Tax Information</a>
+          <ul class="usa-list usa-list--unstyled">
+            <li class="usa-footer__secondary-link"><a href="#">Filing Requirements</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Tax Rates</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Forms &amp; Instructions</a></li>
+          </ul>
+        </li>
+        <li class="desktop:grid-col-3 usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="javascript:void(0);">Resources</a>
+          <ul class="usa-list usa-list--unstyled">
+            <li class="usa-footer__secondary-link"><a href="#">Tax Withholding Estimator</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Where's My Refund?</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Payment Options</a></li>
+          </ul>
+        </li>
+        <li class="desktop:grid-col-3 usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="javascript:void(0);">Help</a>
+          <ul class="usa-list usa-list--unstyled">
+            <li class="usa-footer__secondary-link"><a href="#">Contact IRS</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Taxpayer Advocate</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Report Fraud</a></li>
+          </ul>
+        </li>
+        <li class="desktop:grid-col-3 usa-footer__primary-content">
+          <a class="usa-footer__primary-link" href="javascript:void(0);">About</a>
+          <ul class="usa-list usa-list--unstyled">
+            <li class="usa-footer__secondary-link"><a href="#">Privacy Policy</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">Accessibility</a></li>
+            <li class="usa-footer__secondary-link"><a href="#">FOIA</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row">
+          <div class="tablet:grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="IRS logo">
+          </div>
+          <div class="tablet:grid-col-auto">
+            <p class="usa-footer__logo-text">Internal Revenue Service</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links">
+          <p class="usa-footer__contact-heading">Contact the IRS</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-829-1040">(800) 829-1040</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:efile-help@irs.gov">efile-help@irs.gov</a>
               </div>
             </div>
-          </div>
-        </address>
+          </address>
+        </div>
       </div>
     </div>
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
 <script>
-// Simple form interaction scripts
+// Enhanced form interactions
 document.addEventListener('DOMContentLoaded', function() {
-  // Show/hide itemized deductions section
+  // Deduction method toggle
   const standardRadio = document.getElementById('standard-deduction');
   const itemizedRadio = document.getElementById('itemized-deduction');
   const itemizedSection = document.getElementById('itemized-section');
@@ -412,24 +749,115 @@ document.addEventListener('DOMContentLoaded', function() {
   function toggleItemizedSection() {
     if (itemizedRadio.checked) {
       itemizedSection.classList.remove('display-none');
+      itemizedSection.setAttribute('aria-hidden', 'false');
     } else {
       itemizedSection.classList.add('display-none');
+      itemizedSection.setAttribute('aria-hidden', 'true');
     }
   }
   
   standardRadio.addEventListener('change', toggleItemizedSection);
   itemizedRadio.addEventListener('change', toggleItemizedSection);
   
-  // Show/hide childcare details
-  const childcareCheckbox = document.getElementById('childcare-credit');
-  const childcareDetails = document.getElementById('childcare-details');
+  // Children details toggle
+  const childrenYes = document.getElementById('children-yes');
+  const childrenNo = document.getElementById('children-no');
+  const childrenDetails = document.getElementById('children-details');
   
-  childcareCheckbox.addEventListener('change', function() {
-    if (this.checked) {
-      childcareDetails.classList.remove('display-none');
+  function toggleChildrenDetails() {
+    if (childrenYes.checked) {
+      childrenDetails.classList.remove('display-none');
     } else {
-      childcareDetails.classList.add('display-none');
+      childrenDetails.classList.add('display-none');
+    }
+  }
+  
+  if (childrenYes) childrenYes.addEventListener('change', toggleChildrenDetails);
+  if (childrenNo) childrenNo.addEventListener('change', toggleChildrenDetails);
+  
+  // Education expenses toggle
+  const educationCheckboxes = document.querySelectorAll('input[name="education-credits"]');
+  const educationExpenses = document.getElementById('education-expenses');
+  
+  function toggleEducationExpenses() {
+    const anyChecked = Array.from(educationCheckboxes).some(cb => cb.checked);
+    if (anyChecked) {
+      educationExpenses.classList.remove('display-none');
+    } else {
+      educationExpenses.classList.add('display-none');
+    }
+  }
+  
+  educationCheckboxes.forEach(cb => {
+    cb.addEventListener('change', toggleEducationExpenses);
+  });
+  
+  // Auto-save simulation
+  let saveTimeout;
+  const inputs = document.querySelectorAll('input, select');
+  const saveIndicator = document.querySelector('.auto-save-indicator');
+  
+  function autoSave() {
+    clearTimeout(saveTimeout);
+    saveIndicator.classList.add('saving');
+    
+    saveTimeout = setTimeout(() => {
+      // Simulate save
+      console.log('Auto-saving form data...');
+      saveIndicator.classList.remove('saving');
+    }, 1000);
+  }
+  
+  inputs.forEach(input => {
+    input.addEventListener('change', autoSave);
+    input.addEventListener('input', () => {
+      clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(autoSave, 2000);
+    });
+  });
+  
+  // Format currency inputs
+  const currencyInputs = document.querySelectorAll('input[type="text"][inputmode="numeric"]');
+  
+  currencyInputs.forEach(input => {
+    input.addEventListener('blur', function() {
+      let value = this.value.replace(/,/g, '');
+      if (value && !isNaN(value)) {
+        this.value = parseInt(value).toLocaleString();
+      }
+    });
+    
+    input.addEventListener('focus', function() {
+      this.value = this.value.replace(/,/g, '');
+    });
+  });
+  
+  // Real-time calculation updates (simplified)
+  function updateCalculations() {
+    // This would normally calculate actual tax values
+    console.log('Updating tax calculations...');
+  }
+  
+  inputs.forEach(input => {
+    if (input.type === 'text' || input.type === 'number') {
+      input.addEventListener('input', debounce(updateCalculations, 500));
     }
   });
+  
+  // Debounce helper
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
 });
 </script>
+
+
+</body></html>

@@ -136,9 +136,28 @@ class ShowcaseApp {
     radios.forEach(radio => {
       radio.addEventListener('change', (e) => {
         this.currentVariant = e.target.value;
-        // Reset to home page when switching frameworks
-        this.currentPath = '/';
-        window.history.pushState({}, '', '/');
+        // Keep the same path when switching frameworks
+        // Check if current path is available in new framework
+        const variantMap = {
+          '3000': 'plain',
+          '3001': 'react',
+          '3002': 'trussworks'
+        };
+        const newVariant = variantMap[this.currentVariant];
+        
+        // Check if current template exists in new framework
+        if (this.currentPath !== '/' && this.currentPath !== '') {
+          const [_, category, slug] = this.currentPath.split('/');
+          if (category && slug && this.templates[category] && this.templates[category][slug]) {
+            const template = this.templates[category][slug];
+            if (!template.available.includes(newVariant)) {
+              // Template not available in new framework, reset to home
+              this.currentPath = '/';
+              window.history.pushState({}, '', '/');
+            }
+          }
+        }
+        
         this.updateIframe();
         this.renderNavigation(); // Re-render to update availability
         this.updateActiveLink();
@@ -149,9 +168,7 @@ class ShowcaseApp {
   setupActions() {
     // === Copy Code ===
     document.getElementById('copyCode').addEventListener('click', () => {
-      // Send message to iframe to get code
-      const iframe = document.getElementById('preview');
-      iframe.contentWindow.postMessage({ action: 'getCode' }, '*');
+      this.showCodeModal();
     });
     
     // === Fullscreen ===
@@ -159,6 +176,160 @@ class ShowcaseApp {
       const main = document.querySelector('.dsx-main');
       main.classList.toggle('fullscreen');
     });
+  }
+
+  async showCodeModal() {
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('codeModal');
+    if (!modal) {
+      modal = this.createCodeModal();
+      document.body.appendChild(modal);
+    }
+    
+    // Show loading state
+    const codeContent = modal.querySelector('.dsx-modal-code');
+    codeContent.textContent = 'Loading code...';
+    modal.style.display = 'flex';
+    
+    // Fetch the actual source code based on framework
+    try {
+      const code = await this.fetchSourceCode();
+      codeContent.textContent = code;
+    } catch (error) {
+      codeContent.textContent = 'Error loading source code: ' + error.message;
+    }
+  }
+
+  async fetchSourceCode() {
+    const variantMap = {
+      '3000': 'plain',
+      '3001': 'react', 
+      '3002': 'trussworks'
+    };
+    
+    const framework = variantMap[this.currentVariant];
+    
+    if (this.currentPath === '/' || this.currentPath === '') {
+      return '// Select a template to view its source code';
+    }
+    
+    // Parse the path
+    const [_, category, slug] = this.currentPath.split('/');
+    
+    if (!category || !slug) {
+      throw new Error('Invalid path');
+    }
+    
+    let fileUrl;
+    let response;
+    
+    switch (framework) {
+      case 'plain':
+        // Fetch the HTML source from our source server
+        try {
+          const sourceUrl = `http://localhost:4001/source?framework=plain&category=${category}&slug=${slug}`;
+          response = await fetch(sourceUrl);
+          if (!response.ok) {
+            // Fallback to direct fetch
+            fileUrl = `http://localhost:3000/templates${this.currentPath}/index.html`;
+            response = await fetch(fileUrl);
+            if (!response.ok) throw new Error('Failed to fetch template');
+          }
+          return await response.text();
+        } catch (error) {
+          return `// Unable to fetch Plain USWDS source code
+// Path: ${this.currentPath}
+// Error: ${error.message}`;
+        }
+        
+      case 'react':
+        // React source viewing coming soon
+        return `// React source code viewing coming soon\n// Template: ${this.currentPath}`;
+        
+      case 'trussworks':
+        // Fetch the actual TypeScript source from our source server
+        try {
+          const sourceUrl = `http://localhost:4001/source?framework=trussworks&category=${category}&slug=${slug}`;
+          response = await fetch(sourceUrl);
+          if (!response.ok) {
+            throw new Error('Failed to fetch source');
+          }
+          return await response.text();
+        } catch (error) {
+          // Fallback if source server is not available
+          const componentName = this.formatComponentName(slug);
+          return `// Unable to fetch Trussworks source code
+// Component: ${componentName}
+// Path: ${this.currentPath}
+// Error: ${error.message}
+
+// Make sure the source server is running on port 4001`;
+        }
+        
+      default:
+        throw new Error('Unknown framework');
+    }
+  }
+
+  formatComponentName(slug) {
+    // Convert kebab-case to PascalCase
+    return slug.split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('');
+  }
+
+  createCodeModal() {
+    const modal = document.createElement('div');
+    modal.id = 'codeModal';
+    modal.className = 'dsx-modal';
+    modal.innerHTML = `
+      <div class="dsx-modal-content">
+        <div class="dsx-modal-header">
+          <h2 class="dsx-modal-title">Template Code</h2>
+          <button class="dsx-modal-close" aria-label="Close">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="dsx-modal-body">
+          <pre class="dsx-modal-code"></pre>
+        </div>
+        <div class="dsx-modal-footer">
+          <button class="dsx-modal-btn dsx-modal-copy">Copy Code</button>
+          <button class="dsx-modal-btn dsx-modal-close-btn">Close</button>
+        </div>
+      </div>
+    `;
+    
+    // Close button handlers
+    modal.querySelector('.dsx-modal-close').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    modal.querySelector('.dsx-modal-close-btn').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    // Copy button handler
+    modal.querySelector('.dsx-modal-copy').addEventListener('click', () => {
+      const code = modal.querySelector('.dsx-modal-code').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = modal.querySelector('.dsx-modal-copy');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      });
+    });
+    
+    // Close on backdrop click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+    
+    return modal;
   }
 
   navigateTo(path) {
@@ -170,7 +341,12 @@ class ShowcaseApp {
 
   updateIframe() {
     const iframe = document.getElementById('preview');
-    iframe.src = `http://localhost:${this.currentVariant}${this.currentPath}`;
+    // Plain USWDS needs /templates prefix and trailing slash
+    let path = this.currentPath;
+    if (this.currentVariant === '3000') {
+      path = `/templates${this.currentPath}/`;
+    }
+    iframe.src = `http://localhost:${this.currentVariant}${path}`;
   }
 
   updateActiveLink() {
@@ -200,17 +376,4 @@ document.addEventListener('DOMContentLoaded', () => {
   new ShowcaseApp();
 });
 
-// === Handle Copy Code Response ===
-window.addEventListener('message', (e) => {
-  if (e.data.action === 'codeContent') {
-    navigator.clipboard.writeText(e.data.code).then(() => {
-      // Visual feedback
-      const btn = document.getElementById('copyCode');
-      const originalText = btn.querySelector('.dsx-btn-text').textContent;
-      btn.querySelector('.dsx-btn-text').textContent = 'Copied!';
-      setTimeout(() => {
-        btn.querySelector('.dsx-btn-text').textContent = originalText;
-      }, 2000);
-    });
-  }
-});
+// Message handler removed - now fetching source directly

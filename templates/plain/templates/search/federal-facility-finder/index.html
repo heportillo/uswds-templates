@@ -1,0 +1,662 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Facility Finder - Locate Government Services Near You</title>
+  <meta name="description" content="Find federal facilities including Social Security offices, VA hospitals, passport acceptance facilities, and USPS locations near you.">
+  
+  <!-- USWDS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+  <!-- Government banner -->
+  <section class="usa-banner" aria-label="Official website of the United States government">
+    <div class="usa-accordion">
+      <header class="usa-banner__header">
+        <div class="usa-banner__inner">
+          <div class="grid-col-auto">
+            <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+          </div>
+          <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+            <p class="usa-banner__header-text">An official website of the United States government</p>
+            <p class="usa-banner__header-action">Here's how you know</p>
+          </div>
+          <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+            <span class="usa-banner__button-text">Here's how you know</span>
+          </button>
+        </div>
+      </header>
+      <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+        <div class="grid-row grid-gap-lg">
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Official websites use .gov</strong>
+                <br>
+                A <strong>.gov</strong> website belongs to an official government organization in the United States.
+              </p>
+            </div>
+          </div>
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Secure .gov websites use HTTPS</strong>
+                <br>
+                A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skip navigation -->
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="usa-header usa-header--extended">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="Federal Facility Finder">Federal Facility Finder</a>
+        </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <div class="usa-nav__inner">
+        <button type="button" class="usa-nav__close">
+          <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link usa-current">
+              <span>Find Facilities</span>
+            </a>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link">
+              <span>Services Guide</span>
+            </a>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link">
+              <span>Schedule Appointment</span>
+            </a>
+          </li>
+        </ul>
+        <div class="usa-nav__secondary">
+          <ul class="usa-nav__secondary-links">
+            <li class="usa-nav__secondary-item">
+              <a href="#">Help</a>
+            </li>
+            <li class="usa-nav__secondary-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="grid-container">
+      <h1 class="font-sans-2xl">Find Federal Facilities Near You</h1>
+      <div class="usa-alert usa-alert--info">
+        <div class="usa-alert__body">
+          <p class="usa-alert__text">Locate Social Security offices, VA hospitals, passport centers, and other federal services in your area.</p>
+        </div>
+      </div>
+
+      <!-- Search Form -->
+      <form class="usa-form usa-form--large">
+        <!-- Row 1: Primary Search Fields -->
+        <div class="grid-row grid-gap">
+          <!-- Location Field Container -->
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="location">Location</label>
+            <input class="usa-input" id="location" name="location" type="text" placeholder="City, state, or ZIP code">
+          </div>
+          
+          <!-- Facility Type Field Container -->
+          <div class="grid-col-12 tablet:grid-col-6">
+            <label class="usa-label" for="facility-type">Facility Type</label>
+            <select class="usa-select" id="facility-type" name="facility-type">
+              <option value="">All facilities</option>
+              <option value="ssa">Social Security Administration</option>
+              <option value="va">Veterans Affairs</option>
+              <option value="passport">Passport Services</option>
+              <option value="usps">USPS Post Office</option>
+              <option value="irs">IRS Taxpayer Assistance</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 2: Distance Field + Options Group -->
+        <div class="grid-row grid-gap">
+          <!-- Search Distance Field Container -->
+          <div class="grid-col-12 tablet:grid-col-4">
+            <label class="usa-label" for="search-radius">Search within</label>
+            <select class="usa-select" id="search-radius" name="radius">
+              <option value="10" selected="">10 miles</option>
+              <option value="25">25 miles</option>
+              <option value="50">50 miles</option>
+              <option value="100">100 miles</option>
+            </select>
+          </div>
+          
+          <!-- Accessibility Options Group -->
+          <div class="grid-col-12 tablet:grid-col-8">
+            <span class="usa-label">Accessibility Options</span>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="wheelchair-accessible" type="checkbox" name="accessibility" value="wheelchair">
+              <label class="usa-checkbox__label" for="wheelchair-accessible">Wheelchair accessible only</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Action Buttons -->
+        <div class="grid-row">
+          <div class="grid-col-12">
+            <button type="submit" class="usa-button">Search Facilities</button>
+            <button type="button" class="usa-button usa-button--outline" data-open-modal="filters-modal">More Filters</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Results Section -->
+    <section class="usa-section">
+      <div class="grid-container">
+        <!-- Results Toolbar -->
+        <div class="display-flex flex-justify-space-between flex-align-center">
+          <div class="usa-button-group" role="group" aria-label="View toggle">
+            <button class="usa-button" id="view-list" aria-pressed="true">List</button>
+            <button class="usa-button usa-button--outline" id="view-map" aria-pressed="false">Map</button>
+          </div>
+          <div>
+            <label class="usa-label" for="sort-select">Sort</label>
+            <select class="usa-select" id="sort-select">
+              <option value="distance">Distance</option>
+              <option value="relevance">Relevance</option>
+              <option value="name">Name</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Results List -->
+        <div class="grid-row grid-gap">
+          <!-- Facility Card 1 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">Social Security Card Center</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">SSA Office</span>
+                    <span class="usa-tag">0.8 mi</span>
+                  </div>
+                  <p>
+                    <strong>2100 M Street NW</strong><br>
+                    Washington, DC 20037
+                  </p>
+                  <p>
+                    <span>Open now</span> • Closes at 4:00 PM<br>
+                    Wait time: ~15 minutes
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Social Security card replacement</li>
+                      <li>• Benefits application</li>
+                      <li>• Medicare enrollment</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Card 2 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">Washington DC VA Medical Center</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">VA Hospital</span>
+                    <span class="usa-tag">1.2 mi</span>
+                  </div>
+                  <p>
+                    <strong>50 Irving Street NW</strong><br>
+                    Washington, DC 20422
+                  </p>
+                  <p>
+                    <span>Open 24/7</span><br>
+                    Emergency services available
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Primary care</li>
+                      <li>• Mental health services</li>
+                      <li>• Specialty care</li>
+                      <li>• Pharmacy</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Card 3 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">DC Passport Agency</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">Passport Office</span>
+                    <span class="usa-tag">2.1 mi</span>
+                  </div>
+                  <p>
+                    <strong>600 19th Street NW</strong><br>
+                    Washington, DC 20006
+                  </p>
+                  <p>
+                    <span>Closed</span> • Opens at 8:00 AM<br>
+                    Appointment required
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Urgent passport processing</li>
+                      <li>• Passport renewal</li>
+                      <li>• Name change services</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Card 4 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">L'Enfant Plaza Post Office</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">USPS</span>
+                    <span class="usa-tag">2.3 mi</span>
+                  </div>
+                  <p>
+                    <strong>458 L'Enfant Plaza SW</strong><br>
+                    Washington, DC 20260
+                  </p>
+                  <p>
+                    <span>Open now</span> • Closes at 5:00 PM<br>
+                    Self-service kiosk available 24/7
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Mail &amp; package services</li>
+                      <li>• PO Box rental</li>
+                      <li>• Passport acceptance</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Card 5 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">IRS Taxpayer Assistance Center</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">IRS Office</span>
+                    <span class="usa-tag">3.5 mi</span>
+                  </div>
+                  <p>
+                    <strong>77 K Street NE</strong><br>
+                    Washington, DC 20002
+                  </p>
+                  <p>
+                    <span>Open now</span> • Closes at 4:30 PM<br>
+                    Appointment recommended
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Tax return assistance</li>
+                      <li>• Payment arrangements</li>
+                      <li>• Transcript requests</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Card 6 -->
+          <div class="tablet:grid-col-6 desktop:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">VA Community Clinic - Northeast</h3>
+                </div>
+                <div class="usa-card__body">
+                  <div>
+                    <span class="usa-tag">VA Clinic</span>
+                    <span class="usa-tag">4.2 mi</span>
+                  </div>
+                  <p>
+                    <strong>1730 Rhode Island Ave NW</strong><br>
+                    Washington, DC 20036
+                  </p>
+                  <p>
+                    <span>Open now</span> • Closes at 6:00 PM<br>
+                    Walk-ins welcome
+                  </p>
+                  <div>
+                    <p>Services available:</p>
+                    <ul class="usa-list usa-list--unstyled">
+                      <li>• Primary care</li>
+                      <li>• Lab services</li>
+                      <li>• Prescription refills</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="usa-card__footer">
+                  <button class="usa-button usa-button--outline">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Pagination" class="usa-pagination">
+          <ul class="usa-pagination__list">
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__previous-page" aria-label="Previous page">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/sprite.svg#navigate_before"></use>
+                </svg>
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__overflow" role="presentation">
+              <span>…</span>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 21">21</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next</span>
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/sprite.svg#navigate_next"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="usa-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-12">
+            <h2>Need Help Finding a Facility?</h2>
+            <div class="grid-row grid-gap">
+              <div class="tablet:grid-col-4">
+                <div class="usa-card">
+                  <div class="usa-card__container">
+                    <div class="usa-card__header">
+                      <h3 class="usa-card__heading">Call for Assistance</h3>
+                    </div>
+                    <div class="usa-card__body">
+                      <p>Get help finding the right federal facility and services.</p>
+                      <p>1-844-USA-GOV1</p>
+                      <p>Monday-Friday, 8am-8pm ET</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tablet:grid-col-4">
+                <div class="usa-card">
+                  <div class="usa-card__container">
+                    <div class="usa-card__header">
+                      <h3 class="usa-card__heading">Schedule Appointments</h3>
+                    </div>
+                    <div class="usa-card__body">
+                      <p>Book appointments online for many federal services.</p>
+                      <a href="#" class="usa-button usa-button--outline">Schedule Online</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tablet:grid-col-4">
+                <div class="usa-card">
+                  <div class="usa-card__container">
+                    <div class="usa-card__header">
+                      <h3 class="usa-card__heading">Service Directory</h3>
+                    </div>
+                    <div class="usa-card__body">
+                      <p>Browse our complete guide to federal services and benefits.</p>
+                      <a href="#" class="usa-button usa-button--outline">View Directory</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="usa-footer usa-footer--slim">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+    <div class="usa-footer__primary-section">
+      <div class="grid-container">
+        <div class="usa-footer__primary-container grid-row">
+          <div class="tablet:grid-col-8">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap">
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">About</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Accessibility</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="tablet:grid-col-4">
+            <address class="usa-footer__address">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="tel:1-844-872-4681">1-844-USA-GOV1</a>
+                  </div>
+                </div>
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="mailto:info@usa.gov">info@usa.gov</a>
+                  </div>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="usa-footer__logo grid-row grid-gap-2">
+          <div class="grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="grid-col-auto">
+            <p class="usa-footer__logo-heading">General Services Administration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filters Modal -->
+  <div class="usa-modal" id="filters-modal" aria-labelledby="filters-heading" aria-describedby="filters-desc">
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="filters-heading">Filters</h2>
+        <div class="usa-prose">
+          <p id="filters-desc">Choose the services and amenities that matter to you.</p>
+        </div>
+
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Services</h3>
+            <ul class="usa-list usa-list--unstyled">
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="service-benefits" type="checkbox" value="benefits">
+                <label class="usa-checkbox__label" for="service-benefits">Benefits Application</label>
+              </li>
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="service-replacement" type="checkbox" value="replacement">
+                <label class="usa-checkbox__label" for="service-replacement">Card/ID Replacement</label>
+              </li>
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="service-appointment" type="checkbox" value="appointment">
+                <label class="usa-checkbox__label" for="service-appointment">Schedule Appointments</label>
+              </li>
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="service-documents" type="checkbox" value="documents">
+                <label class="usa-checkbox__label" for="service-documents">Document Submission</label>
+              </li>
+            </ul>
+          </div>
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Hours</h3>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="hours-any" type="radio" name="hours" value="" checked="">
+              <label class="usa-radio__label" for="hours-any">Any hours</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="hours-open" type="radio" name="hours" value="open">
+              <label class="usa-radio__label" for="hours-open">Open now</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="hours-24" type="radio" name="hours" value="24hours">
+              <label class="usa-radio__label" for="hours-24">24 hours</label>
+            </div>
+            <div class="usa-radio">
+              <input class="usa-radio__input" id="hours-weekend" type="radio" name="hours" value="weekend">
+              <label class="usa-radio__label" for="hours-weekend">Weekend hours</label>
+            </div>
+          </div>
+          <div class="grid-col-12 tablet:grid-col-4">
+            <h3 class="font-sans-lg">Accessibility</h3>
+            <ul class="usa-list usa-list--unstyled">
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="filter-wheelchair" type="checkbox" value="wheelchair">
+                <label class="usa-checkbox__label" for="filter-wheelchair">Wheelchair accessible</label>
+              </li>
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="filter-parking" type="checkbox" value="parking">
+                <label class="usa-checkbox__label" for="filter-parking">Accessible parking</label>
+              </li>
+              <li class="usa-checkbox">
+                <input class="usa-checkbox__input" id="filter-interpreter" type="checkbox" value="interpreter">
+                <label class="usa-checkbox__label" for="filter-interpreter">Sign language interpreter</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="usa-modal__footer">
+        <ul class="usa-button-group">
+          <li class="usa-button-group__item">
+            <button type="button" class="usa-button" id="apply-filters">Apply</button>
+          </li>
+          <li class="usa-button-group__item">
+            <button type="button" class="usa-button usa-button--outline" data-close-modal="">Cancel</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- USWDS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body></html>

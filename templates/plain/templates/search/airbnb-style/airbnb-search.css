@@ -1,0 +1,14 @@
+:root{}
+.map-shell{position:relative;height:420px;border:1px dashed var(--usa-border-color-secondary);border-radius:.5rem;background:var(--usa-color-base-cool-1);}
+.map-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;opacity:.25;}
+#map-pins{position:absolute;inset:0;}
+.pin{position:absolute;transform:translate(-50%,-100%);}
+.pin .dot{width:10px;height:10px;border-radius:9999px;background:var(--usa-color-primary-dark);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+.display-none{display:none;}
+.card__price{font-weight:700;}
+.card__meta{color:var(--usa-color-base-dark);}
+.inline-badge{display:inline-block;padding:.1rem .35rem;border-radius:.25rem;background:var(--usa-color-base-light);font-size:.85rem;}
+.usa-card__img img{object-fit:cover;height:160px;}
+@media (max-width: 640px){
+  .usa-card__img img{height:140px;}
+}

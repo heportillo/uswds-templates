@@ -1,0 +1,531 @@
+{
+  "totalFiles": 114,
+  "filesWithIssues": 43,
+  "filesFixed": 38,
+  "issueStats": {
+    "narrow-multi-column-forms": 38,
+    "fieldset-legend-mismatch": 2,
+    "unbalanced-buttons": 1,
+    "improper-responsive-columns": 5
+  },
+  "details": [
+    {
+      "file": "templates/plain/templates/forms/emergency-contact-form.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/translation-request/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/tax-filing-wizard/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/tax-filing/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/service-request/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/retirement-calculator/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/reimbursement/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/records-request/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/permit-request/index.html",
+      "issues": [
+        {
+          "type": "fieldset-legend-mismatch",
+          "description": "Fieldset legends creating visual hierarchy mismatches"
+        },
+        {
+          "type": "unbalanced-buttons",
+          "description": "Oversized primary buttons next to normal secondary buttons"
+        },
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/payment-plan/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/patent-application/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/maintenance-request/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/loan-application/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/it-support/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/invoice-submission/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/insurance-claim/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/financial-aid/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/feedback-survey/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/emergency-assistance/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/drivers-license/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/complaint-submission/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/direct-deposit/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/benefits-application/index.html",
+      "issues": [
+        {
+          "type": "fieldset-legend-mismatch",
+          "description": "Fieldset legends creating visual hierarchy mismatches"
+        },
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/budget-proposal/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/appointment-scheduling/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/forms/accommodation-request/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/regulation-search/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/public-records/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/provider-directory/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/patent-search/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/legislative-search/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/federal-facility-finder/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/data-browser/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/contract-search/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/cola-finder/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/case-law/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/benefits-checker/index.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/search/airbnb-style/airbnb-search.html",
+      "issues": [
+        {
+          "type": "narrow-multi-column-forms",
+          "description": "Multi-column forms using usa-form without --large modifier"
+        }
+      ],
+      "fixesApplied": [
+        "narrow-multi-column-forms"
+      ]
+    },
+    {
+      "file": "templates/plain/templates/workflows/resource-reservation/index.html",
+      "issues": [
+        {
+          "type": "improper-responsive-columns",
+          "description": "Grid columns without mobile-first responsive classes"
+        }
+      ],
+      "fixesApplied": []
+    },
+    {
+      "file": "templates/plain/templates/workflows/queue-management/index.html",
+      "issues": [
+        {
+          "type": "improper-responsive-columns",
+          "description": "Grid columns without mobile-first responsive classes"
+        }
+      ],
+      "fixesApplied": []
+    },
+    {
+      "file": "templates/plain/templates/workflows/public-comment/index.html",
+      "issues": [
+        {
+          "type": "improper-responsive-columns",
+          "description": "Grid columns without mobile-first responsive classes"
+        }
+      ],
+      "fixesApplied": []
+    },
+    {
+      "file": "templates/plain/templates/workflows/event-platform/index.html",
+      "issues": [
+        {
+          "type": "improper-responsive-columns",
+          "description": "Grid columns without mobile-first responsive classes"
+        }
+      ],
+      "fixesApplied": []
+    },
+    {
+      "file": "templates/plain/templates/workflows/appointment-booking/index.html",
+      "issues": [
+        {
+          "type": "improper-responsive-columns",
+          "description": "Grid columns without mobile-first responsive classes"
+        }
+      ],
+      "fixesApplied": []
+    }
+  ]
+}

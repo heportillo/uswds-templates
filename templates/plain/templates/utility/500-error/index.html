@@ -1,88 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>500 Error Page - U.S. Government</title>
+  <title>Server Error (500) - U.S. Government</title>
+  <meta name="description" content="We're experiencing technical difficulties. Try again later or contact support for assistance.">
+  
+  <!-- USWDS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
 </head>
 <body>
-<section class="usa-banner" aria-label="Official website of the United States government">
-  <div class="usa-accordion">
-    <header class="usa-banner__header">
-      <div class="usa-banner__inner">
-        <div class="grid-col-auto">
-          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
-        </div>
-        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-          <p class="usa-banner__header-text">An official website of the United States government</p>
-        </div>
-      </div>
-    </header>
-  </div>
-</section>
-<a class="usa-skipnav" href="#main-content">Skip to main content</a>
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text"><a href="/">500 Error Page</a></em>
-      </div>
-    </div>
-  </div>
-</header>
-<main id="main-content">
-  <div class="grid-container">
-    <h1>500 Error Page</h1>
-    <p class="usa-intro">This is the 500 Error Page page for official government services.</p>
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-12">
-        <div class="usa-alert usa-alert--info">
-          <div class="usa-alert__body">
-            <p class="usa-alert__text">This template demonstrates USWDS components for 500 Error Page functionality.</p>
+  <!-- Government banner -->
+  <section class="usa-banner" aria-label="Official website of the United States government">
+    <div class="usa-accordion">
+      <header class="usa-banner__header">
+        <div class="usa-banner__inner">
+          <div class="grid-col-auto">
+            <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
           </div>
+          <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+            <p class="usa-banner__header-text">An official website of the United States government</p>
+            <p class="usa-banner__header-action">Here's how you know</p>
+          </div>
+          <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+            <span class="usa-banner__button-text">Here's how you know</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-6">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Quick Actions</h2>
-            </div>
-            <div class="usa-card__body">
-              <p>Access frequently used features and services.</p>
-            </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Get Started</a>
+      </header>
+      <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+        <div class="grid-row grid-gap-lg">
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Official websites use .gov</strong>
+                <br>
+                A <strong>.gov</strong> website belongs to an official government organization in the United States.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="grid-col-6">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Resources</h2>
-            </div>
-            <div class="usa-card__body">
-              <p>Find helpful guides and documentation.</p>
-            </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button usa-button--outline">Learn More</a>
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Secure .gov websites use HTTPS</strong>
+                <br>
+                A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
-<footer class="usa-footer usa-footer--slim">
-  <div class="grid-container usa-footer__return-to-top">
-    <a href="#">Return to top</a>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
-</body>
-</html>
+  </section>
+
+  <!-- Skip navigation -->
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <em class="usa-logo__text">
+            <a href="/" title="Home">U.S. Government</a>
+          </em>
+        </div>
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+    </div>
+  </header>
+  <!-- Main content -->
+  <main id="main-content">
+    <section class="usa-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-8 desktop:grid-col-6 text-center">
+            <h1 class="font-sans-3xl">500</h1>
+            <h2 class="font-sans-xl">Server error</h2>
+            <p class="usa-intro">
+              We're experiencing technical difficulties. Please try again in a few minutes.
+            </p>
+            
+            <div class="usa-alert usa-alert--warning">
+              <div class="usa-alert__body">
+                <h3 class="usa-alert__heading">What happened?</h3>
+                <p class="usa-alert__text">
+                  Our servers are temporarily unable to process your request. This issue has been reported to our technical team.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <button type="button" class="usa-button" onclick="window.location.reload()">Try again</button>
+              <a href="/" class="usa-button usa-button--outline">Go to homepage</a>
+              <a href="#contact" class="usa-button usa-button--unstyled">Contact support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status and Support Section -->
+    <section class="usa-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-6">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">System Status</h3>
+                </div>
+                <div class="usa-card__body">
+                  <p>Check our system status page for real-time updates on service availability and maintenance schedules.</p>
+                  <ul class="usa-list">
+                    <li>Current system health</li>
+                    <li>Planned maintenance windows</li>
+                    <li>Service restoration updates</li>
+                  </ul>
+                </div>
+                <div class="usa-card__footer">
+                  <a href="#" class="usa-button usa-button--outline">View status page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tablet:grid-col-6">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading" id="contact">Need Help?</h3>
+                </div>
+                <div class="usa-card__body">
+                  <p>If this problem persists, please contact our support team with the following information:</p>
+                  <ul class="usa-list">
+                    <li>Time of the error</li>
+                    <li>What you were trying to do</li>
+                    <li>Any error codes displayed</li>
+                  </ul>
+                  <p>Support: 1-844-USA-GOV1</p>
+                  <p>Monday-Friday, 8am-8pm ET</p>
+                </div>
+                <div class="usa-card__footer">
+                  <a href="mailto:support@usa.gov" class="usa-button usa-button--outline">Email support</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="usa-footer usa-footer--slim">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+    <div class="usa-footer__primary-section">
+      <div class="grid-container">
+        <div class="usa-footer__primary-container grid-row">
+          <div class="tablet:grid-col-8">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap">
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">About</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Accessibility</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="tablet:grid-col-4">
+            <address class="usa-footer__address">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="tel:1-844-872-4681">1-844-USA-GOV1</a>
+                  </div>
+                </div>
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="mailto:info@usa.gov">info@usa.gov</a>
+                  </div>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="usa-footer__logo grid-row grid-gap-2">
+          <div class="grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="grid-col-auto">
+            <p class="usa-footer__logo-heading">General Services Administration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- USWDS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+
+</body></html>

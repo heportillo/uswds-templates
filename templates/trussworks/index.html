@@ -6,7 +6,28 @@
   <title>Trussworks React USWDS Templates</title>
 </head>
 <body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <!-- Showcase helper for code preview -->
+  <script>
+    // Helper script for showcase functionality
+    (function() {
+      // Listen for messages from the showcase iframe
+      window.addEventListener('message', (e) => {
+        if (e.data && e.data.action === 'getCode') {
+          // Get the entire HTML content
+          const html = document.documentElement.outerHTML;
+          
+          // Send it back to the parent window
+          e.source.postMessage({
+            action: 'codeContent',
+            code: html
+          }, e.origin);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

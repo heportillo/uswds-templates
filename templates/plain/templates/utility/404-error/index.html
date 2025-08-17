@@ -1,88 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Error Page - U.S. Government</title>
+  <title>Page Not Found (404) - U.S. Government</title>
+  <meta name="description" content="The page you requested cannot be found. Find helpful navigation and contact information to get back on track.">
+  
+  <!-- USWDS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
 </head>
 <body>
-<section class="usa-banner" aria-label="Official website of the United States government">
-  <div class="usa-accordion">
-    <header class="usa-banner__header">
-      <div class="usa-banner__inner">
-        <div class="grid-col-auto">
-          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
-        </div>
-        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-          <p class="usa-banner__header-text">An official website of the United States government</p>
-        </div>
-      </div>
-    </header>
-  </div>
-</section>
-<a class="usa-skipnav" href="#main-content">Skip to main content</a>
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text"><a href="/">404 Error Page</a></em>
-      </div>
-    </div>
-  </div>
-</header>
-<main id="main-content">
-  <div class="grid-container">
-    <h1>404 Error Page</h1>
-    <p class="usa-intro">This is the 404 Error Page page for official government services.</p>
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-12">
-        <div class="usa-alert usa-alert--info">
-          <div class="usa-alert__body">
-            <p class="usa-alert__text">This template demonstrates USWDS components for 404 Error Page functionality.</p>
+  <!-- Government banner -->
+  <section class="usa-banner" aria-label="Official website of the United States government">
+    <div class="usa-accordion">
+      <header class="usa-banner__header">
+        <div class="usa-banner__inner">
+          <div class="grid-col-auto">
+            <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
           </div>
+          <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+            <p class="usa-banner__header-text">An official website of the United States government</p>
+            <p class="usa-banner__header-action">Here's how you know</p>
+          </div>
+          <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+            <span class="usa-banner__button-text">Here's how you know</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-6">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Quick Actions</h2>
-            </div>
-            <div class="usa-card__body">
-              <p>Access frequently used features and services.</p>
-            </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button">Get Started</a>
+      </header>
+      <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+        <div class="grid-row grid-gap-lg">
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Official websites use .gov</strong>
+                <br>
+                A <strong>.gov</strong> website belongs to an official government organization in the United States.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="grid-col-6">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Resources</h2>
-            </div>
-            <div class="usa-card__body">
-              <p>Find helpful guides and documentation.</p>
-            </div>
-            <div class="usa-card__footer">
-              <a href="#" class="usa-button usa-button--outline">Learn More</a>
+          <div class="usa-banner__guidance tablet:grid-col-6">
+            <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+            <div class="usa-media-block__body">
+              <p>
+                <strong>Secure .gov websites use HTTPS</strong>
+                <br>
+                A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
-<footer class="usa-footer usa-footer--slim">
-  <div class="grid-container usa-footer__return-to-top">
-    <a href="#">Return to top</a>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
-</body>
-</html>
+  </section>
+
+  <!-- Skip navigation -->
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <em class="usa-logo__text">
+            <a href="/" title="Home">U.S. Government</a>
+          </em>
+        </div>
+        <button type="button" class="usa-menu-btn">Menu</button>
+      </div>
+    </div>
+  </header>
+  <!-- Main content -->
+  <main id="main-content">
+    <section class="usa-section">
+      <div class="grid-container">
+        <div class="grid-row grid-gap">
+          <div class="grid-col-12 tablet:grid-col-8 desktop:grid-col-6 text-center">
+            <h1 class="font-sans-3xl">404</h1>
+            <h2 class="font-sans-xl">Page not found</h2>
+            <p class="usa-intro">
+              We're sorry, but the page you're looking for doesn't exist or has been moved.
+            </p>
+            
+            <div class="usa-alert usa-alert--info">
+              <div class="usa-alert__body">
+                <h3 class="usa-alert__heading">What you can do</h3>
+                <p class="usa-alert__text">
+                  Check the web address for typos, or try searching for what you need.
+                </p>
+              </div>
+            </div>
+
+            <!-- Search Form -->
+            <form class="usa-form usa-form--large">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-12 tablet:grid-col-8">
+                  <label class="usa-label usa-sr-only" for="search">Search</label>
+                  <input class="usa-input" id="search" name="search" type="search" placeholder="Search government services">
+                </div>
+                <div class="grid-col-12 tablet:grid-col-4">
+                  <button type="submit" class="usa-button">Search</button>
+                </div>
+              </div>
+            </form>
+
+            <div>
+              <a href="/" class="usa-button usa-button--outline">Go to homepage</a>
+              <a href="#" class="usa-button usa-button--unstyled">Contact support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Services Section -->
+    <section class="usa-section">
+      <div class="grid-container">
+        <h2 class="font-sans-lg text-center">Popular government services</h2>
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">Benefits and Services</h3>
+                </div>
+                <div class="usa-card__body">
+                  <p>Apply for benefits, check status, and manage your account.</p>
+                </div>
+                <div class="usa-card__footer">
+                  <a href="#" class="usa-button usa-button--outline">Explore benefits</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tablet:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">Tax Information</h3>
+                </div>
+                <div class="usa-card__body">
+                  <p>File taxes, check refund status, and access tax forms.</p>
+                </div>
+                <div class="usa-card__footer">
+                  <a href="#" class="usa-button usa-button--outline">Visit IRS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tablet:grid-col-4">
+            <div class="usa-card">
+              <div class="usa-card__container">
+                <div class="usa-card__header">
+                  <h3 class="usa-card__heading">Passport Services</h3>
+                </div>
+                <div class="usa-card__body">
+                  <p>Apply for a passport, renew, or check application status.</p>
+                </div>
+                <div class="usa-card__footer">
+                  <a href="#" class="usa-button usa-button--outline">Get passport info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="usa-footer usa-footer--slim">
+    <div class="grid-container usa-footer__return-to-top">
+      <a href="#">Return to top</a>
+    </div>
+    <div class="usa-footer__primary-section">
+      <div class="grid-container">
+        <div class="usa-footer__primary-container grid-row">
+          <div class="tablet:grid-col-8">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap">
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">About</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Accessibility</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="tablet:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="tablet:grid-col-4">
+            <address class="usa-footer__address">
+              <div class="grid-row grid-gap">
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="tel:1-844-872-4681">1-844-USA-GOV1</a>
+                  </div>
+                </div>
+                <div class="grid-col-auto tablet:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="mailto:info@usa.gov">info@usa.gov</a>
+                  </div>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="usa-footer__secondary-section">
+      <div class="grid-container">
+        <div class="usa-footer__logo grid-row grid-gap-2">
+          <div class="grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="">
+          </div>
+          <div class="grid-col-auto">
+            <p class="usa-footer__logo-heading">General Services Administration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- USWDS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+
+</body></html>

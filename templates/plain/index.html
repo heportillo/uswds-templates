@@ -6,9 +6,12 @@
   <title>Plain USWDS Templates</title>
   <!-- USWDS CSS from CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
   <script src="/src/router.js" type="module"></script>
 </head>
 <body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
   <div id="app">
     <!-- Content will be loaded here -->
   </div>
@@ -20,5 +23,7 @@
       if (window.USWDS) window.USWDS.init();
     });
   </script>
+  <!-- Showcase helper for code preview -->
+  <script src="/public/showcase-helper.js"></script>
 </body>
 </html>

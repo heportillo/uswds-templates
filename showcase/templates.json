@@ -53,7 +53,8 @@
     "agricultural-dashboard": {
       "name": "Agricultural Dashboard",
       "available": [
-        "plain"
+        "plain",
+        "trussworks"
       ]
     },
     "app-management": {
@@ -582,6 +583,12 @@
         "plain"
       ]
     },
+    "emergency-contact-form": {
+      "name": "Emergency Contact Form",
+      "available": [
+        "plain"
+      ]
+    },
     "environmental-assessment": {
       "name": "Environmental Assessment",
       "available": [
@@ -1106,6 +1113,12 @@
     },
     "document-search": {
       "name": "Document Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "federal-facility-finder": {
+      "name": "Federal Facility Finder",
       "available": [
         "plain"
       ]

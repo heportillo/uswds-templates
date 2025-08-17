@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Management Dashboard - Federal Case Tracking System</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
 </head>
 <body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
 
 <!-- ========== GOVERNMENT BANNER ========== -->
 <section class="usa-banner" aria-label="Official website of the United States government">
@@ -25,13 +26,13 @@
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-case-mgmt" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-case-mgmt" hidden="">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -40,8 +41,8 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
-              A lock (<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false"><title id="banner-lock-description">Lock</title><desc>Locked padlock icon</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg></span>) or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+              <strong>Secure .gov websites use HTTPS</strong><br>
+              A lock (<span><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false"><title id="banner-lock-description">Lock</title><desc>Locked padlock icon</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path></svg></span>) or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
             </p>
           </div>
         </div>
@@ -62,9 +63,7 @@
   </div>
   <nav aria-label="Primary navigation" class="usa-nav">
     <div class="usa-nav__inner">
-      <button type="button" class="usa-nav__close">
-        <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
-      </button>
+      <button type="button" class="usa-nav__close" aria-label="Close"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close"></button>
       <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
           <a href="#" class="usa-nav__link usa-current">
@@ -104,12 +103,12 @@
 <main id="main-content">
   
   <!-- === Dashboard Header === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="tablet:grid-col-8">
-          <h1 class="margin-0">Case Management Dashboard</h1>
-          <p class="usa-intro margin-top-1">Monitor and manage active cases across departments</p>
+          <h1>Case Management Dashboard</h1>
+          <p class="usa-intro">Monitor and manage active cases across departments</p>
         </div>
         <div class="tablet:grid-col-4 text-right">
           <button class="usa-button">New Case</button>
@@ -131,9 +130,9 @@
                 <h3 class="usa-card__heading">Total Cases</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">2,847</p>
-                <p class="text-base margin-y-0">
-                  <span class="text-success">↑ 8%</span> from last week
+                <p class="margin-y-0">2,847</p>
+                <p class="margin-y-0">
+                  <span>↑ 8%</span> from last week
                 </p>
               </div>
             </div>
@@ -148,8 +147,8 @@
                 <h3 class="usa-card__heading">Active Cases</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">1,234</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">1,234</p>
+                <p class="margin-y-0">
                   43% of total cases
                 </p>
               </div>
@@ -165,9 +164,9 @@
                 <h3 class="usa-card__heading">Pending Review</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">342</p>
-                <p class="text-base margin-y-0">
-                  <span class="text-warning">↑ 15%</span> from yesterday
+                <p class="margin-y-0">342</p>
+                <p class="margin-y-0">
+                  <span>↑ 15%</span> from yesterday
                 </p>
               </div>
             </div>
@@ -182,8 +181,8 @@
                 <h3 class="usa-card__heading">Avg Resolution</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">4.2</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">4.2</p>
+                <p class="margin-y-0">
                   days (↓ 0.5 from avg)
                 </p>
               </div>
@@ -206,32 +205,32 @@
               </div>
               <div class="usa-card__body">
                 <div class="grid-row grid-gap-2">
-                  <div class="grid-col-6">
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-primary">New</span>
-                      <span class="margin-left-2">423 cases (15%)</span>
+                  <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-6">
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">New</span>
+                      <span>423 cases (15%)</span>
                     </div>
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-info">In Progress</span>
-                      <span class="margin-left-2">811 cases (28%)</span>
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">In Progress</span>
+                      <span>811 cases (28%)</span>
                     </div>
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-warning">Under Review</span>
-                      <span class="margin-left-2">342 cases (12%)</span>
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">Under Review</span>
+                      <span>342 cases (12%)</span>
                     </div>
                   </div>
-                  <div class="grid-col-6">
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-secondary">On Hold</span>
-                      <span class="margin-left-2">198 cases (7%)</span>
+                  <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-6">
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">On Hold</span>
+                      <span>198 cases (7%)</span>
                     </div>
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-success">Resolved</span>
-                      <span class="margin-left-2">897 cases (31%)</span>
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">Resolved</span>
+                      <span>897 cases (31%)</span>
                     </div>
-                    <div class="display-flex flex-align-center margin-bottom-2">
-                      <span class="usa-tag bg-base-dark">Closed</span>
-                      <span class="margin-left-2">176 cases (6%)</span>
+                    <div class="display-flex flex-align-center">
+                      <span class="usa-tag">Closed</span>
+                      <span>176 cases (6%)</span>
                     </div>
                   </div>
                 </div>
@@ -252,34 +251,34 @@
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span class="text-bold">High Priority</span>
-                      <span class="usa-tag bg-error">87</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>High Priority</span>
+                      <span class="usa-tag">87</span>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span class="text-bold">Urgent</span>
-                      <span class="usa-tag bg-warning">124</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Urgent</span>
+                      <span class="usa-tag">124</span>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span class="text-bold">Normal</span>
-                      <span class="usa-tag bg-info">1,023</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Normal</span>
+                      <span class="usa-tag">1,023</span>
                     </div>
                   </li>
                   <li class="padding-y-1">
-                    <div class="display-flex flex-justify">
-                      <span class="text-bold">Low</span>
-                      <span class="usa-tag bg-base-lighter">342</span>
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Low</span>
+                      <span class="usa-tag">342</span>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="usa-card__footer">
-                <button class="usa-button usa-button--outline width-full">Manage Priorities</button>
+                <button class="usa-button usa-button--outline">Manage Priorities</button>
               </div>
             </div>
           </div>
@@ -298,7 +297,8 @@
           </div>
           <div class="usa-card__body">
             <div class="usa-table-container--scrollable" tabindex="0">
-              <table class="usa-table usa-table--borderless width-full">
+              <table class="usa-table usa-table--borderless">
+  <caption class="usa-sr-only">Recent activity and updates</caption>
                 <thead>
                   <tr>
                     <th scope="col">Case ID</th>
@@ -316,8 +316,8 @@
                     <td><a href="#">#CM-2024-0847</a></td>
                     <td>Benefits Application Review</td>
                     <td>Application</td>
-                    <td><span class="usa-tag bg-error">High</span></td>
-                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td><span class="usa-tag">High</span></td>
+                    <td><span class="usa-tag">In Progress</span></td>
                     <td>Sarah Johnson</td>
                     <td>2024-01-15</td>
                     <td>
@@ -328,8 +328,8 @@
                     <td><a href="#">#CM-2024-0846</a></td>
                     <td>Immigration Status Update</td>
                     <td>Immigration</td>
-                    <td><span class="usa-tag bg-warning">Urgent</span></td>
-                    <td><span class="usa-tag bg-primary">New</span></td>
+                    <td><span class="usa-tag">Urgent</span></td>
+                    <td><span class="usa-tag">New</span></td>
                     <td>Michael Chen</td>
                     <td>2024-01-15</td>
                     <td>
@@ -340,8 +340,8 @@
                     <td><a href="#">#CM-2024-0845</a></td>
                     <td>Tax Document Verification</td>
                     <td>Tax</td>
-                    <td><span class="usa-tag bg-info">Normal</span></td>
-                    <td><span class="usa-tag bg-warning">Under Review</span></td>
+                    <td><span class="usa-tag">Normal</span></td>
+                    <td><span class="usa-tag">Under Review</span></td>
                     <td>Emily Rodriguez</td>
                     <td>2024-01-14</td>
                     <td>
@@ -352,8 +352,8 @@
                     <td><a href="#">#CM-2024-0844</a></td>
                     <td>License Renewal Request</td>
                     <td>Licensing</td>
-                    <td><span class="usa-tag bg-base-lighter">Low</span></td>
-                    <td><span class="usa-tag bg-success">Resolved</span></td>
+                    <td><span class="usa-tag">Low</span></td>
+                    <td><span class="usa-tag">Resolved</span></td>
                     <td>James Wilson</td>
                     <td>2024-01-14</td>
                     <td>
@@ -364,8 +364,8 @@
                     <td><a href="#">#CM-2024-0843</a></td>
                     <td>Healthcare Coverage Appeal</td>
                     <td>Healthcare</td>
-                    <td><span class="usa-tag bg-error">High</span></td>
-                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td><span class="usa-tag">High</span></td>
+                    <td><span class="usa-tag">In Progress</span></td>
                     <td>David Martinez</td>
                     <td>2024-01-13</td>
                     <td>
@@ -376,8 +376,8 @@
                     <td><a href="#">#CM-2024-0842</a></td>
                     <td>Permit Application</td>
                     <td>Permits</td>
-                    <td><span class="usa-tag bg-info">Normal</span></td>
-                    <td><span class="usa-tag bg-secondary">On Hold</span></td>
+                    <td><span class="usa-tag">Normal</span></td>
+                    <td><span class="usa-tag">On Hold</span></td>
                     <td>Lisa Anderson</td>
                     <td>2024-01-13</td>
                     <td>
@@ -388,8 +388,8 @@
                     <td><a href="#">#CM-2024-0841</a></td>
                     <td>Complaint Investigation</td>
                     <td>Complaint</td>
-                    <td><span class="usa-tag bg-warning">Urgent</span></td>
-                    <td><span class="usa-tag bg-info">In Progress</span></td>
+                    <td><span class="usa-tag">Urgent</span></td>
+                    <td><span class="usa-tag">In Progress</span></td>
                     <td>Robert Taylor</td>
                     <td>2024-01-12</td>
                     <td>
@@ -400,8 +400,8 @@
                     <td><a href="#">#CM-2024-0840</a></td>
                     <td>Grant Application Review</td>
                     <td>Grants</td>
-                    <td><span class="usa-tag bg-info">Normal</span></td>
-                    <td><span class="usa-tag bg-warning">Under Review</span></td>
+                    <td><span class="usa-tag">Normal</span></td>
+                    <td><span class="usa-tag">Under Review</span></td>
                     <td>Jennifer Lee</td>
                     <td>2024-01-12</td>
                     <td>
@@ -421,13 +421,13 @@
                   </a>
                 </li>
                 <li class="usa-pagination__item usa-pagination__page-no">
-                  <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1">1</a>
+                  <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1">96</a>
                 </li>
                 <li class="usa-pagination__item usa-pagination__page-no">
-                  <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+                  <a href="#" class="usa-pagination__button" aria-label="Page 2">89</a>
                 </li>
                 <li class="usa-pagination__item usa-pagination__page-no">
-                  <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+                  <a href="#" class="usa-pagination__button" aria-label="Page 3">75</a>
                 </li>
                 <li class="usa-pagination__item usa-pagination__arrow">
                   <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
@@ -453,7 +453,8 @@
                 <h3 class="usa-card__heading">Department Performance</h3>
               </div>
               <div class="usa-card__body">
-                <table class="usa-table usa-table--borderless width-full">
+                <table class="usa-table usa-table--borderless">
+  <caption class="usa-sr-only">Recent activity and updates</caption>
                   <thead>
                     <tr>
                       <th scope="col">Department</th>
@@ -467,31 +468,31 @@
                       <td>Immigration Services</td>
                       <td>432</td>
                       <td>3.2 days</td>
-                      <td><span class="text-success">92%</span></td>
+                      <td><span>92%</span></td>
                     </tr>
                     <tr>
                       <td>Benefits Administration</td>
                       <td>567</td>
                       <td>4.1 days</td>
-                      <td><span class="text-success">88%</span></td>
+                      <td><span>88%</span></td>
                     </tr>
                     <tr>
                       <td>Tax Services</td>
                       <td>312</td>
                       <td>5.3 days</td>
-                      <td><span class="text-warning">76%</span></td>
+                      <td><span>76%</span></td>
                     </tr>
                     <tr>
                       <td>Healthcare Services</td>
                       <td>289</td>
                       <td>2.8 days</td>
-                      <td><span class="text-success">94%</span></td>
+                      <td><span>94%</span></td>
                     </tr>
                     <tr>
                       <td>Licensing Bureau</td>
                       <td>198</td>
                       <td>6.2 days</td>
-                      <td><span class="text-error">68%</span></td>
+                      <td><span>68%</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -512,50 +513,50 @@
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <div>
                         <strong>Case #CM-2024-0847</strong> status updated
-                        <br><small class="text-base">By Sarah Johnson • 5 min ago</small>
+                        <br><small>By Sarah Johnson • 5 min ago</small>
                       </div>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <div>
                         <strong>New case</strong> assigned to Michael Chen
-                        <br><small class="text-base">System • 12 min ago</small>
+                        <br><small>System • 12 min ago</small>
                       </div>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <div>
                         <strong>Case #CM-2024-0844</strong> marked as resolved
-                        <br><small class="text-base">By James Wilson • 28 min ago</small>
+                        <br><small>By James Wilson • 28 min ago</small>
                       </div>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
                       <div>
                         <strong>Priority changed</strong> for Case #CM-2024-0843
-                        <br><small class="text-base">By David Martinez • 45 min ago</small>
+                        <br><small>By David Martinez • 45 min ago</small>
                       </div>
                     </div>
                   </li>
                   <li class="padding-y-1">
-                    <div class="display-flex flex-justify">
+                    <div class="display-flex flex-justify-space-between">
                       <div>
                         <strong>3 new cases</strong> added to queue
-                        <br><small class="text-base">System • 1 hour ago</small>
+                        <br><small>System • 1 hour ago</small>
                       </div>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="usa-card__footer">
-                <button class="usa-button usa-button--outline width-full">View All Activity</button>
+                <button class="usa-button usa-button--outline">View All Activity</button>
               </div>
             </div>
           </div>
@@ -575,16 +576,16 @@
           <div class="usa-card__body">
             <div class="grid-row grid-gap">
               <div class="tablet:grid-col-3">
-                <button class="usa-button width-full">Create New Case</button>
+                <button class="usa-button">Create New Case</button>
               </div>
               <div class="tablet:grid-col-3">
-                <button class="usa-button usa-button--outline width-full">Assign Cases</button>
+                <button class="usa-button usa-button--outline">Assign Cases</button>
               </div>
               <div class="tablet:grid-col-3">
-                <button class="usa-button usa-button--outline width-full">Generate Report</button>
+                <button class="usa-button usa-button--outline">Generate Report</button>
               </div>
               <div class="tablet:grid-col-3">
-                <button class="usa-button usa-button--outline width-full">Export Data</button>
+                <button class="usa-button usa-button--outline">Export Data</button>
               </div>
             </div>
           </div>
@@ -624,5 +625,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
 
-</body>
-</html>
+
+</body></html>

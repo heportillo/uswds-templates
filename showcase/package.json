@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "npx vite",
+    "source-server": "node source-server.js",
     "build": "npx vite build",
     "preview": "npx vite preview"
   },
   "devDependencies": {
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   }
 }

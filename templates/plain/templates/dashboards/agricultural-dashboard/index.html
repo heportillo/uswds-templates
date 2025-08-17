@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricultural Dashboard - U.S. Government</title>
+  <title>USDA Agricultural Dashboard - U.S. Department of Agriculture</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
 </head>
 <body>
 
+<!-- Government Banner -->
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
@@ -17,24 +18,56 @@
         </div>
         <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
           <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action">Here's how you know</p>
         </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-ag">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
       </div>
     </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-ag" hidden>
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong><br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong><br/>
+              A lock or <strong>https://</strong> means you've safely connected to the .gov website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- Skip Navigation -->
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
+<!-- Header -->
 <header class="usa-header usa-header--extended">
   <div class="usa-navbar">
     <div class="usa-logo">
-      <em class="usa-logo__text"><a href="/">Agricultural Dashboard</a></em>
+      <em class="usa-logo__text">
+        <a href="/" title="USDA Agricultural Dashboard">
+          USDA Agricultural Dashboard
+        </a>
+      </em>
     </div>
     <button type="button" class="usa-menu-btn">Menu</button>
   </div>
   <nav aria-label="Primary navigation" class="usa-nav">
     <div class="usa-nav__inner">
-      <button type="button" class="usa-nav__close">
+      <button type="button" class="usa-nav__close" aria-label="Close navigation menu">
         <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close">
       </button>
       <ul class="usa-nav__primary usa-accordion">
@@ -42,167 +75,537 @@
           <a href="#" class="usa-nav-link usa-current"><span>Dashboard</span></a>
         </li>
         <li class="usa-nav__primary-item">
-          <a href="#" class="usa-nav-link"><span>Reports</span></a>
+          <a href="#" class="usa-nav-link"><span>Crop Reports</span></a>
         </li>
         <li class="usa-nav__primary-item">
-          <a href="#" class="usa-nav-link"><span>Analytics</span></a>
+          <a href="#" class="usa-nav-link"><span>Market Analysis</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Weather Data</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Resources</span></a>
         </li>
       </ul>
     </div>
   </nav>
 </header>
 
+<!-- Main Content -->
 <main id="main-content">
-  <div class="grid-container">
-    <div class="grid-row margin-top-2">
-      <div class="grid-col-12">
-        <h1>Agricultural Dashboard</h1>
-        <p class="usa-intro">Monitor and analyze key metrics and performance indicators.</p>
+  <!-- Hero Section with Key Stats -->
+  <section class="usa-section bg-base-lightest">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12">
+          <h1 class="font-sans-3xl margin-bottom-0">U.S. Agricultural Overview</h1>
+          <p class="usa-intro">Real-time monitoring of crop production, market prices, and agricultural conditions across America</p>
+        </div>
+      </div>
+      
+      <!-- Date Range Selector -->
+      <div class="grid-row grid-gap margin-top-4">
+        <div class="grid-col-12">
+          <form class="usa-form">
+            <div class="grid-row grid-gap-2">
+              <div class="grid-col-auto">
+                <label class="usa-label" for="season">Season</label>
+                <select class="usa-select" id="season" name="season">
+                  <option value="2025-spring" selected>Spring 2025</option>
+                  <option value="2024-winter">Winter 2024</option>
+                  <option value="2024-fall">Fall 2024</option>
+                  <option value="2024-summer">Summer 2024</option>
+                </select>
+              </div>
+              <div class="grid-col-auto">
+                <label class="usa-label" for="region">Region</label>
+                <select class="usa-select" id="region" name="region">
+                  <option value="all" selected>All Regions</option>
+                  <option value="midwest">Midwest</option>
+                  <option value="south">South</option>
+                  <option value="west">West</option>
+                  <option value="northeast">Northeast</option>
+                </select>
+              </div>
+              <div class="grid-col-auto display-flex flex-align-end">
+                <button class="usa-button" type="submit">Update View</button>
+              </div>
+              <div class="grid-col-auto display-flex flex-align-end margin-left-auto">
+                <button class="usa-button usa-button--outline" type="button">
+                  <svg class="usa-icon" aria-hidden="true" role="img">
+                    <use xlink:href="#file_download"></use>
+                  </svg>
+                  Export Report
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="grid-row margin-top-3">
-      <div class="grid-col-12 tablet:grid-col-8">
-        <form class="usa-form">
-          <div class="grid-row grid-gap">
-            <div class="grid-col-auto">
-              <label class="usa-label" for="date-start">From</label>
-              <input class="usa-input" id="date-start" name="date-start" type="date" value="2025-01-01">
-            </div>
-            <div class="grid-col-auto">
-              <label class="usa-label" for="date-end">To</label>
-              <input class="usa-input" id="date-end" name="date-end" type="date" value="2025-01-17">
-            </div>
-            <div class="grid-col-auto display-flex flex-align-end">
-              <button class="usa-button" type="submit">Update</button>
+  <!-- Key Metrics Cards -->
+  <section class="usa-section padding-top-3">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <!-- Total Farm Acres -->
+        <div class="tablet:grid-col-6 desktop:grid-col-3 margin-bottom-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Total Farm Acres</h2>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-sans-3xl margin-y-0">896.3M</p>
+                <p class="margin-top-1 margin-bottom-0">
+                  <span class="usa-tag bg-accent-warm-dark">+2.1%</span>
+                  <span class="font-sans-xs">vs last year</span>
+                </p>
+                <p class="margin-top-2 font-sans-xs text-base-dark">
+                  Active farmland across 50 states
+                </p>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
-      <div class="grid-col-12 tablet:grid-col-4 text-right">
-        <button class="usa-button usa-button--outline">Export Dashboard</button>
-      </div>
-    </div>
+        </div>
 
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Metric 1</h2>
-            </div>
-            <div class="usa-card__body">
-              <span class="font-sans-3xl text-bold">2.4M</span>
-              <p class="margin-top-1 text-base">Acres monitored</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Metric 2</h2>
-            </div>
-            <div class="usa-card__body">
-              <span class="font-sans-3xl text-bold">$4.8B</span>
-              <p class="margin-top-1 text-base">Crop value</p>
+        <!-- Crop Production -->
+        <div class="tablet:grid-col-6 desktop:grid-col-3 margin-bottom-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Crop Production</h2>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-sans-3xl margin-y-0">14.2B</p>
+                <p class="margin-top-1 margin-bottom-0">
+                  <span class="usa-tag bg-success">+5.3%</span>
+                  <span class="font-sans-xs">bushels</span>
+                </p>
+                <p class="margin-top-2 font-sans-xs text-base-dark">
+                  Corn, soybeans, wheat combined
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Metric 3</h2>
-            </div>
-            <div class="usa-card__body">
-              <span class="font-sans-3xl text-bold">87%</span>
-              <p class="margin-top-1 text-base">Yield forecast</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card">
-          <div class="usa-card__container">
-            <div class="usa-card__header">
-              <h2 class="usa-card__heading">Metric 4</h2>
-            </div>
-            <div class="usa-card__body">
-              <span class="font-sans-3xl text-bold">156K</span>
-              <p class="margin-top-1 text-base">Active farms</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid-row margin-top-4">
-      <div class="grid-col-12">
-        <h2>Recent Data</h2>
-        <div class="usa-table-container--scrollable" tabindex="0">
-          <table class="usa-table usa-table--striped">
-            <caption>Dashboard data overview</caption>
-            <thead>
-              <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Status</th>
-                <th scope="col">Value</th>
-                <th scope="col">Date</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Sample Item 1</th>
-                <td><span class="usa-tag bg-green">Active</span></td>
-                <td>125,000</td>
-                <td>Jan 17, 2025</td>
-                <td><a href="#" class="usa-link">View</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Sample Item 2</th>
-                <td><span class="usa-tag bg-yellow">Pending</span></td>
-                <td>85,500</td>
-                <td>Jan 16, 2025</td>
-                <td><a href="#" class="usa-link">View</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Sample Item 3</th>
-                <td><span class="usa-tag bg-green">Active</span></td>
-                <td>210,000</td>
-                <td>Jan 15, 2025</td>
-                <td><a href="#" class="usa-link">View</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Market Value -->
+        <div class="tablet:grid-col-6 desktop:grid-col-3 margin-bottom-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Market Value</h2>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-sans-3xl margin-y-0">$485B</p>
+                <p class="margin-top-1 margin-bottom-0">
+                  <span class="usa-tag bg-success">+8.7%</span>
+                  <span class="font-sans-xs">YoY growth</span>
+                </p>
+                <p class="margin-top-2 font-sans-xs text-base-dark">
+                  Total agricultural output value
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Farms -->
+        <div class="tablet:grid-col-6 desktop:grid-col-3 margin-bottom-3">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Active Farms</h2>
+              </div>
+              <div class="usa-card__body">
+                <p class="font-sans-3xl margin-y-0">2.01M</p>
+                <p class="margin-top-1 margin-bottom-0">
+                  <span class="usa-tag bg-warning">-0.8%</span>
+                  <span class="font-sans-xs">operations</span>
+                </p>
+                <p class="margin-top-2 font-sans-xs text-base-dark">
+                  Family & commercial farms
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Commodity Prices & Weather Alert -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <!-- Commodity Prices -->
+        <div class="tablet:grid-col-8">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Current Commodity Prices</h2>
+                <div class="usa-card__media usa-card__media--inset">
+                  <span class="font-sans-xs text-base-dark">Chicago Board of Trade - Live Feed</span>
+                </div>
+              </div>
+              <div class="usa-card__body">
+                <div class="usa-table-container--scrollable" tabindex="0">
+                  <table class="usa-table usa-table--borderless">
+                    <caption class="usa-sr-only">Current commodity prices and daily changes</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Commodity</th>
+                        <th scope="col" class="text-right">Price</th>
+                        <th scope="col" class="text-right">Change</th>
+                        <th scope="col" class="text-right">% Change</th>
+                        <th scope="col">Trend (7d)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <strong>Corn</strong>
+                          <span class="display-block font-sans-xs text-base-dark">per bushel</span>
+                        </th>
+                        <td class="text-right font-mono-sm">$4.82</td>
+                        <td class="text-right text-success">+0.12</td>
+                        <td class="text-right">
+                          <span class="usa-tag usa-tag--small bg-success">+2.5%</span>
+                        </td>
+                        <td>
+                          <svg width="60" height="20" class="text-success">
+                            <polyline points="0,15 10,12 20,10 30,8 40,11 50,7 60,5" 
+                                      fill="none" stroke="currentColor" stroke-width="2"/>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <strong>Soybeans</strong>
+                          <span class="display-block font-sans-xs text-base-dark">per bushel</span>
+                        </th>
+                        <td class="text-right font-mono-sm">$10.45</td>
+                        <td class="text-right text-error">-0.08</td>
+                        <td class="text-right">
+                          <span class="usa-tag usa-tag--small bg-error">-0.8%</span>
+                        </td>
+                        <td>
+                          <svg width="60" height="20" class="text-error">
+                            <polyline points="0,5 10,7 20,10 30,12 40,11 50,15 60,14" 
+                                      fill="none" stroke="currentColor" stroke-width="2"/>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <strong>Wheat</strong>
+                          <span class="display-block font-sans-xs text-base-dark">per bushel</span>
+                        </th>
+                        <td class="text-right font-mono-sm">$5.68</td>
+                        <td class="text-right text-success">+0.23</td>
+                        <td class="text-right">
+                          <span class="usa-tag usa-tag--small bg-success">+4.2%</span>
+                        </td>
+                        <td>
+                          <svg width="60" height="20" class="text-success">
+                            <polyline points="0,18 10,15 20,13 30,12 40,8 50,6 60,3" 
+                                      fill="none" stroke="currentColor" stroke-width="2"/>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <strong>Cotton</strong>
+                          <span class="display-block font-sans-xs text-base-dark">per pound</span>
+                        </th>
+                        <td class="text-right font-mono-sm">$0.72</td>
+                        <td class="text-right text-success">+0.02</td>
+                        <td class="text-right">
+                          <span class="usa-tag usa-tag--small bg-success">+2.9%</span>
+                        </td>
+                        <td>
+                          <svg width="60" height="20" class="text-success">
+                            <polyline points="0,10 10,10 20,9 30,8 40,7 50,5 60,4" 
+                                      fill="none" stroke="currentColor" stroke-width="2"/>
+                          </svg>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="margin-top-2">
+                  <a href="#" class="usa-link">View all commodities</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather Alerts -->
+        <div class="tablet:grid-col-4">
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">Weather Alerts</h2>
+              </div>
+              <div class="usa-card__body">
+                <!-- Alert 1 -->
+                <div class="usa-alert usa-alert--warning usa-alert--slim margin-bottom-2">
+                  <div class="usa-alert__body">
+                    <p class="usa-alert__text">
+                      <strong>Drought Warning</strong><br/>
+                      Western Kansas, Eastern Colorado
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Alert 2 -->
+                <div class="usa-alert usa-alert--info usa-alert--slim margin-bottom-2">
+                  <div class="usa-alert__body">
+                    <p class="usa-alert__text">
+                      <strong>Frost Advisory</strong><br/>
+                      Northern Michigan, Wisconsin
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Soil Moisture -->
+                <h3 class="font-sans-md margin-top-3">Soil Moisture Index</h3>
+                <div class="margin-bottom-2">
+                  <div class="display-flex flex-justify-space-between margin-bottom-1">
+                    <span class="font-sans-xs">Midwest</span>
+                    <span class="font-sans-xs text-bold">72%</span>
+                  </div>
+                  <div class="bg-base-lightest" style="height: 8px; border-radius: 4px;">
+                    <div class="bg-primary" style="width: 72%; height: 100%; border-radius: 4px;"></div>
+                  </div>
+                </div>
+                
+                <div class="margin-bottom-2">
+                  <div class="display-flex flex-justify-space-between margin-bottom-1">
+                    <span class="font-sans-xs">South</span>
+                    <span class="font-sans-xs text-bold">65%</span>
+                  </div>
+                  <div class="bg-base-lightest" style="height: 8px; border-radius: 4px;">
+                    <div class="bg-primary" style="width: 65%; height: 100%; border-radius: 4px;"></div>
+                  </div>
+                </div>
+
+                <div class="margin-bottom-2">
+                  <div class="display-flex flex-justify-space-between margin-bottom-1">
+                    <span class="font-sans-xs">West</span>
+                    <span class="font-sans-xs text-bold text-error">38%</span>
+                  </div>
+                  <div class="bg-base-lightest" style="height: 8px; border-radius: 4px;">
+                    <div class="bg-error" style="width: 38%; height: 100%; border-radius: 4px;"></div>
+                  </div>
+                </div>
+
+                <a href="#" class="usa-link">View weather maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Production Table -->
+  <section class="usa-section padding-top-2">
+    <div class="grid-container">
+      <div class="usa-card">
+        <div class="usa-card__container">
+          <div class="usa-card__header">
+            <h2 class="usa-card__heading">Regional Production Summary</h2>
+            <div class="usa-card__media usa-card__media--inset">
+              <button class="usa-button usa-button--unstyled font-sans-xs">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="#filter_list"></use>
+                </svg>
+                Filter Data
+              </button>
+            </div>
+          </div>
+          <div class="usa-card__body">
+            <div class="usa-table-container--scrollable" tabindex="0">
+              <table class="usa-table usa-table--striped">
+                <caption class="usa-sr-only">Regional agricultural production data</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">State</th>
+                    <th scope="col">Primary Crop</th>
+                    <th scope="col" class="text-right">Acres Planted</th>
+                    <th scope="col" class="text-right">Yield (bu/acre)</th>
+                    <th scope="col" class="text-right">Production (M bu)</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Iowa</th>
+                    <td>Corn</td>
+                    <td class="text-right font-mono-sm">13.5M</td>
+                    <td class="text-right font-mono-sm">198</td>
+                    <td class="text-right font-mono-sm">2,673</td>
+                    <td><span class="usa-tag bg-success">Excellent</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Illinois</th>
+                    <td>Soybeans</td>
+                    <td class="text-right font-mono-sm">10.8M</td>
+                    <td class="text-right font-mono-sm">64</td>
+                    <td class="text-right font-mono-sm">691</td>
+                    <td><span class="usa-tag bg-success">Good</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Kansas</th>
+                    <td>Wheat</td>
+                    <td class="text-right font-mono-sm">7.3M</td>
+                    <td class="text-right font-mono-sm">48</td>
+                    <td class="text-right font-mono-sm">350</td>
+                    <td><span class="usa-tag bg-warning">Fair</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Texas</th>
+                    <td>Cotton</td>
+                    <td class="text-right font-mono-sm">6.2M</td>
+                    <td class="text-right font-mono-sm">825</td>
+                    <td class="text-right font-mono-sm">5.1M bales</td>
+                    <td><span class="usa-tag bg-success">Good</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nebraska</th>
+                    <td>Corn</td>
+                    <td class="text-right font-mono-sm">9.9M</td>
+                    <td class="text-right font-mono-sm">181</td>
+                    <td class="text-right font-mono-sm">1,792</td>
+                    <td><span class="usa-tag bg-success">Excellent</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">California</th>
+                    <td>Almonds</td>
+                    <td class="text-right font-mono-sm">1.3M</td>
+                    <td class="text-right font-mono-sm">2,390</td>
+                    <td class="text-right font-mono-sm">3.1B lbs</td>
+                    <td><span class="usa-tag bg-error">Poor</span></td>
+                    <td>
+                      <a href="#" class="usa-link">View Details</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="margin-top-3">
+              <nav role="navigation" aria-label="Pagination">
+                <ul class="usa-pagination">
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a href="#" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                      <svg class="usa-icon" aria-hidden="true" role="img">
+                        <use xlink:href="#navigate_before"></use>
+                      </svg>
+                      <span class="usa-pagination__link-text">Previous</span>
+                    </a>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+                  </li>
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                      <span class="usa-pagination__link-text">Next</span>
+                      <svg class="usa-icon" aria-hidden="true" role="img">
+                        <use xlink:href="#navigate_next"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions -->
+  <section class="usa-section padding-y-4 bg-base-lightest">
+    <div class="grid-container">
+      <h2 class="font-sans-xl margin-bottom-3">Quick Actions</h2>
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-3">
+          <a href="#" class="usa-button usa-button--big usa-button--outline width-full">
+            Generate Report
+          </a>
+        </div>
+        <div class="tablet:grid-col-3">
+          <a href="#" class="usa-button usa-button--big usa-button--outline width-full">
+            Submit Data
+          </a>
+        </div>
+        <div class="tablet:grid-col-3">
+          <a href="#" class="usa-button usa-button--big usa-button--outline width-full">
+            View Forecasts
+          </a>
+        </div>
+        <div class="tablet:grid-col-3">
+          <a href="#" class="usa-button usa-button--big usa-button--outline width-full">
+            Contact Expert
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="usa-footer">
+<!-- Footer -->
+<footer class="usa-footer usa-footer--slim">
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
   </div>
   <div class="usa-footer__primary-section">
-    <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <ul class="grid-row grid-gap">
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="#">Documentation</a>
-        </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="#">Support</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="usa-footer__primary-container grid-container">
+      <div class="usa-footer__contact-links">
+        <p class="usa-footer__contact-heading">USDA Agricultural Statistics</p>
+        <address class="usa-footer__address">
+          <div class="usa-footer__contact-info grid-row grid-gap">
+            <div class="grid-col-auto">
+              <a href="tel:1-800-727-9540">1-800-727-9540</a>
+            </div>
+            <div class="grid-col-auto">
+              <a href="mailto:nass@usda.gov">nass@usda.gov</a>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
 </body>
 </html>

@@ -419,3 +419,152 @@ After creating each template:
 6. **Share with team**
 
 Remember: We're not just building interfaces, we're serving people at important moments in their lives. Every template is an opportunity to make government services more human, more helpful, and more hopeful.
+
+## 🛠️ Session Learnings & Tools (Updated January 2025)
+
+### Critical Infrastructure Created
+
+#### 1. CSS Enhancement Library (`/templates/plain/assets/css/uswds-enhancements.css`)
+A comprehensive utility library that should be included in ALL templates:
+- Text overflow handling with `.text-truncate-elegant`
+- Skeleton loaders for async content
+- Responsive utilities using `clamp()` for fluid sizing
+- Animation utilities (pulse, fade-in, slide-up)
+- Focus ring enhancements for accessibility
+
+#### 2. Validation Script (`/scripts/validate-templates.js`)
+Run regularly to identify quality issues:
+```bash
+node scripts/validate-templates.js
+```
+Common issues it finds:
+- Generic placeholders (METRIC1_VALUE, Item 1, etc.)
+- Missing accessibility attributes
+- Text overflow problems
+- Non-responsive layouts
+- Missing empty states
+
+#### 3. Enhancement Script (`/scripts/apply-enhancements.js`)
+Batch-applies improvements to templates:
+```bash
+node scripts/apply-enhancements.js
+```
+Automatically:
+- Adds CSS enhancement library link
+- Replaces generic placeholders with contextual data
+- Applies responsive classes
+- Adds missing ARIA labels
+
+### Responsive Design Requirements
+
+#### Four Essential Breakpoints
+**CRITICAL**: All templates must look excellent at these breakpoints:
+1. **Mobile**: < 640px (single column, touch-friendly)
+2. **Tablet**: 640px - 1023px (2 columns max)
+3. **Desktop**: 1024px - 1399px (3-4 columns)
+4. **Widescreen**: ≥ 1400px (4+ columns, utilize space)
+
+#### CSS Grid Pattern for Responsive Layouts
+```css
+/* Use this pattern for all grid layouts */
+@media (min-width: 1400px) {
+  .grid-name { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .grid-name { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .grid-name { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 639px) {
+  .grid-name { grid-template-columns: 1fr; }
+}
+```
+
+### Common Quality Issues & Fixes
+
+#### Issue 1: Generic Placeholders
+**Wrong**: `<span>METRIC1_VALUE</span>`
+**Fix**: Use realistic, contextual data based on template type
+
+#### Issue 2: Text Overflow in Cards
+**Wrong**: Long text breaking layouts
+**Fix**: Apply `.text-truncate-elegant` class or use `clamp()` for responsive sizing
+
+#### Issue 3: Missing Responsive Behavior
+**Wrong**: Fixed widths, horizontal scrolling on mobile
+**Fix**: Use USWDS grid classes with proper breakpoints
+
+#### Issue 4: Poor Accessibility
+**Wrong**: Missing labels, no skip navigation
+**Fix**: Add proper ARIA labels, alt text, and skip links
+
+### Successfully Completed Templates (High Quality Examples)
+
+1. **emergency-response dashboard** - Complete rewrite with:
+   - Real-time emergency data (147 incidents, 2,847 personnel)
+   - 4-breakpoint responsive grids
+   - Progress bars for infrastructure status
+   - Proper accessibility throughout
+
+2. **agency-home landing page** - Fully responsive with:
+   - Hero section with responsive content widths
+   - Service grid adapting from 1 to 4 columns
+   - News section with responsive layout
+   - Metrics dashboard sidebar
+
+3. **benefits-application form** - Multi-step with:
+   - Progress indicator showing current step
+   - Household member management
+   - Emotional design reducing anxiety
+   - Auto-save functionality messaging
+
+4. **permit-request form** - 4-step process with:
+   - Dynamic fee calculator
+   - Document upload section
+   - Realistic project timelines
+   - Contact information for help
+
+### Pending High-Priority Tasks
+
+1. **Fix tax-filing-wizard** (12 issues) - Focus on multi-step flow
+2. **Fix federal-analytics dashboard** (11 issues) - Need realistic metrics
+3. **Add PRD/story markdown** to each template folder for context
+4. **Create batch improvement script** for systematic fixes
+5. **Implement consistent empty/loading/error states**
+6. **Add micro-interactions** for better user feedback
+7. **Build quality scorecard system** for tracking improvements
+
+### Quality Validation Commands
+
+```bash
+# Check all templates for issues
+node scripts/validate-templates.js
+
+# Apply enhancements to all templates
+node scripts/apply-enhancements.js
+
+# Test specific template responsiveness
+# Open in browser and test at: 320px, 640px, 1024px, 1400px
+```
+
+### Next Agent Instructions
+
+1. **Continue with tax-filing-wizard fix** - It has 12 identified issues
+2. **Run validation script first** to see current state
+3. **Apply CSS enhancements** to all remaining templates
+4. **Focus on responsiveness** - User emphasized this is VERY important
+5. **Use realistic data** - No more generic placeholders
+6. **Test at all breakpoints** - Mobile to widescreen must look good
+
+### Key Files to Reference
+
+- `/templates/plain/assets/css/uswds-enhancements.css` - Utility CSS library
+- `/scripts/validate-templates.js` - Quality validation tool
+- `/scripts/apply-enhancements.js` - Batch enhancement tool
+- `/templates/plain/templates/dashboards/emergency-response/index.html` - Gold standard example
+- `/templates/plain/templates/landing/agency-home/index.html` - Responsive grid example
+
+### Final Note
+
+The user values quality over quantity. They were very pleased with the systematic approach to improvements and especially emphasized the importance of responsive design across all breakpoints. Always ensure templates work beautifully from mobile (320px) to widescreen (1400px+).

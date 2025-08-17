@@ -1,48 +1,543 @@
-<!-- ========== AGENCY HOMEPAGE (PLACEHOLDER) ========== -->
-<div class="usa-section">
-  <div class="grid-container">
-    <div class="usa-alert usa-alert--info">
-      <div class="usa-alert__body">
-        <h4 class="usa-alert__heading">Template Coming Soon</h4>
-        <p class="usa-alert__text">
-          The Agency Homepage template will be created here.
-        </p>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U.S. Department of Digital Services - Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
+  <style>
+    /* Enhanced responsive styles */
+    @media (min-width: 1400px) {
+      .hero-content { max-width: 60%; }
+      .service-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 1024px) and (max-width: 1399px) {
+      .hero-content { max-width: 70%; }
+      .service-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .hero-content { max-width: 80%; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 639px) {
+      .hero-content { max-width: 100%; }
+      .service-grid { grid-template-columns: 1fr; }
+    }
+    .service-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- Official Government Banner -->
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
       </div>
-    </div>
-    
-    <div class="margin-top-4">
-      <h1 class="usa-heading">Agency Homepage</h1>
-      <p class="usa-intro">This will be a main landing page for a federal agency.</p>
-      
-      <div class="usa-card margin-top-4">
-        <div class="usa-card__container">
-          <div class="usa-card__header">
-            <h2 class="usa-card__heading">Planned Features</h2>
-          </div>
-          <div class="usa-card__body">
-            <ul class="usa-list">
-              <li>Hero section with call-to-action</li>
-              <li>Key services grid</li>
-              <li>News and announcements</li>
-              <li>Quick links section</li>
-              <li>Search functionality</li>
-              <li>Contact information</li>
-              <li>Social media links</li>
-            </ul>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="Dot gov">
+          <div class="usa-media-block__body">
+            <p><strong>Official websites use .gov</strong><br>A .gov website belongs to an official government organization in the United States.</p>
           </div>
         </div>
-      </div>
-      
-      <div class="margin-top-4">
-        <p>To create this template, use Claude Code with a prompt like:</p>
-        <div class="usa-alert usa-alert--slim">
-          <div class="usa-alert__body">
-            <p class="usa-alert__text">
-              "Create an agency homepage with hero banner, services grid, news section, featured programs, and footer with contact info"
-            </p>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="HTTPS">
+          <div class="usa-media-block__body">
+            <p><strong>Secure .gov websites use HTTPS</strong><br>A lock or https:// means you've safely connected to the .gov website.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Header with Navigation -->
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a href="/" title="Home" aria-label="U.S. Digital Services Home">
+          U.S. Department of Digital Services
+        </a>
+      </em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close" aria-label="Close"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close"></button>
+      
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-nav__link usa-accordion__button" aria-expanded="false" aria-controls="nav-1">
+            <span>Services</span>
+          </button>
+          <ul id="nav-1" class="usa-nav__submenu">
+            <li class="usa-nav__submenu-item"><a href="#">Online Applications</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">Benefits Portal</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">Document Center</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">Payment Services</a></li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button type="button" class="usa-nav__link usa-accordion__button" aria-expanded="false" aria-controls="nav-2">
+            <span>Resources</span>
+          </button>
+          <ul id="nav-2" class="usa-nav__submenu">
+            <li class="usa-nav__submenu-item"><a href="#">Forms &amp; Documents</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">Data &amp; Statistics</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">Reports</a></li>
+            <li class="usa-nav__submenu-item"><a href="#">FAQs</a></li>
+          </ul>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>News</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>About</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav-link"><span>Contact</span></a>
+        </li>
+      </ul>
+      
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <a href="#">Español</a>
+          </li>
+        </ul>
+        <section aria-label="Search component">
+          <form class="usa-search usa-search--small" role="search">
+            <label class="usa-sr-only" for="search-field">Search</label>
+            <input class="usa-input" id="search-field" type="search" name="search" placeholder="Search">
+            <button class="usa-button" type="submit" aria-label="Search"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search"></button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <!-- Hero Section - Fully Responsive -->
+  <section class="usa-hero" aria-label="Introduction">
+    <div class="grid-container">
+      <div class="usa-hero__callout">
+        <h1 class="usa-hero__heading">
+          <span class="usa-hero__heading--alt">Transforming government</span>
+          through digital excellence
+        </h1>
+        <p>We're modernizing federal services to better serve the American people with user-centered, accessible, and efficient digital solutions.</p>
+        <a class="usa-button usa-button--big" href="#">Explore our services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert Banner for Important Announcements -->
+  <section class="usa-section padding-y-2">
+    <div class="grid-container">
+      <div class="usa-alert usa-alert--info usa-alert--slim">
+        <div class="usa-alert__body">
+          <p class="usa-alert__text">
+            <strong>New Digital ID System Launch:</strong> Starting February 1, 2025, access all federal services with a single secure login. <a href="#" class="usa-link">Learn more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Services Grid - Highly Responsive -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <h1 class="font-sans-3xl">Popular Services</h1>
+      
+      <div>
+        <!-- Service Card 1 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Benefits Application</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Apply for federal benefits including healthcare, housing assistance, and food programs.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Apply now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Document Services</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Request official documents, certificates, and records from federal agencies.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Get documents</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Tax Center</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>File taxes, check refund status, and access tax resources for individuals and businesses.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">File taxes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Immigration Services</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Check case status, submit applications, and find immigration resources.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Check status</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Veterans Portal</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Access VA benefits, healthcare services, and support resources for veterans.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Visit portal</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Business Hub</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Register your business, apply for licenses, and find contracting opportunities.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Start business</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 7 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Grants &amp; Funding</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Search and apply for federal grants, loans, and funding opportunities.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Find grants</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 8 -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Emergency Services</h3>
+            </div>
+            <div class="usa-card__body">
+              <p>Report emergencies, find disaster assistance, and access crisis resources.</p>
+            </div>
+            <div class="usa-card__footer">
+              <a href="#" class="usa-button usa-button--outline">Get help</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News and Updates - Responsive Layout -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <!-- News Section -->
+        <div class="grid-col-12 desktop:grid-col-8">
+          <h2 class="font-sans-3xl">Latest News</h2>
+          
+          <!-- Featured News -->
+          <article class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">
+                  <a href="#" class="usa-link">Major Infrastructure Bill Signed: $1.2 Trillion for America's Future</a>
+                </h3>
+              </div>
+              <div class="usa-card__body">
+                <p class="usa-card__text">
+                  <time datetime="2025-01-15">January 15, 2025</time> - 
+                  The historic infrastructure package will modernize roads, bridges, broadband, and public transit across all 50 states. Applications for funding open next month.
+                </p>
+              </div>
+              <div class="usa-card__footer">
+                <a href="#" class="usa-link">Read full article</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Additional News Items -->
+          <ul class="usa-collection">
+            <li class="usa-collection__item">
+              <div class="usa-collection__body">
+                <h4 class="usa-collection__heading">
+                  <a href="#" class="usa-link">New Cybersecurity Standards for Federal Contractors</a>
+                </h4>
+                <p class="usa-collection__description">
+                  <time datetime="2025-01-14">January 14, 2025</time> - Enhanced security requirements take effect March 1 for all federal contractors handling sensitive data.
+                </p>
+              </div>
+            </li>
+            <li class="usa-collection__item">
+              <div class="usa-collection__body">
+                <h4 class="usa-collection__heading">
+                  <a href="#" class="usa-link">Medicare Enrollment Period Extended Through February</a>
+                </h4>
+                <p class="usa-collection__description">
+                  <time datetime="2025-01-12">January 12, 2025</time> - Special enrollment period provides additional time for seniors to review and change their coverage options.
+                </p>
+              </div>
+            </li>
+            <li class="usa-collection__item">
+              <div class="usa-collection__body">
+                <h4 class="usa-collection__heading">
+                  <a href="#" class="usa-link">Federal Jobs Report: 45,000 New Positions Available</a>
+                </h4>
+                <p class="usa-collection__description">
+                  <time datetime="2025-01-10">January 10, 2025</time> - Hiring surge across multiple agencies with focus on technology, healthcare, and environmental positions.
+                </p>
+              </div>
+            </li>
+          </ul>
+          
+          <a href="#" class="usa-button usa-button--outline">View all news</a>
+        </div>
+
+        <!-- Quick Links Sidebar -->
+        <div class="grid-col-12 desktop:grid-col-4">
+          <h2 class="font-sans-3xl">Quick Links</h2>
+          
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__body">
+                <ul class="usa-list usa-list--unstyled">
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/account_balance.svg" alt="Government icon" width="24">
+                      Find Government Agencies
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/work.svg" alt="Jobs icon" width="24">
+                      Federal Job Openings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/attach_money.svg" alt="Money icon" width="24">
+                      Track Your Refund
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/local_hospital.svg" alt="Healthcare icon" width="24">
+                      Healthcare.gov
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/forum.svg" alt="FAQ icon" width="24">
+                      Frequently Asked Questions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="usa-link display-flex flex-align-center">
+                      <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/contact_phone.svg" alt="Contact icon" width="24">
+                      Contact Directory
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Metrics Dashboard -->
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">By the Numbers</h3>
+              </div>
+              <div class="usa-card__body">
+                <div>
+                  <span class="font-sans-xl">2.8M</span><br>
+                  <span class="font-sans-xs">Citizens served this month</span>
+                </div>
+                <div>
+                  <span class="font-sans-xl">147K</span><br>
+                  <span class="font-sans-xs">Applications processed</span>
+                </div>
+                <div>
+                  <span class="font-sans-xl">98.7%</span><br>
+                  <span class="font-sans-xs">Customer satisfaction</span>
+                </div>
+                <div>
+                  <span class="font-sans-xl">24/7</span><br>
+                  <span class="font-sans-xs">Online services available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="usa-section usa-section--dark">
+    <div class="grid-container">
+      <div class="grid-row grid-gap flex-align-center">
+        <div class="grid-col-12 tablet:grid-col-8">
+          <h2 class="font-sans-3xl">Stay Informed</h2>
+          <p class="font-sans-lg">
+            Get the latest updates on federal programs, services, and initiatives delivered to your inbox.
+          </p>
+        </div>
+        <div class="grid-col-12 tablet:grid-col-4 text-center tablet:text-right">
+          <a href="#" class="usa-button usa-button--big usa-button--accent-warm tablet:margin-top-0">
+            Subscribe to updates
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="usa-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-col-12">
+          <div class="tablet:grid-col-auto">
+            <img class="usa-footer__logo-img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/logo-img.png" alt="Agency logo">
+          </div>
+          <div class="tablet:grid-col-auto">
+            <p class="usa-footer__logo-heading">U.S. Department of Digital Services</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links grid-col-12">
+          <div class="usa-footer__social-links grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="#">
+                <img class="usa-social-link__icon" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/facebook.svg" alt="Facebook">
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="#">
+                <img class="usa-social-link__icon" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/twitter.svg" alt="Twitter">
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="#">
+                <img class="usa-social-link__icon" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/youtube.svg" alt="YouTube">
+              </a>
+            </div>
+          </div>
+          <p class="usa-footer__contact-heading">Contact Us</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-0100">1-800-555-0100</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:info@digitalservices.gov">info@digitalservices.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <!-- Additional Footer Links -->
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
+          <nav class="usa-footer__nav" aria-label="Footer navigation">
+            <ul class="grid-row grid-gap">
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">Accessibility</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">FOIA</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">No FEAR Act</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">Inspector General</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">Performance Reports</a>
+              </li>
+              <li class="grid-col-auto usa-footer__primary-content">
+                <a href="#">Site Map</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body></html>

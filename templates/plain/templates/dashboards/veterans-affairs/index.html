@@ -1,6 +1,14 @@
-<!-- ========== VETERANS AFFAIRS DASHBOARD ========== -->
-
-<!-- ========== GOVERNMENT BANNER ========== -->
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VA.gov Dashboard - Veterans Affairs</title>
+  <meta name="description" content="Your personal VA benefits dashboard. View claims status, disability rating, healthcare appointments, and manage your veterans benefits.">
+  
+  <!-- USWDS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+  <!-- Government banner -->
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
@@ -17,13 +25,13 @@
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-va" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-va" hidden="">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -32,7 +40,7 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
+              <strong>Secure .gov websites use HTTPS</strong><br>
               A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
             </p>
           </div>
@@ -43,22 +51,27 @@
 </section>
 
 <!-- ========== HEADER SECTION ========== -->
-<header class="usa-header usa-header--basic">
-  <div class="usa-nav-container">
-    <div class="usa-navbar">
-      <div class="usa-logo">
-        <em class="usa-logo__text">
-          <a href="/" title="Home">VA.gov Dashboard</a>
-        </em>
+  <!-- Skip navigation -->
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <em class="usa-logo__text">
+            <a href="/" title="Home">VA.gov Dashboard</a>
+          </em>
+        </div>
+        <button type="button" class="usa-menu-btn">Menu</button>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 <!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
   <!-- === Welcome Section === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="tablet:grid-col-8">
@@ -73,80 +86,80 @@
   </section>
 
   <!-- === Benefits Overview === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
-      <h2 class="margin-bottom-3">Your VA Benefits Summary</h2>
+      <h2>Your VA Benefits Summary</h2>
       <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Disability Rating</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">70%</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">70%</p>
+                <p class="margin-y-0">
                   Combined service-connected
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-warning">Pending review</span>
+                <div>
+                  <span class="usa-tag usa-tag--big">Pending review</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Monthly Compensation</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">$1,567</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">$1,567</p>
+                <p class="margin-y-0">
                   Next payment: March 1
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">Active</span>
+                <div>
+                  <span class="usa-tag usa-tag--big">Active</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">GI Bill Benefits</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">18 months</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">18 months</p>
+                <p class="margin-y-0">
                   Remaining education benefits
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-info">Available</span>
+                <div>
+                  <span class="usa-tag usa-tag--big">Available</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h3 class="usa-card__heading">Home Loan Eligibility</h3>
               </div>
               <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">$417K</p>
-                <p class="text-base margin-y-0">
+                <p class="margin-y-0">$417K</p>
+                <p class="margin-y-0">
                   Available loan amount
                 </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">Eligible</span>
+                <div>
+                  <span class="usa-tag usa-tag--big">Eligible</span>
                 </div>
               </div>
             </div>
@@ -157,7 +170,7 @@
   </section>
 
   <!-- === Claims Status and Healthcare === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap-4">
         <!-- Claims Status -->
@@ -168,47 +181,50 @@
                 <h2 class="usa-card__heading">Claims Status</h2>
               </div>
               <div class="usa-card__body">
-                <table class="usa-table usa-table--borderless width-full">
-                  <thead>
-                    <tr>
-                      <th scope="col">Claim ID</th>
-                      <th scope="col">Claim Type</th>
-                      <th scope="col">Submitted</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Progress</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">C54789231</th>
-                      <td>Increase Request</td>
-                      <td>Dec 15, 2023</td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Pending Decision</span></td>
-                      <td>Step 8 of 8</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">C54789230</th>
-                      <td>Disability Compensation</td>
-                      <td>Oct 3, 2023</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Closed</span></td>
-                      <td>Complete</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">C54789229</th>
-                      <td>Education Benefits</td>
-                      <td>Aug 22, 2023</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Approved</span></td>
-                      <td>Complete</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">C54789228</th>
-                      <td>Medical Records Request</td>
-                      <td>Jun 10, 2023</td>
-                      <td><span class="usa-tag usa-tag--big bg-success">Fulfilled</span></td>
-                      <td>Complete</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="usa-table-container--scrollable" tabindex="0">
+                  <table class="usa-table usa-table--borderless">
+                    <caption class="usa-sr-only">Claims status overview table</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Claim ID</th>
+                        <th scope="col">Claim Type</th>
+                        <th scope="col">Submitted</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Progress</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">C54789231</th>
+                        <td>Increase Request</td>
+                        <td>Dec 15, 2023</td>
+                        <td><span class="usa-tag usa-tag--big">Pending Decision</span></td>
+                        <td>Step 8 of 8</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C54789230</th>
+                        <td>Disability Compensation</td>
+                        <td>Oct 3, 2023</td>
+                        <td><span class="usa-tag usa-tag--big">Closed</span></td>
+                        <td>Complete</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C54789229</th>
+                        <td>Education Benefits</td>
+                        <td>Aug 22, 2023</td>
+                        <td><span class="usa-tag usa-tag--big">Approved</span></td>
+                        <td>Complete</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C54789228</th>
+                        <td>Medical Records Request</td>
+                        <td>Jun 10, 2023</td>
+                        <td><span class="usa-tag usa-tag--big">Fulfilled</span></td>
+                        <td>Complete</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -216,32 +232,32 @@
 
         <!-- Healthcare & Appointments -->
         <div class="tablet:grid-col-4">
-          <div class="usa-card margin-bottom-3">
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">VA Healthcare</h2>
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <li class="padding-y-1 border-bottom">
                     <div>
                       <strong>Primary Care</strong><br>
-                      <span class="text-base">Dr. Anderson - March 20, 2024</span><br>
-                      <span class="text-base">Annual wellness exam</span>
+                      <span>Dr. Anderson - March 20, 2024</span><br>
+                      <span>Annual wellness exam</span>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
+                  <li class="padding-y-1 border-bottom">
                     <div>
                       <strong>Mental Health</strong><br>
-                      <span class="text-base">Dr. Rodriguez - March 25, 2024</span><br>
-                      <span class="text-base">PTSD counseling session</span>
+                      <span>Dr. Rodriguez - March 25, 2024</span><br>
+                      <span>PTSD counseling session</span>
                     </div>
                   </li>
                   <li class="padding-y-1">
                     <div>
                       <strong>Orthopedics</strong><br>
-                      <span class="text-base">Dr. Thompson - April 2, 2024</span><br>
-                      <span class="text-base">Knee injury follow-up</span>
+                      <span>Dr. Thompson - April 2, 2024</span><br>
+                      <span>Knee injury follow-up</span>
                     </div>
                   </li>
                 </ul>
@@ -256,23 +272,23 @@
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       File New Claim
                     </a>
                   </li>
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       Schedule Appointment
                     </a>
                   </li>
-                  <li class="margin-bottom-2">
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                  <li>
+                    <a href="#" class="usa-button usa-button--outline">
                       Request Medical Records
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="usa-button usa-button--outline width-full">
+                    <a href="#" class="usa-button usa-button--outline">
                       Update Contact Info
                     </a>
                   </li>
@@ -286,7 +302,7 @@
   </section>
 
   <!-- === Service History === -->
-  <section class="usa-section padding-y-3">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="usa-card">
         <div class="usa-card__container">
@@ -297,26 +313,26 @@
             <div class="grid-row grid-gap-2">
               <div class="tablet:grid-col-4">
                 <dl>
-                  <dt class="font-heading-md margin-bottom-05">Branch of Service</dt>
-                  <dd class="margin-bottom-2">United States Army</dd>
-                  <dt class="font-heading-md margin-bottom-05">Service Period</dt>
-                  <dd class="margin-bottom-2">January 2008 - December 2016</dd>
+                  <dt>Branch of Service</dt>
+                  <dd>United States Army</dd>
+                  <dt>Service Period</dt>
+                  <dd>January 2008 - December 2016</dd>
                 </dl>
               </div>
               <div class="tablet:grid-col-4">
                 <dl>
-                  <dt class="font-heading-md margin-bottom-05">Highest Rank</dt>
-                  <dd class="margin-bottom-2">Sergeant First Class (E-7)</dd>
-                  <dt class="font-heading-md margin-bottom-05">Character of Service</dt>
-                  <dd class="margin-bottom-2">Honorable Discharge</dd>
+                  <dt>Highest Rank</dt>
+                  <dd>Sergeant First Class (E-7)</dd>
+                  <dt>Character of Service</dt>
+                  <dd>Honorable Discharge</dd>
                 </dl>
               </div>
               <div class="tablet:grid-col-4">
                 <dl>
-                  <dt class="font-heading-md margin-bottom-05">Deployments</dt>
-                  <dd class="margin-bottom-2">Afghanistan (2 tours), Iraq (1 tour)</dd>
-                  <dt class="font-heading-md margin-bottom-05">Awards</dt>
-                  <dd class="margin-bottom-2">Bronze Star Medal, Combat Action Badge</dd>
+                  <dt>Deployments</dt>
+                  <dd>Afghanistan (2 tours), Iraq (1 tour)</dd>
+                  <dt>Awards</dt>
+                  <dd>Bronze Star Medal, Combat Action Badge</dd>
                 </dl>
               </div>
             </div>
@@ -351,7 +367,12 @@
           <div class="grid-row grid-gap">
             <div class="grid-col-auto">
               <div class="usa-footer__contact-info">
-                VA Support: myva311@va.gov | (844) 698-2311
+                <a href="tel:8446982311">(844) 698-2311</a>
+              </div>
+            </div>
+            <div class="grid-col-auto">
+              <div class="usa-footer__contact-info">
+                <a href="mailto:myva311@va.gov">myva311@va.gov</a>
               </div>
             </div>
           </div>
@@ -360,3 +381,9 @@
     </div>
   </div>
 </footer>
+
+  <!-- USWDS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+
+</body></html>

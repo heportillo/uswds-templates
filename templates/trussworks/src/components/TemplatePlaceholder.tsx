@@ -11,7 +11,7 @@ function TemplatePlaceholder({ path }: TemplatePlaceholderProps) {
   return (
     <section className="usa-section">
       <GridContainer>
-        <Alert type="info" heading="Trussworks Template Coming Soon">
+        <Alert type="info" heading="Trussworks Template Coming Soon" headingLevel="h4">
           The Trussworks template for <strong>{path}</strong> will be created here.
           Use Claude Code to generate this template with TypeScript and Trussworks components.
         </Alert>

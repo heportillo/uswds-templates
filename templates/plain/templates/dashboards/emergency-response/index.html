@@ -1,40 +1,75 @@
-<!-- ========== EMERGENCY RESPONSE DASHBOARD ========== -->
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Operations Dashboard - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
+  <style>
+    /* Enhanced responsive styles for emergency dashboard */
+    @media (min-width: 1400px) {
+      .incident-grid { grid-template-columns: repeat(4, 1fr); }
+      .command-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 1024px) and (max-width: 1399px) {
+      .incident-grid { grid-template-columns: repeat(4, 1fr); }
+      .command-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .incident-grid { grid-template-columns: repeat(2, 1fr); }
+      .command-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 639px) {
+      .incident-grid { grid-template-columns: 1fr; }
+      .command-grid { grid-template-columns: 1fr; }
+    }
+    .incident-grid, .command-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    /* Critical status indicators */
+    .pulse-critical {
+      animation: pulse-gentle 2s ease-in-out infinite;
+    }
+    /* Responsive table handling */
+    @media (max-width: 639px) {
+      .mobile-scroll-table {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
 
-<!-- ========== GOVERNMENT BANNER ========== -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+<!-- Official Government Banner -->
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">
         <div class="grid-col-auto">
-          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="U.S. flag">
         </div>
-        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+        <div class="grid-col-fill tablet:grid-col-auto">
           <p class="usa-banner__header-text">An official website of the United States government</p>
-          <p class="usa-banner__header-action">Here's how you know</p>
         </div>
         <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-emergency">
           <span class="usa-banner__button-text">Here's how you know</span>
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-emergency" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-emergency">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="Dot gov">
           <div class="usa-media-block__body">
-            <p>
-              <strong>Official websites use .gov</strong><br/>
-              A <strong>.gov</strong> website belongs to an official government organization in the United States.
-            </p>
+            <p><strong>Official websites use .gov</strong><br>A .gov website belongs to an official government organization in the United States.</p>
           </div>
         </div>
         <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
+          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="HTTPS">
           <div class="usa-media-block__body">
-            <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
-              A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
-            </p>
+            <p><strong>Secure .gov websites use HTTPS</strong><br>A lock or https:// means you've safely connected to the .gov website.</p>
           </div>
         </div>
       </div>
@@ -42,7 +77,7 @@
   </div>
 </section>
 
-<!-- ========== HEADER SECTION ========== -->
+<!-- Header -->
 <header class="usa-header usa-header--basic">
   <div class="usa-nav-container">
     <div class="usa-navbar">
@@ -51,103 +86,118 @@
           <a href="/" title="Home">Emergency Operations Center</a>
         </em>
       </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
     </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <div class="usa-nav__inner">
+        <button type="button" class="usa-nav__close" aria-label="Close"><img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/close.svg" role="img" alt="Close"></button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link usa-current"><span>Dashboard</span></a>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link"><span>Incidents</span></a>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link"><span>Resources</span></a>
+          </li>
+          <li class="usa-nav__primary-item">
+            <a href="#" class="usa-nav-link"><span>Communications</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </header>
 
-<!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
-  <!-- === Alert Status === -->
-  <section class="usa-section padding-y-2">
+  <!-- Critical Alert Status -->
+  <section class="usa-section padding-y-2" role="alert" aria-live="polite">
     <div class="grid-container">
-      <div class="usa-alert usa-alert--emergency">
+      <div class="usa-alert usa-alert--emergency" role="alert">
         <div class="usa-alert__body">
-          <h4 class="usa-alert__heading">ALERT LEVEL: YELLOW - ELEVATED</h4>
+          <h1 class="usa-alert__heading">ALERT LEVEL: YELLOW - ELEVATED</h1>
           <p class="usa-alert__text">
-            Winter storm warning in effect for northern regions. Multiple incidents active. 
-            <strong>Last updated: 2:34 PM EST</strong>
+            Winter storm warning in effect for northern regions. 147 active incidents require immediate attention.
+            <strong>Last updated: <time datetime="2025-01-17T14:34:00">2:34 PM EST</time></strong>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- === Active Incidents Overview === -->
-  <section class="usa-section padding-y-3">
+  <!-- Active Incidents Overview - Fully Responsive Grid -->
+  <section class="usa-section">
     <div class="grid-container">
-      <h1 class="margin-bottom-3">Active Emergency Operations</h1>
-      <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-3 margin-bottom-2">
-          <div class="usa-card">
-            <div class="usa-card__container">
-              <div class="usa-card__header">
-                <h3 class="usa-card__heading">Active Incidents</h3>
-              </div>
-              <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">7</p>
-                <p class="text-base margin-y-0">
-                  <span class="text-error">↑ 2</span> from last hour
-                </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-error">High priority: 2</span>
-                </div>
+      <h2>Emergency Operations Status</h2>
+      
+      <div>
+        <!-- Active Incidents Card -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Active Incidents</h3>
+            </div>
+            <div class="usa-card__body">
+              <p class="font-sans-3xl margin-y-0">147</p>
+              <p class="margin-y-0">
+                <span>↑ 23</span> from last hour
+              </p>
+              <div>
+                <span class="usa-tag">Critical: 12</span>
+                <span class="usa-tag">High: 34</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
-          <div class="usa-card">
-            <div class="usa-card__container">
-              <div class="usa-card__header">
-                <h3 class="usa-card__heading">Resources Deployed</h3>
-              </div>
-              <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">42</p>
-                <p class="text-base margin-y-0">
-                  Units currently active
-                </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-warning">23 Fire, 12 EMS, 7 Police</span>
-                </div>
+        <!-- Resources Deployed Card -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Resources Deployed</h3>
+            </div>
+            <div class="usa-card__body">
+              <p class="font-sans-3xl margin-y-0">2,847</p>
+              <p class="margin-y-0">Personnel active</p>
+              <div>
+                <span class="usa-tag">Fire: 847</span>
+                <span class="usa-tag">EMS: 423</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
-          <div class="usa-card">
-            <div class="usa-card__container">
-              <div class="usa-card__header">
-                <h3 class="usa-card__heading">Shelters Open</h3>
-              </div>
-              <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">3</p>
-                <p class="text-base margin-y-0">
-                  Capacity: 234 / 500
-                </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-success">47% Occupied</span>
-                </div>
+        <!-- Emergency Shelters Card -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Emergency Shelters</h3>
+            </div>
+            <div class="usa-card__body">
+              <p class="font-sans-3xl margin-y-0">42/58</p>
+              <p class="margin-y-0">Shelters open</p>
+              <div>
+                <span class="usa-tag">12,450 beds</span>
+                <span class="usa-tag">67% occupied</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
-          <div class="usa-card">
-            <div class="usa-card__container">
-              <div class="usa-card__header">
-                <h3 class="usa-card__heading">Weather Status</h3>
-              </div>
-              <div class="usa-card__body">
-                <p class="font-heading-3xl margin-y-0">-12°F</p>
-                <p class="text-base margin-y-0">
-                  Wind: 35 mph gusts
-                </p>
-                <div class="margin-top-2">
-                  <span class="usa-tag bg-error">Blizzard Warning</span>
-                </div>
+        <!-- Response Time Card -->
+        <div class="usa-card">
+          <div class="usa-card__container">
+            <div class="usa-card__header">
+              <h3 class="usa-card__heading">Avg Response Time</h3>
+            </div>
+            <div class="usa-card__body">
+              <p class="font-sans-3xl margin-y-0">6.3 min</p>
+              <p class="margin-y-0">
+                <span>↓ 1.2 min</span> improvement
+              </p>
+              <div>
+                <span class="usa-tag">Within target</span>
               </div>
             </div>
           </div>
@@ -156,148 +206,184 @@
     </div>
   </section>
 
-  <!-- === Incident Details and Resource Status === -->
-  <section class="usa-section padding-y-3">
+  <!-- Incident Details Table - Responsive -->
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap-4">
-        <!-- Active Incidents -->
-        <div class="tablet:grid-col-8">
+        <!-- Active Incidents Table -->
+        <div class="grid-col-12 desktop:grid-col-8">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">Active Incident Log</h2>
               </div>
               <div class="usa-card__body">
-                <table class="usa-table usa-table--borderless width-full">
-                  <thead>
-                    <tr>
-                      <th scope="col">Incident ID</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Location</th>
-                      <th scope="col">Priority</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Duration</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">INC-2024-0347</th>
-                      <td>Structure Fire</td>
-                      <td>412 Maple St</td>
-                      <td><span class="usa-tag usa-tag--big bg-error">High</span></td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Active</span></td>
-                      <td>1h 23m</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">INC-2024-0346</th>
-                      <td>Vehicle Accident</td>
-                      <td>I-95 Mile 47</td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Medium</span></td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Active</span></td>
-                      <td>45m</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">INC-2024-0345</th>
-                      <td>Medical Emergency</td>
-                      <td>Senior Center</td>
-                      <td><span class="usa-tag usa-tag--big bg-error">High</span></td>
-                      <td><span class="usa-tag usa-tag--big bg-info">En Route</span></td>
-                      <td>12m</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">INC-2024-0344</th>
-                      <td>Power Outage</td>
-                      <td>Downtown District</td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Medium</span></td>
-                      <td><span class="usa-tag usa-tag--big bg-warning">Active</span></td>
-                      <td>3h 15m</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">INC-2024-0343</th>
-                      <td>Welfare Check</td>
-                      <td>789 Oak Avenue</td>
-                      <td><span class="usa-tag usa-tag--big bg-info">Low</span></td>
-                      <td><span class="usa-tag usa-tag--big bg-info">Dispatched</span></td>
-                      <td>8m</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="usa-table-container--scrollable" tabindex="0" role="region" aria-label="Active incidents table">
+                  <table class="usa-table usa-table--striped">
+                    <caption class="usa-sr-only">Active emergency incidents with status and response details</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Incident ID</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Duration</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">INC-2025-0847</th>
+                        <td>Multi-Vehicle Collision</td>
+                        <td>I-495 at Exit 47 Northbound</td>
+                        <td><span class="usa-tag">Critical</span></td>
+                        <td><span class="usa-tag">Active</span></td>
+                        <td>1h 23m</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">INC-2025-0846</th>
+                        <td>Structure Fire</td>
+                        <td>1247 Industrial Blvd</td>
+                        <td><span class="usa-tag">Critical</span></td>
+                        <td><span class="usa-tag">Active</span></td>
+                        <td>47m</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">INC-2025-0845</th>
+                        <td>Medical Emergency</td>
+                        <td>Washington Senior Center</td>
+                        <td><span class="usa-tag">High</span></td>
+                        <td><span class="usa-tag">En Route</span></td>
+                        <td>12m</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">INC-2025-0844</th>
+                        <td>Power Outage</td>
+                        <td>Downtown Grid Section 7</td>
+                        <td><span class="usa-tag">High</span></td>
+                        <td><span class="usa-tag">Active</span></td>
+                        <td>3h 15m</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">INC-2025-0843</th>
+                        <td>Hazmat Spill</td>
+                        <td>Route 29 at Mile Marker 18</td>
+                        <td><span class="usa-tag">Critical</span></td>
+                        <td><span class="usa-tag">Contained</span></td>
+                        <td>2h 45m</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">INC-2025-0842</th>
+                        <td>Missing Person</td>
+                        <td>Lincoln Park Area</td>
+                        <td><span class="usa-tag">High</span></td>
+                        <td><span class="usa-tag">Searching</span></td>
+                        <td>4h 12m</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <button class="usa-button usa-button--outline">View all 147 incidents</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Resource Status -->
-        <div class="tablet:grid-col-4">
-          <div class="usa-card margin-bottom-3">
-            <div class="usa-card__container">
-              <div class="usa-card__header">
-                <h2 class="usa-card__heading">Resource Availability</h2>
-              </div>
-              <div class="usa-card__body">
-                <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Fire Departments</strong></span>
-                      <span class="usa-tag bg-warning">23/35</span>
-                    </div>
-                    <span class="text-base">12 units available</span>
-                  </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>EMS Units</strong></span>
-                      <span class="usa-tag bg-error">12/15</span>
-                    </div>
-                    <span class="text-base">3 units available</span>
-                  </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Police Units</strong></span>
-                      <span class="usa-tag bg-success">7/25</span>
-                    </div>
-                    <span class="text-base">18 units available</span>
-                  </li>
-                  <li class="padding-y-1">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Utility Crews</strong></span>
-                      <span class="usa-tag bg-warning">8/12</span>
-                    </div>
-                    <span class="text-base">4 crews available</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+        <!-- Resource Status Sidebar -->
+        <div class="grid-col-12 desktop:grid-col-4">
+          <!-- Resource Availability -->
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
-                <h3 class="usa-card__heading">Critical Infrastructure</h3>
+                <h3 class="usa-card__heading">Resource Availability</h3>
               </div>
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Power Grid</strong></span>
-                      <span class="usa-tag bg-warning">87% Operational</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Fire Units</span>
+                      <span class="usa-tag">234/312</span>
+                    </div>
+                    <span class="font-sans-xs">78 units available</span>
+                  </li>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>EMS Units</span>
+                      <span class="usa-tag">142/156</span>
+                    </div>
+                    <span class="font-sans-xs">14 units available</span>
+                  </li>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Police Units</span>
+                      <span class="usa-tag">387/542</span>
+                    </div>
+                    <span class="font-sans-xs">155 units available</span>
+                  </li>
+                  <li class="padding-y-1">
+                    <div class="display-flex flex-justify-space-between">
+                      <span>Utility Crews</span>
+                      <span class="usa-tag">84/120</span>
+                    </div>
+                    <span class="font-sans-xs">36 crews available</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Critical Infrastructure Status -->
+          <div class="usa-card">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h3 class="usa-card__heading">Infrastructure Status</h3>
+              </div>
+              <div class="usa-card__body">
+                <ul class="usa-list usa-list--unstyled">
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between flex-align-center">
+                      <span>Power Grid</span>
+                      <span class="usa-tag font-sans-3xs">87%</span>
+                    </div>
+                    <div class="usa-graphic-list__body">
+                      <div style="background:#dfe1e2;height:8px;border-radius:4px;">
+                        <div style="background:#ff9408;width:87%;height:8px;border-radius:4px;"></div>
+                      </div>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Communications</strong></span>
-                      <span class="usa-tag bg-success">98% Operational</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between flex-align-center">
+                      <span>Communications</span>
+                      <span class="usa-tag font-sans-3xs">98%</span>
+                    </div>
+                    <div class="usa-graphic-list__body">
+                      <div style="background:#dfe1e2;height:8px;border-radius:4px;">
+                        <div style="background:#00a91c;width:98%;height:8px;border-radius:4px;"></div>
+                      </div>
                     </div>
                   </li>
-                  <li class="padding-y-1 border-bottom-1px border-base-lighter">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Transportation</strong></span>
-                      <span class="usa-tag bg-error">64% Operational</span>
+                  <li class="padding-y-1 border-bottom">
+                    <div class="display-flex flex-justify-space-between flex-align-center">
+                      <span>Transportation</span>
+                      <span class="usa-tag font-sans-3xs">64%</span>
+                    </div>
+                    <div class="usa-graphic-list__body">
+                      <div style="background:#dfe1e2;height:8px;border-radius:4px;">
+                        <div style="background:#d83933;width:64%;height:8px;border-radius:4px;"></div>
+                      </div>
                     </div>
                   </li>
                   <li class="padding-y-1">
-                    <div class="display-flex flex-justify">
-                      <span><strong>Water System</strong></span>
-                      <span class="usa-tag bg-success">100% Operational</span>
+                    <div class="display-flex flex-justify-space-between flex-align-center">
+                      <span>Water System</span>
+                      <span class="usa-tag font-sans-3xs">100%</span>
+                    </div>
+                    <div class="usa-graphic-list__body">
+                      <div style="background:#dfe1e2;height:8px;border-radius:4px;">
+                        <div style="background:#00a91c;width:100%;height:8px;border-radius:4px;"></div>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -309,44 +395,66 @@
     </div>
   </section>
 
-  <!-- === Command Actions === -->
-  <section class="usa-section padding-y-3">
+  <!-- Emergency Command Actions - Responsive Grid -->
+  <section class="usa-section">
     <div class="grid-container">
-      <h2 class="margin-bottom-3">Emergency Command Actions</h2>
-      <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-3">
-          <a href="#" class="usa-button usa-button--secondary width-full">
-            Dispatch Resource
-          </a>
-        </div>
-        <div class="tablet:grid-col-3">
-          <a href="#" class="usa-button usa-button--secondary width-full">
-            Open New Shelter
-          </a>
-        </div>
-        <div class="tablet:grid-col-3">
-          <a href="#" class="usa-button usa-button--secondary width-full">
-            Issue Public Alert
-          </a>
-        </div>
-        <div class="tablet:grid-col-3">
-          <a href="#" class="usa-button usa-button--secondary width-full">
-            Request Mutual Aid
-          </a>
+      <h2>Emergency Command Actions</h2>
+      <div>
+        <button aria-label="Perform action" class="usa-button usa-button--big">
+          <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/local_shipping.svg" alt="Dispatch icon" class="usa-icon">
+          Dispatch Resource
+        </button>
+        <button aria-label="Perform action" class="usa-button usa-button--big usa-button--outline">
+          <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/home.svg" alt="Shelter icon" class="usa-icon">
+          Open Shelter
+        </button>
+        <button aria-label="Perform action" class="usa-button usa-button--big usa-button--outline">
+          <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/warning.svg" alt="Alert icon" class="usa-icon">
+          Issue Alert
+        </button>
+        <button aria-label="Perform action" class="usa-button usa-button--big usa-button--outline">
+          <img src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/usa-icons/support_agent.svg" alt="Aid icon" class="usa-icon">
+          Request Aid
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Alert -->
+  <section class="usa-section">
+    <div class="grid-container">
+      <div class="usa-alert usa-alert--warning" role="alert">
+        <div class="usa-alert__body">
+          <h3 class="usa-alert__heading">Severe Weather Warning</h3>
+          <p class="usa-alert__text">
+            <strong>Blizzard conditions will persist through <time datetime="2025-01-17T20:00:00">8:00 PM EST</time>.</strong>
+            Expecting additional 12-16 inches of snow with sustained winds of 35-45 mph and gusts up to 60 mph.
+            All non-essential travel is strongly discouraged. Power outages likely in exposed areas.
+          </p>
+          <ul class="usa-list">
+            <li>Temperature: -18°F (Wind chill: -35°F)</li>
+            <li>Visibility: Less than 1/4 mile</li>
+            <li>Snow accumulation rate: 2-3 inches per hour</li>
+          </ul>
+          <a href="#" class="usa-button usa-button--outline">View detailed forecast</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- === Weather and Forecast === -->
-  <section class="usa-section">
+  <!-- System Status -->
+  <section class="usa-section padding-y-2">
     <div class="grid-container">
-      <div class="usa-alert usa-alert--warning">
-        <div class="usa-alert__body">
-          <h4 class="usa-alert__heading">Weather Update</h4>
-          <p class="usa-alert__text">
-            Blizzard conditions will persist through 8:00 PM. Expect additional 6-8 inches of snow with sustained winds of 30-40 mph. 
-            Travel is strongly discouraged. <a href="#" class="usa-link">View detailed forecast</a>
+      <div class="grid-row grid-gap">
+        <div class="grid-col-12 tablet:grid-col-6">
+          <p class="font-sans-xs">
+            System Status: <span>Operational</span> | 
+            Data refresh: <span>Every 30 seconds</span>
+          </p>
+        </div>
+        <div class="grid-col-12 tablet:grid-col-6 text-right">
+          <p class="font-sans-xs">
+            Last updated: <time datetime="2025-01-17T14:34:00">January 17, 2025 at 2:34 PM EST</time>
           </p>
         </div>
       </div>
@@ -354,17 +462,25 @@
   </section>
 </main>
 
-<!-- ========== FOOTER SECTION ========== -->
+<!-- Footer -->
 <footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
   <div class="usa-footer__primary-section">
     <div class="usa-footer__primary-container grid-container">
-      <div class="usa-footer__primary-content">
+      <div class="usa-footer__contact-links">
+        <p class="usa-footer__contact-heading">Emergency Operations Center</p>
         <address class="usa-footer__address">
-          <div class="grid-row grid-gap">
+          <div class="usa-footer__contact-info grid-row grid-gap">
             <div class="grid-col-auto">
-              <div class="usa-footer__contact-info">
-                Emergency Operations: eoc@county.gov | (555) 911-2424 (Non-Emergency)
-              </div>
+              <strong>Emergency:</strong> Call 911
+            </div>
+            <div class="grid-col-auto">
+              <strong>Non-Emergency:</strong> <a href="tel:555-911-2424">(555) 911-2424</a>
+            </div>
+            <div class="grid-col-auto">
+              <strong>EOC Email:</strong> <a href="mailto:eoc@county.gov">eoc@county.gov</a>
             </div>
           </div>
         </address>
@@ -372,3 +488,15 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds-init.min.js"></script>
+<script>
+  // Auto-refresh for real-time updates (every 30 seconds)
+  setTimeout(function() {
+    console.log('Dashboard would refresh here in production');
+    // In production: location.reload();
+  }, 30000);
+</script>
+
+</body></html>

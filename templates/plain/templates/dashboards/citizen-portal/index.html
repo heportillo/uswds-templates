@@ -1,7 +1,4 @@
-<!-- ========== CITIZEN PORTAL DASHBOARD ========== -->
-
-<!-- ========== GOVERNMENT BANNER ========== -->
-<section class="usa-banner" aria-label="Official website of the United States government">
+<!-- ========== CITIZEN PORTAL DASHBOARD ========== --><!-- ========== GOVERNMENT BANNER ========== --><html><head></head><body><section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">
@@ -17,13 +14,13 @@
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-citizen" hidden>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner-citizen" hidden="">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Official websites use .gov</strong><br/>
+              <strong>Official websites use .gov</strong><br>
               A <strong>.gov</strong> website belongs to an official government organization in the United States.
             </p>
           </div>
@@ -32,7 +29,7 @@
           <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
           <div class="usa-media-block__body">
             <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
+              <strong>Secure .gov websites use HTTPS</strong><br>
               A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
             </p>
           </div>
@@ -54,9 +51,7 @@
   </div>
   <nav aria-label="Primary navigation" class="usa-nav">
     <div class="usa-nav__inner">
-      <button type="button" class="usa-nav__close">
-        <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
-      </button>
+      <button type="button" class="usa-nav__close" aria-label="Close"><img src="/assets/img/usa-icons/close.svg" role="img" alt="Close"></button>
       <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
           <a href="#" class="usa-nav-link usa-current">Dashboard</a>
@@ -88,10 +83,10 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
   <!-- === Welcome Section === -->
-  <section class="usa-section padding-y-3 bg-base-lightest">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="grid-col-12">
+        <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-12">
           <h1 class="usa-heading">Welcome back, John</h1>
           <p class="usa-intro">Manage your government services and applications in one place</p>
         </div>
@@ -100,12 +95,12 @@
   </section>
 
   <!-- === Quick Actions === -->
-  <section class="usa-section padding-top-4 padding-bottom-2">
+  <section class="usa-section">
     <div class="grid-container">
       <h2 class="usa-heading">Quick Actions</h2>
       
       <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
@@ -115,13 +110,13 @@
                 <p>Start a new application for federal benefits programs</p>
               </div>
               <div class="usa-card__footer">
-                <a href="#" class="usa-button usa-button--outline width-full">Get Started</a>
+                <a href="#" class="usa-button usa-button--outline">Get Started</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
@@ -131,13 +126,13 @@
                 <p>View the status of your submitted applications</p>
               </div>
               <div class="usa-card__footer">
-                <a href="#" class="usa-button usa-button--outline width-full">View Status</a>
+                <a href="#" class="usa-button usa-button--outline">View Status</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
@@ -147,13 +142,13 @@
                 <p>Submit required documentation for your applications</p>
               </div>
               <div class="usa-card__footer">
-                <a href="#" class="usa-button usa-button--outline width-full">Upload</a>
+                <a href="#" class="usa-button usa-button--outline">Upload</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tablet:grid-col-3 margin-bottom-2">
+        <div class="tablet:grid-col-3">
           <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
@@ -163,7 +158,7 @@
                 <p>Contact support or find helpful resources</p>
               </div>
               <div class="usa-card__footer">
-                <a href="#" class="usa-button usa-button--outline width-full">Get Support</a>
+                <a href="#" class="usa-button usa-button--outline">Get Support</a>
               </div>
             </div>
           </div>
@@ -173,28 +168,28 @@
   </section>
 
   <!-- === Active Applications === -->
-  <section class="usa-section padding-y-4">
+  <section class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap-4">
         <div class="tablet:grid-col-8">
           <h2 class="usa-heading">Your Active Applications</h2>
           
-          <div class="usa-card margin-bottom-2">
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <div class="grid-row">
-                  <div class="grid-col-8">
+                  <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-8">
                     <h3 class="usa-card__heading">Social Security Disability Benefits</h3>
                   </div>
                   <div class="grid-col-4 text-right">
-                    <span class="usa-tag bg-info">Under Review</span>
+                    <span class="usa-tag">Under Review</span>
                   </div>
                 </div>
               </div>
               <div class="usa-card__body">
-                <p class="margin-y-1">Application ID: #SSA-2024-789012</p>
-                <p class="text-base margin-y-0">Submitted: March 15, 2024</p>
-                <div class="margin-top-3">
+                <p>Application ID: #SSA-2024-789012</p>
+                <p class="margin-y-0">Submitted: March 15, 2024</p>
+                <div>
                   <div class="usa-step-indicator usa-step-indicator--counters-sm" aria-label="progress">
                     <ol class="usa-step-indicator__segments">
                       <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
@@ -219,22 +214,22 @@
             </div>
           </div>
 
-          <div class="usa-card margin-bottom-2">
+          <div class="usa-card">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <div class="grid-row">
-                  <div class="grid-col-8">
+                  <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-8">
                     <h3 class="usa-card__heading">Veterans Healthcare Enrollment</h3>
                   </div>
                   <div class="grid-col-4 text-right">
-                    <span class="usa-tag bg-warning text-ink">Action Required</span>
+                    <span class="usa-tag">Action Required</span>
                   </div>
                 </div>
               </div>
               <div class="usa-card__body">
-                <p class="margin-y-1">Application ID: #VA-2024-456789</p>
-                <p class="text-base margin-y-0">Submitted: March 22, 2024</p>
-                <div class="usa-alert usa-alert--warning usa-alert--slim margin-top-2">
+                <p>Application ID: #VA-2024-456789</p>
+                <p class="margin-y-0">Submitted: March 22, 2024</p>
+                <div class="usa-alert usa-alert--warning usa-alert--slim">
                   <div class="usa-alert__body">
                     <p class="usa-alert__text">Additional documentation required by April 5, 2024</p>
                   </div>
@@ -255,43 +250,43 @@
             <div class="usa-card__container">
               <div class="usa-card__body">
                 <ul class="usa-list usa-list--unstyled">
-                  <li class="padding-bottom-2 border-bottom-1px border-base-lighter">
+                  <li class="border-bottom">
                     <div class="display-flex">
-                      <svg class="usa-icon text-info margin-right-1 flex-align-self-start" aria-hidden="true">
+                      <svg class="usa-icon" aria-hidden="true">
                         <use xlink:href="/assets/img/sprite.svg#notifications"></use>
                       </svg>
                       <div>
-                        <p class="margin-y-0 text-bold">New message from SSA</p>
-                        <p class="margin-y-0 text-base font-body-3xs">2 hours ago</p>
+                        <p class="margin-y-0">New message from SSA</p>
+                        <p class="margin-y-0">2 hours ago</p>
                       </div>
                     </div>
                   </li>
-                  <li class="padding-y-2 border-bottom-1px border-base-lighter">
+                  <li class="padding-y-2 border-bottom">
                     <div class="display-flex">
-                      <svg class="usa-icon text-success margin-right-1 flex-align-self-start" aria-hidden="true">
+                      <svg class="usa-icon" aria-hidden="true">
                         <use xlink:href="/assets/img/sprite.svg#check_circle"></use>
                       </svg>
                       <div>
-                        <p class="margin-y-0 text-bold">Document approved</p>
-                        <p class="margin-y-0 text-base font-body-3xs">Yesterday</p>
+                        <p class="margin-y-0">Document approved</p>
+                        <p class="margin-y-0">Yesterday</p>
                       </div>
                     </div>
                   </li>
-                  <li class="padding-top-2">
+                  <li>
                     <div class="display-flex">
-                      <svg class="usa-icon text-warning margin-right-1 flex-align-self-start" aria-hidden="true">
+                      <svg class="usa-icon" aria-hidden="true">
                         <use xlink:href="/assets/img/sprite.svg#warning"></use>
                       </svg>
                       <div>
-                        <p class="margin-y-0 text-bold">Deadline approaching</p>
-                        <p class="margin-y-0 text-base font-body-3xs">3 days ago</p>
+                        <p class="margin-y-0">Deadline approaching</p>
+                        <p class="margin-y-0">3 days ago</p>
                       </div>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="usa-card__footer">
-                <a href="#" class="usa-button usa-button--outline usa-button--small width-full">
+                <a href="#" class="usa-button usa-button--outline usa-button--small">
                   View All Notifications
                 </a>
               </div>
@@ -303,36 +298,36 @@
   </section>
 
   <!-- === Resources Section === -->
-  <section class="usa-section bg-base-lightest">
+  <section class="usa-section">
     <div class="grid-container">
       <h2 class="usa-heading">Helpful Resources</h2>
       <div class="grid-row grid-gap-2">
         <div class="tablet:grid-col-4">
           <ul class="usa-list usa-list--unstyled">
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">Benefits eligibility calculator</a>
             </li>
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">Document checklist</a>
             </li>
           </ul>
         </div>
         <div class="tablet:grid-col-4">
           <ul class="usa-list usa-list--unstyled">
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">Application guide</a>
             </li>
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">FAQs</a>
             </li>
           </ul>
         </div>
         <div class="tablet:grid-col-4">
           <ul class="usa-list usa-list--unstyled">
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">Contact support</a>
             </li>
-            <li class="margin-bottom-1">
+            <li>
               <a href="#" class="usa-link">Find local office</a>
             </li>
           </ul>
@@ -359,4 +354,4 @@
       </div>
     </div>
   </div>
-</footer>
+</footer></body></html>

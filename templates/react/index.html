@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>React USWDS Templates</title>
   <link rel="stylesheet" href="/node_modules/@uswds/uswds/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
 </head>
 <body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script src="/node_modules/@uswds/uswds/dist/js/uswds.min.js"></script>
+  <!-- Showcase helper for code preview -->
+  <script>
+    // Helper script for showcase functionality
+    (function() {
+      // Listen for messages from the showcase iframe
+      window.addEventListener('message', (e) => {
+        if (e.data && e.data.action === 'getCode') {
+          // Get the entire HTML content
+          const html = document.documentElement.outerHTML;
+          
+          // Send it back to the parent window
+          e.source.postMessage({
+            action: 'codeContent',
+            code: html
+          }, e.origin);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

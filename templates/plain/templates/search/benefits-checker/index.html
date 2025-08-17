@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benefits Eligibility Checker - U.S. Government</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+  <link rel="stylesheet" href="/assets/css/uswds-enhancements.css">
 </head>
 <body>
 <section class="usa-banner" aria-label="Official website of the United States government">
@@ -43,13 +42,12 @@
       </button>
     </form>
     
-    <div class="grid-row grid-gap margin-top-4">
-      <div class="grid-col-3">
+    <div class="grid-row grid-gap">
+      <div class="grid-col-12 tablet:grid-col-6 desktop:grid-col-3">
         <h2>Filter Results</h2>
-        <form class="usa-form">
-          <fieldset class="usa-fieldset">
-            <legend class="usa-legend">Category</legend>
-            <div class="usa-checkbox">
+        <form class="usa-form usa-form--large">
+          <span class="usa-label">Category</span>
+<div class="usa-checkbox">
               <input class="usa-checkbox__input" id="cat-1" type="checkbox" name="category" value="1">
               <label class="usa-checkbox__label" for="cat-1">Documents</label>
             </div>
@@ -61,7 +59,6 @@
               <input class="usa-checkbox__input" id="cat-3" type="checkbox" name="category" value="3">
               <label class="usa-checkbox__label" for="cat-3">Resources</label>
             </div>
-          </fieldset>
           
           <fieldset class="usa-fieldset">
             <legend class="usa-legend">Date Range</legend>
@@ -75,9 +72,9 @@
         </form>
       </div>
       
-      <div class="grid-col-9">
-        <div class="display-flex flex-justify">
-          <p class="text-bold">Showing 1-10 of 234 results</p>
+      <div class="grid-col-12 tablet:grid-col-12 desktop:grid-col-9">
+        <div class="display-flex flex-justify-space-between">
+          <p>Showing 1-10 of 234 results</p>
           <div>
             <label class="usa-label" for="sort">Sort by</label>
             <select class="usa-select" id="sort" name="sort">
@@ -90,20 +87,20 @@
         </div>
         
         <ul class="usa-list usa-list--unstyled">
-          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+          <li class="border-bottom">
             <h3><a href="#" class="usa-link">Search Result Title 1</a></h3>
-            <p class="margin-y-1">Brief description of the search result with relevant keywords highlighted. This provides context for the user.</p>
-            <p class="text-base-dark text-italic">Category: Documents | Date: Jan 15, 2025</p>
+            <p>Brief description of the search result with relevant keywords highlighted. This provides context for the user.</p>
+            <p>Category: Documents | Date: Jan 15, 2025</p>
           </li>
-          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+          <li class="border-bottom">
             <h3><a href="#" class="usa-link">Search Result Title 2</a></h3>
-            <p class="margin-y-1">Another search result with description and relevant information for the user's query.</p>
-            <p class="text-base-dark text-italic">Category: Services | Date: Jan 14, 2025</p>
+            <p>Another search result with description and relevant information for the user's query.</p>
+            <p>Category: Services | Date: Jan 14, 2025</p>
           </li>
-          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+          <li class="border-bottom">
             <h3><a href="#" class="usa-link">Search Result Title 3</a></h3>
-            <p class="margin-y-1">Additional search result showing how results are displayed in the interface.</p>
-            <p class="text-base-dark text-italic">Category: Resources | Date: Jan 13, 2025</p>
+            <p>Additional search result showing how results are displayed in the interface.</p>
+            <p>Category: Resources | Date: Jan 13, 2025</p>
           </li>
         </ul>
         
@@ -115,13 +112,13 @@
               </a>
             </li>
             <li class="usa-pagination__item usa-pagination__page-no">
-              <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+              <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">6,901</a>
             </li>
             <li class="usa-pagination__item usa-pagination__page-no">
-              <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+              <a href="#" class="usa-pagination__button" aria-label="Page 2">5,766</a>
             </li>
             <li class="usa-pagination__item usa-pagination__page-no">
-              <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+              <a href="#" class="usa-pagination__button" aria-label="Page 3">7,285</a>
             </li>
             <li class="usa-pagination__item usa-pagination__arrow">
               <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
@@ -140,5 +137,6 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
-</body>
-</html>
+
+
+</body></html>
