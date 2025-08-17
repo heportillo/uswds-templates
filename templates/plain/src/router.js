@@ -294,7 +294,13 @@ class Router {
       if (!response.ok) throw new Error('Template not found');
       
       const html = await response.text();
-      app.innerHTML = html;
+      
+      // Extract body content from the full HTML document
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const bodyContent = doc.body.innerHTML;
+      
+      app.innerHTML = bodyContent;
       
       // Re-initialize USWDS components
       if (window.USWDS) {
