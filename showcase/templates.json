@@ -1,43 +1,1554 @@
 {
-  "dashboards": {
-    "federal-analytics": {
-      "name": "Federal Analytics",
-      "description": "Analytics dashboard for federal programs",
-      "available": ["plain", "react", "trussworks"]
+  "analytics": {
+    "ab-testing": {
+      "name": "Ab Testing",
+      "available": [
+        "plain"
+      ]
     },
-    "citizen-portal": {
-      "name": "Citizen Portal",
-      "description": "Self-service portal for citizens",
-      "available": ["plain", "react"]
+    "business-intelligence": {
+      "name": "Business Intelligence",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-visualization": {
+      "name": "Data Visualization",
+      "available": [
+        "plain"
+      ]
+    },
+    "metrics-tracker": {
+      "name": "Metrics Tracker",
+      "available": [
+        "plain"
+      ]
+    },
+    "performance-analytics": {
+      "name": "Performance Analytics",
+      "available": [
+        "plain"
+      ]
+    },
+    "reporting-engine": {
+      "name": "Reporting Engine",
+      "available": [
+        "plain"
+      ]
+    },
+    "user-feedback": {
+      "name": "User Feedback",
+      "available": [
+        "plain"
+      ]
+    },
+    "web-analytics": {
+      "name": "Web Analytics",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "dashboards": {
+    "agricultural-dashboard": {
+      "name": "Agricultural Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "app-management": {
+      "name": "App Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "benefits-overview": {
+      "name": "Benefits Overview",
+      "available": [
+        "plain"
+      ]
+    },
+    "border-control": {
+      "name": "Border Control",
+      "available": [
+        "plain"
+      ]
+    },
+    "business-owner": {
+      "name": "Business Owner",
+      "available": [
+        "plain"
+      ]
+    },
+    "call-center": {
+      "name": "Call Center",
+      "available": [
+        "plain"
+      ]
     },
     "case-management": {
       "name": "Case Management",
-      "description": "Track and manage cases",
-      "available": ["plain", "react", "trussworks"]
+      "available": [
+        "plain"
+      ]
+    },
+    "census-data": {
+      "name": "Census Data",
+      "available": [
+        "plain"
+      ]
+    },
+    "citizen-portal": {
+      "name": "Citizen Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "compliance-monitoring": {
+      "name": "Compliance Monitoring",
+      "available": [
+        "plain"
+      ]
+    },
+    "content-management": {
+      "name": "Content Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "contractor-dashboard": {
+      "name": "Contractor Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "crime-statistics": {
+      "name": "Crime Statistics",
+      "available": [
+        "plain"
+      ]
+    },
+    "disaster-recovery": {
+      "name": "Disaster Recovery",
+      "available": [
+        "plain"
+      ]
+    },
+    "economic-indicators": {
+      "name": "Economic Indicators",
+      "available": [
+        "plain"
+      ]
+    },
+    "education-dashboard": {
+      "name": "Education Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "election-monitoring": {
+      "name": "Election Monitoring",
+      "available": [
+        "plain"
+      ]
+    },
+    "emergency-response": {
+      "name": "Emergency Response",
+      "available": [
+        "plain"
+      ]
+    },
+    "energy-consumption": {
+      "name": "Energy Consumption",
+      "available": [
+        "plain"
+      ]
+    },
+    "environmental-monitoring": {
+      "name": "Environmental Monitoring",
+      "available": [
+        "plain"
+      ]
+    },
+    "facility-management": {
+      "name": "Facility Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "federal-analytics": {
+      "name": "Federal Analytics",
+      "available": [
+        "plain"
+      ]
+    },
+    "fleet-management": {
+      "name": "Fleet Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "grant-management": {
+      "name": "Grant Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "healthcare-portal": {
+      "name": "Healthcare Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "immigration-status": {
+      "name": "Immigration Status",
+      "available": [
+        "plain"
+      ]
+    },
+    "inventory-management": {
+      "name": "Inventory Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "performance-metrics": {
+      "name": "Performance Metrics",
+      "available": [
+        "plain"
+      ]
+    },
+    "procurement-dashboard": {
+      "name": "Procurement Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "project-management": {
+      "name": "Project Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "public-health": {
+      "name": "Public Health",
+      "available": [
+        "plain"
+      ]
+    },
+    "quality-assurance": {
+      "name": "Quality Assurance",
+      "available": [
+        "plain"
+      ]
+    },
+    "research-metrics": {
+      "name": "Research Metrics",
+      "available": [
+        "plain"
+      ]
+    },
+    "resource-allocation": {
+      "name": "Resource Allocation",
+      "available": [
+        "plain"
+      ]
+    },
+    "security-operations": {
+      "name": "Security Operations",
+      "available": [
+        "plain"
+      ]
+    },
+    "social-security": {
+      "name": "Social Security",
+      "available": [
+        "plain"
+      ]
+    },
+    "system-admin": {
+      "name": "System Admin",
+      "available": [
+        "plain"
+      ]
+    },
+    "tax-dashboard": {
+      "name": "Tax Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "tourism-analytics": {
+      "name": "Tourism Analytics",
+      "available": [
+        "plain"
+      ]
+    },
+    "training-management": {
+      "name": "Training Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "transportation-analytics": {
+      "name": "Transportation Analytics",
+      "available": [
+        "plain"
+      ]
+    },
+    "user-management": {
+      "name": "User Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "veterans-affairs": {
+      "name": "Veterans Affairs",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "data-displays": {
+    "annual-report": {
+      "name": "Annual Report",
+      "available": [
+        "plain"
+      ]
+    },
+    "batch-entry": {
+      "name": "Batch Entry",
+      "available": [
+        "plain"
+      ]
+    },
+    "chart-dashboard": {
+      "name": "Chart Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "comparison-table": {
+      "name": "Comparison Table",
+      "available": [
+        "plain"
+      ]
+    },
+    "compliance-report": {
+      "name": "Compliance Report",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-export": {
+      "name": "Data Export",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-import": {
+      "name": "Data Import",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-lineage": {
+      "name": "Data Lineage",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-quality": {
+      "name": "Data Quality",
+      "available": [
+        "plain"
+      ]
+    },
+    "executive-summary": {
+      "name": "Executive Summary",
+      "available": [
+        "plain"
+      ]
+    },
+    "expandable-table": {
+      "name": "Expandable Table",
+      "available": [
+        "plain"
+      ]
+    },
+    "financial-statement": {
+      "name": "Financial Statement",
+      "available": [
+        "plain"
+      ]
+    },
+    "geographic-map": {
+      "name": "Geographic Map",
+      "available": [
+        "plain"
+      ]
+    },
+    "inspection-checklist": {
+      "name": "Inspection Checklist",
+      "available": [
+        "plain"
+      ]
+    },
+    "interactive-charts": {
+      "name": "Interactive Charts",
+      "available": [
+        "plain"
+      ]
+    },
+    "inventory-count": {
+      "name": "Inventory Count",
+      "available": [
+        "plain"
+      ]
+    },
+    "master-data": {
+      "name": "Master Data",
+      "available": [
+        "plain"
+      ]
+    },
+    "network-diagram": {
+      "name": "Network Diagram",
+      "available": [
+        "plain"
+      ]
+    },
+    "performance-report": {
+      "name": "Performance Report",
+      "available": [
+        "plain"
+      ]
+    },
+    "pivot-table": {
+      "name": "Pivot Table",
+      "available": [
+        "plain"
+      ]
+    },
+    "real-time-grid": {
+      "name": "Real Time Grid",
+      "available": [
+        "plain"
+      ]
+    },
+    "realtime-grid": {
+      "name": "Realtime Grid",
+      "available": [
+        "plain"
+      ]
+    },
+    "sortable-data-table": {
+      "name": "Sortable Data Table",
+      "available": [
+        "plain"
+      ]
+    },
+    "sortable-table": {
+      "name": "Sortable Table",
+      "available": [
+        "plain"
+      ]
+    },
+    "survey-collection": {
+      "name": "Survey Collection",
+      "available": [
+        "plain"
+      ]
+    },
+    "time-entry": {
+      "name": "Time Entry",
+      "available": [
+        "plain"
+      ]
+    },
+    "timeline-view": {
+      "name": "Timeline View",
+      "available": [
+        "plain"
+      ]
+    },
+    "tree-view": {
+      "name": "Tree View",
+      "available": [
+        "plain"
+      ]
     }
   },
   "forms": {
+    "accommodation-request": {
+      "name": "Accommodation Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "appointment-scheduling": {
+      "name": "Appointment Scheduling",
+      "available": [
+        "plain"
+      ]
+    },
+    "audit-response": {
+      "name": "Audit Response",
+      "available": [
+        "plain"
+      ]
+    },
     "benefits-application": {
       "name": "Benefits Application",
-      "description": "Multi-step benefits application form",
-      "available": ["plain", "react", "trussworks"]
+      "available": [
+        "plain"
+      ]
+    },
+    "budget-proposal": {
+      "name": "Budget Proposal",
+      "available": [
+        "plain"
+      ]
+    },
+    "building-permit": {
+      "name": "Building Permit",
+      "available": [
+        "plain"
+      ]
+    },
+    "business-license": {
+      "name": "Business License",
+      "available": [
+        "plain"
+      ]
+    },
+    "certification-renewal": {
+      "name": "Certification Renewal",
+      "available": [
+        "plain"
+      ]
+    },
+    "change-request": {
+      "name": "Change Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "clinical-services": {
+      "name": "Clinical Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "clinical-trial": {
+      "name": "Clinical Trial",
+      "available": [
+        "plain"
+      ]
+    },
+    "complaint-submission": {
+      "name": "Complaint Submission",
+      "available": [
+        "plain"
+      ]
+    },
+    "direct-deposit": {
+      "name": "Direct Deposit",
+      "available": [
+        "plain"
+      ]
+    },
+    "disclosure-statement": {
+      "name": "Disclosure Statement",
+      "available": [
+        "plain"
+      ]
+    },
+    "drivers-license": {
+      "name": "Drivers License",
+      "available": [
+        "plain"
+      ]
+    },
+    "drivers-license-renewal": {
+      "name": "Drivers License Renewal",
+      "available": [
+        "plain"
+      ]
+    },
+    "emergency-assistance": {
+      "name": "Emergency Assistance",
+      "available": [
+        "plain"
+      ]
+    },
+    "environmental-assessment": {
+      "name": "Environmental Assessment",
+      "available": [
+        "plain"
+      ]
+    },
+    "event-registration": {
+      "name": "Event Registration",
+      "available": [
+        "plain"
+      ]
+    },
+    "exception-request": {
+      "name": "Exception Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "feedback-survey": {
+      "name": "Feedback Survey",
+      "available": [
+        "plain"
+      ]
+    },
+    "financial-aid": {
+      "name": "Financial Aid",
+      "available": [
+        "plain"
+      ]
+    },
+    "foia-request": {
+      "name": "Foia Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "grant-application": {
+      "name": "Grant Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "incident-report": {
+      "name": "Incident Report",
+      "available": [
+        "plain"
+      ]
+    },
+    "insurance-claim": {
+      "name": "Insurance Claim",
+      "available": [
+        "plain"
+      ]
+    },
+    "invoice-submission": {
+      "name": "Invoice Submission",
+      "available": [
+        "plain"
+      ]
+    },
+    "it-support": {
+      "name": "It Support",
+      "available": [
+        "plain"
+      ]
+    },
+    "job-application": {
+      "name": "Job Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "loan-application": {
+      "name": "Loan Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "maintenance-request": {
+      "name": "Maintenance Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "membership-application": {
+      "name": "Membership Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "newsletter-subscription": {
+      "name": "Newsletter Subscription",
+      "available": [
+        "plain"
+      ]
+    },
+    "passport-application": {
+      "name": "Passport Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "patent-application": {
+      "name": "Patent Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "payment-plan": {
+      "name": "Payment Plan",
+      "available": [
+        "plain"
+      ]
     },
     "permit-request": {
       "name": "Permit Request",
-      "description": "Submit permit requests",
-      "available": ["plain"]
+      "available": [
+        "plain"
+      ]
+    },
+    "privacy-assessment": {
+      "name": "Privacy Assessment",
+      "available": [
+        "plain"
+      ]
+    },
+    "program-participation": {
+      "name": "Program Participation",
+      "available": [
+        "plain"
+      ]
+    },
+    "records-request": {
+      "name": "Records Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "reimbursement": {
+      "name": "Reimbursement",
+      "available": [
+        "plain"
+      ]
+    },
+    "research-participant": {
+      "name": "Research Participant",
+      "available": [
+        "plain"
+      ]
+    },
+    "retirement-calculator": {
+      "name": "Retirement Calculator",
+      "available": [
+        "plain"
+      ]
+    },
+    "risk-assessment": {
+      "name": "Risk Assessment",
+      "available": [
+        "plain"
+      ]
+    },
+    "safety-inspection": {
+      "name": "Safety Inspection",
+      "available": [
+        "plain"
+      ]
+    },
+    "school-enrollment": {
+      "name": "School Enrollment",
+      "available": [
+        "plain"
+      ]
+    },
+    "service-request": {
+      "name": "Service Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "tax-filing": {
+      "name": "Tax Filing",
+      "available": [
+        "plain"
+      ]
+    },
+    "tax-filing-wizard": {
+      "name": "Tax Filing Wizard",
+      "available": [
+        "plain"
+      ]
+    },
+    "training-enrollment": {
+      "name": "Training Enrollment",
+      "available": [
+        "plain"
+      ]
+    },
+    "translation-request": {
+      "name": "Translation Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "vendor-registration": {
+      "name": "Vendor Registration",
+      "available": [
+        "plain"
+      ]
+    },
+    "volunteer-registration": {
+      "name": "Volunteer Registration",
+      "available": [
+        "plain"
+      ]
+    },
+    "voter-registration": {
+      "name": "Voter Registration",
+      "available": [
+        "plain"
+      ]
     }
   },
   "landing": {
     "agency-home": {
-      "name": "Agency Homepage",
-      "description": "Main agency landing page",
-      "available": ["plain", "react"]
+      "name": "Agency Home",
+      "available": [
+        "plain"
+      ]
     },
-    "program-overview": {
-      "name": "Program Overview",
-      "description": "Program information page",
-      "available": ["plain", "react", "trussworks"]
+    "benefits-program": {
+      "name": "Benefits Program",
+      "available": [
+        "plain"
+      ]
+    },
+    "census-campaign": {
+      "name": "Census Campaign",
+      "available": [
+        "plain"
+      ]
+    },
+    "city-government": {
+      "name": "City Government",
+      "available": [
+        "plain"
+      ]
+    },
+    "climate-action": {
+      "name": "Climate Action",
+      "available": [
+        "plain"
+      ]
+    },
+    "county-services": {
+      "name": "County Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "covid-info": {
+      "name": "Covid Info",
+      "available": [
+        "plain"
+      ]
+    },
+    "digital-services": {
+      "name": "Digital Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "disaster-response": {
+      "name": "Disaster Response",
+      "available": [
+        "plain"
+      ]
+    },
+    "economic-recovery": {
+      "name": "Economic Recovery",
+      "available": [
+        "plain"
+      ]
+    },
+    "education-initiative": {
+      "name": "Education Initiative",
+      "available": [
+        "plain"
+      ]
+    },
+    "emergency-services": {
+      "name": "Emergency Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "environmental-initiative": {
+      "name": "Environmental Initiative",
+      "available": [
+        "plain"
+      ]
+    },
+    "federal-department": {
+      "name": "Federal Department",
+      "available": [
+        "plain"
+      ]
+    },
+    "federal-homepage": {
+      "name": "Federal Homepage",
+      "available": [
+        "plain"
+      ]
+    },
+    "healthcare-program": {
+      "name": "Healthcare Program",
+      "available": [
+        "plain"
+      ]
+    },
+    "legal-aid": {
+      "name": "Legal Aid",
+      "available": [
+        "plain"
+      ]
+    },
+    "library-services": {
+      "name": "Library Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "new-residents": {
+      "name": "New Residents",
+      "available": [
+        "plain"
+      ]
+    },
+    "parks-recreation": {
+      "name": "Parks Recreation",
+      "available": [
+        "plain"
+      ]
+    },
+    "public-health": {
+      "name": "Public Health",
+      "available": [
+        "plain"
+      ]
+    },
+    "public-health-campaign": {
+      "name": "Public Health Campaign",
+      "available": [
+        "plain"
+      ]
+    },
+    "recruitment-campaign": {
+      "name": "Recruitment Campaign",
+      "available": [
+        "plain"
+      ]
+    },
+    "regulatory-agency": {
+      "name": "Regulatory Agency",
+      "available": [
+        "plain"
+      ]
+    },
+    "research-program": {
+      "name": "Research Program",
+      "available": [
+        "plain"
+      ]
+    },
+    "safety-awareness": {
+      "name": "Safety Awareness",
+      "available": [
+        "plain"
+      ]
+    },
+    "senior-services": {
+      "name": "Senior Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "small-business": {
+      "name": "Small Business",
+      "available": [
+        "plain"
+      ]
+    },
+    "state-portal": {
+      "name": "State Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "tourist-info": {
+      "name": "Tourist Info",
+      "available": [
+        "plain"
+      ]
+    },
+    "transportation-services": {
+      "name": "Transportation Services",
+      "available": [
+        "plain"
+      ]
+    },
+    "veterans-portal": {
+      "name": "Veterans Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "youth-programs": {
+      "name": "Youth Programs",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "mobile": {
+    "mobile-checklist": {
+      "name": "Mobile Checklist",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-dashboard": {
+      "name": "Mobile Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-directory": {
+      "name": "Mobile Directory",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-form": {
+      "name": "Mobile Form",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-notifications": {
+      "name": "Mobile Notifications",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-profile": {
+      "name": "Mobile Profile",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-scanner": {
+      "name": "Mobile Scanner",
+      "available": [
+        "plain"
+      ]
+    },
+    "mobile-search": {
+      "name": "Mobile Search",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "search": {
+    "advanced-search": {
+      "name": "Advanced Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "api-catalog": {
+      "name": "Api Catalog",
+      "available": [
+        "plain"
+      ]
+    },
+    "archive-search": {
+      "name": "Archive Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "benefits-checker": {
+      "name": "Benefits Checker",
+      "available": [
+        "plain"
+      ]
+    },
+    "case-law": {
+      "name": "Case Law",
+      "available": [
+        "plain"
+      ]
+    },
+    "cola-finder": {
+      "name": "Cola Finder",
+      "available": [
+        "plain"
+      ]
+    },
+    "contract-search": {
+      "name": "Contract Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "data-browser": {
+      "name": "Data Browser",
+      "available": [
+        "plain"
+      ]
+    },
+    "document-search": {
+      "name": "Document Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "legislative-search": {
+      "name": "Legislative Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "location-search": {
+      "name": "Location Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "media-library": {
+      "name": "Media Library",
+      "available": [
+        "plain"
+      ]
+    },
+    "patent-search": {
+      "name": "Patent Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "people-finder": {
+      "name": "People Finder",
+      "available": [
+        "plain"
+      ]
+    },
+    "provider-directory": {
+      "name": "Provider Directory",
+      "available": [
+        "plain"
+      ]
+    },
+    "public-records": {
+      "name": "Public Records",
+      "available": [
+        "plain"
+      ]
+    },
+    "regulation-search": {
+      "name": "Regulation Search",
+      "available": [
+        "plain"
+      ]
+    },
+    "research-repository": {
+      "name": "Research Repository",
+      "available": [
+        "plain"
+      ]
+    },
+    "resource-discovery": {
+      "name": "Resource Discovery",
+      "available": [
+        "plain"
+      ]
+    },
+    "search-results-grid": {
+      "name": "Search Results Grid",
+      "available": [
+        "plain"
+      ]
+    },
+    "search-results-list": {
+      "name": "Search Results List",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "security": {
+    "access-control": {
+      "name": "Access Control",
+      "available": [
+        "plain"
+      ]
+    },
+    "audit-log-viewer": {
+      "name": "Audit Log Viewer",
+      "available": [
+        "plain"
+      ]
+    },
+    "compliance-monitor": {
+      "name": "Compliance Monitor",
+      "available": [
+        "plain"
+      ]
+    },
+    "consent-management": {
+      "name": "Consent Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "incident-response": {
+      "name": "Incident Response",
+      "available": [
+        "plain"
+      ]
+    },
+    "privacy-center": {
+      "name": "Privacy Center",
+      "available": [
+        "plain"
+      ]
+    },
+    "security-dashboard": {
+      "name": "Security Dashboard",
+      "available": [
+        "plain"
+      ]
+    },
+    "vulnerability-tracker": {
+      "name": "Vulnerability Tracker",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "user-management": {
+    "access-request": {
+      "name": "Access Request",
+      "available": [
+        "plain"
+      ]
+    },
+    "account-recovery": {
+      "name": "Account Recovery",
+      "available": [
+        "plain"
+      ]
+    },
+    "account-settings": {
+      "name": "Account Settings",
+      "available": [
+        "plain"
+      ]
+    },
+    "community-directory": {
+      "name": "Community Directory",
+      "available": [
+        "plain"
+      ]
+    },
+    "contractor-directory": {
+      "name": "Contractor Directory",
+      "available": [
+        "plain"
+      ]
+    },
+    "employee-directory": {
+      "name": "Employee Directory",
+      "available": [
+        "plain"
+      ]
+    },
+    "expert-network": {
+      "name": "Expert Network",
+      "available": [
+        "plain"
+      ]
+    },
+    "multi-factor-login": {
+      "name": "Multi Factor Login",
+      "available": [
+        "plain"
+      ]
+    },
+    "password-reset": {
+      "name": "Password Reset",
+      "available": [
+        "plain"
+      ]
+    },
+    "role-management": {
+      "name": "Role Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "session-management": {
+      "name": "Session Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "sso-portal": {
+      "name": "Sso Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "stakeholder-registry": {
+      "name": "Stakeholder Registry",
+      "available": [
+        "plain"
+      ]
+    },
+    "team-management": {
+      "name": "Team Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "user-profile": {
+      "name": "User Profile",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "utility": {
+    "404-error": {
+      "name": "404 Error",
+      "available": [
+        "plain"
+      ]
+    },
+    "500-error": {
+      "name": "500 Error",
+      "available": [
+        "plain"
+      ]
+    },
+    "accessibility": {
+      "name": "Accessibility",
+      "available": [
+        "plain"
+      ]
+    },
+    "accessibility-statement": {
+      "name": "Accessibility Statement",
+      "available": [
+        "plain"
+      ]
+    },
+    "api-docs": {
+      "name": "Api Docs",
+      "available": [
+        "plain"
+      ]
+    },
+    "bug-report": {
+      "name": "Bug Report",
+      "available": [
+        "plain"
+      ]
+    },
+    "cookie-consent": {
+      "name": "Cookie Consent",
+      "available": [
+        "plain"
+      ]
+    },
+    "feedback-portal": {
+      "name": "Feedback Portal",
+      "available": [
+        "plain"
+      ]
+    },
+    "foia-reading": {
+      "name": "Foia Reading",
+      "available": [
+        "plain"
+      ]
+    },
+    "help-center": {
+      "name": "Help Center",
+      "available": [
+        "plain"
+      ]
+    },
+    "maintenance-mode": {
+      "name": "Maintenance Mode",
+      "available": [
+        "plain"
+      ]
+    },
+    "privacy-policy": {
+      "name": "Privacy Policy",
+      "available": [
+        "plain"
+      ]
+    },
+    "release-notes": {
+      "name": "Release Notes",
+      "available": [
+        "plain"
+      ]
+    },
+    "sitemap": {
+      "name": "Sitemap",
+      "available": [
+        "plain"
+      ]
+    },
+    "system-status": {
+      "name": "System Status",
+      "available": [
+        "plain"
+      ]
+    },
+    "terms-service": {
+      "name": "Terms Service",
+      "available": [
+        "plain"
+      ]
+    }
+  },
+  "workflows": {
+    "appointment-booking": {
+      "name": "Appointment Booking",
+      "available": [
+        "plain"
+      ]
+    },
+    "benefits-enrollment": {
+      "name": "Benefits Enrollment",
+      "available": [
+        "plain"
+      ]
+    },
+    "budget-planning": {
+      "name": "Budget Planning",
+      "available": [
+        "plain"
+      ]
+    },
+    "business-registration": {
+      "name": "Business Registration",
+      "available": [
+        "plain"
+      ]
+    },
+    "case-review": {
+      "name": "Case Review",
+      "available": [
+        "plain"
+      ]
+    },
+    "contract-negotiation": {
+      "name": "Contract Negotiation",
+      "available": [
+        "plain"
+      ]
+    },
+    "document-assembly": {
+      "name": "Document Assembly",
+      "available": [
+        "plain"
+      ]
+    },
+    "event-platform": {
+      "name": "Event Platform",
+      "available": [
+        "plain"
+      ]
+    },
+    "grant-review": {
+      "name": "Grant Review",
+      "available": [
+        "plain"
+      ]
+    },
+    "immigration-wizard": {
+      "name": "Immigration Wizard",
+      "available": [
+        "plain"
+      ]
+    },
+    "investigation-management": {
+      "name": "Investigation Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "permit-application": {
+      "name": "Permit Application",
+      "available": [
+        "plain"
+      ]
+    },
+    "permit-wizard": {
+      "name": "Permit Wizard",
+      "available": [
+        "plain"
+      ]
+    },
+    "procurement-evaluation": {
+      "name": "Procurement Evaluation",
+      "available": [
+        "plain"
+      ]
+    },
+    "public-comment": {
+      "name": "Public Comment",
+      "available": [
+        "plain"
+      ]
+    },
+    "queue-management": {
+      "name": "Queue Management",
+      "available": [
+        "plain"
+      ]
+    },
+    "report-builder": {
+      "name": "Report Builder",
+      "available": [
+        "plain"
+      ]
+    },
+    "resource-reservation": {
+      "name": "Resource Reservation",
+      "available": [
+        "plain"
+      ]
+    },
+    "scheduling-coordinator": {
+      "name": "Scheduling Coordinator",
+      "available": [
+        "plain"
+      ]
+    },
+    "tax-filing-wizard": {
+      "name": "Tax Filing Wizard",
+      "available": [
+        "plain"
+      ]
+    },
+    "workflow-designer": {
+      "name": "Workflow Designer",
+      "available": [
+        "plain"
+      ]
     }
   }
 }
