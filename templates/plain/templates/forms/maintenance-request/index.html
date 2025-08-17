@@ -1,6 +1,12 @@
-<!-- ========== MAINTENANCE REQUEST FORM ========== -->
-
-<!-- ========== GOVERNMENT BANNER ========== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance Request Form - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
@@ -10,136 +16,68 @@
         </div>
         <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
           <p class="usa-banner__header-text">An official website of the United States government</p>
-          <p class="usa-banner__header-action">Here's how you know</p>
         </div>
-        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-maintenance-request">
-          <span class="usa-banner__button-text">Here's how you know</span>
-        </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner-maintenance-request" hidden>
-      <div class="grid-row grid-gap-lg">
-        <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true">
-          <div class="usa-media-block__body">
-            <p>
-              <strong>Official websites use .gov</strong><br/>
-              A <strong>.gov</strong> website belongs to an official government organization in the United States.
-            </p>
-          </div>
-        </div>
-        <div class="usa-banner__guidance tablet:grid-col-6">
-          <img class="usa-banner__icon usa-media-block__img" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/icon-https.svg" role="img" alt="" aria-hidden="true">
-          <div class="usa-media-block__body">
-            <p>
-              <strong>Secure .gov websites use HTTPS</strong><br/>
-              A lock or <strong>https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
-
-<!-- ========== HEADER SECTION ========== -->
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
 <header class="usa-header usa-header--basic">
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
-        <em class="usa-logo__text">
-          <a href="/" title="Home">Maintenance Request Form</a>
-        </em>
+        <em class="usa-logo__text"><a href="/">Federal Agency</a></em>
       </div>
     </div>
   </div>
 </header>
-
-<!-- ========== MAIN CONTENT ========== -->
 <main id="main-content">
-  <section class="usa-section">
-    <div class="grid-container">
-      <h1 class="usa-heading">Maintenance Request Form</h1>
-      <p class="usa-intro">Facility maintenance and service requests</p>
-      
-      <div class="usa-alert usa-alert--info">
-        <div class="usa-alert__body">
-          <h4 class="usa-alert__heading">Template Under Development</h4>
-          <p class="usa-alert__text">
-            This Maintenance Request Form template provides a basic USWDS structure. 
-            Additional functionality and content will be added in future updates.
-          </p>
-        </div>
-      </div>
-      
-      <div class="margin-top-4">
-        <div class="grid-row grid-gap">
-          <div class="tablet:grid-col-8">
-            <div class="usa-card">
-              <div class="usa-card__container">
-                <div class="usa-card__header">
-                  <h2 class="usa-card__heading">Key Features</h2>
-                </div>
-                <div class="usa-card__body">
-                  <ul class="usa-list">
-                    <li>Government banner and accessibility compliance</li>
-                    <li>Responsive USWDS design components</li>
-                    <li>Semantic HTML5 structure</li>
-                    <li>Mobile-first responsive layout</li>
-                  </ul>
-                </div>
-              </div>
+  <div class="grid-container">
+    <div class="grid-row">
+      <div class="grid-col-12">
+        <h1>Maintenance Request Form</h1>
+        <form class="usa-form">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend usa-legend--large">Personal Information</legend>
+            <label class="usa-label" for="first-name">First name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="first-name" name="first-name" type="text" required>
+            
+            <label class="usa-label" for="last-name">Last name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="last-name" name="last-name" type="text" required>
+            
+            <label class="usa-label" for="email">Email address <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+            <input class="usa-input" id="email" name="email" type="email" required>
+            
+            <label class="usa-label" for="phone">Phone number</label>
+            <input class="usa-input" id="phone" name="phone" type="tel">
+          </fieldset>
+          
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend usa-legend--large">Additional Information</legend>
+            <label class="usa-label" for="comments">Comments</label>
+            <textarea class="usa-textarea" id="comments" name="comments"></textarea>
+            
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="agreement" type="checkbox" name="agreement" value="agree" required>
+              <label class="usa-checkbox__label" for="agreement">I agree to the terms and conditions</label>
             </div>
+          </fieldset>
+          
+          <div class="margin-top-3">
+            <button type="submit" class="usa-button">Submit</button>
+            <button type="button" class="usa-button usa-button--outline">Save draft</button>
+            <button type="reset" class="usa-button usa-button--unstyled">Clear form</button>
           </div>
-          <div class="tablet:grid-col-4">
-            <div class="usa-card">
-              <div class="usa-card__container">
-                <div class="usa-card__header">
-                  <h3 class="usa-card__heading">Quick Actions</h3>
-                </div>
-                <div class="usa-card__body">
-                  <ul class="usa-list usa-list--unstyled">
-                    <li class="margin-bottom-2">
-                      <a href="#" class="usa-button usa-button--outline width-full">
-                        Primary Action
-                      </a>
-                    </li>
-                    <li class="margin-bottom-2">
-                      <a href="#" class="usa-button usa-button--outline width-full">
-                        Secondary Action
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="usa-button usa-button--outline width-full">
-                        Learn More
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- ========== FOOTER SECTION ========== -->
-<footer class="usa-footer usa-footer--slim">
-  <div class="usa-footer__primary-section">
-    <div class="usa-footer__primary-container grid-container">
-      <div class="usa-footer__primary-content">
-        <address class="usa-footer__address">
-          <div class="grid-row grid-gap">
-            <div class="grid-col-auto">
-              <div class="usa-footer__contact-info">
-                Support: support@agency.gov | (800) 123-4567
-              </div>
-            </div>
-          </div>
-        </address>
+        </form>
       </div>
     </div>
   </div>
+</main>
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+</body>
+</html>

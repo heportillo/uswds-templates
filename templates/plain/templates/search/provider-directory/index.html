@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provider Directory Search - U.S. Government</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/css/uswds.min.css">
+</head>
+<body>
+<section class="usa-banner" aria-label="Official website of the United States government">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/img/us_flag_small.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text"><a href="/">Search Portal</a></em>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main-content">
+  <div class="grid-container">
+    <h1>Provider Directory Search</h1>
+    
+    <form class="usa-search usa-search--big" role="search">
+      <label class="usa-sr-only" for="search-field">Search</label>
+      <input class="usa-input" id="search-field" type="search" name="search" placeholder="Enter search terms">
+      <button class="usa-button" type="submit">
+        <span class="usa-search__submit-text">Search</span>
+      </button>
+    </form>
+    
+    <div class="grid-row grid-gap margin-top-4">
+      <div class="grid-col-3">
+        <h2>Filter Results</h2>
+        <form class="usa-form">
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Category</legend>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="cat-1" type="checkbox" name="category" value="1">
+              <label class="usa-checkbox__label" for="cat-1">Documents</label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="cat-2" type="checkbox" name="category" value="2">
+              <label class="usa-checkbox__label" for="cat-2">Services</label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="cat-3" type="checkbox" name="category" value="3">
+              <label class="usa-checkbox__label" for="cat-3">Resources</label>
+            </div>
+          </fieldset>
+          
+          <fieldset class="usa-fieldset">
+            <legend class="usa-legend">Date Range</legend>
+            <label class="usa-label" for="date-from">From</label>
+            <input class="usa-input" id="date-from" name="date-from" type="date">
+            <label class="usa-label" for="date-to">To</label>
+            <input class="usa-input" id="date-to" name="date-to" type="date">
+          </fieldset>
+          
+          <button class="usa-button" type="submit">Apply Filters</button>
+        </form>
+      </div>
+      
+      <div class="grid-col-9">
+        <div class="display-flex flex-justify">
+          <p class="text-bold">Showing 1-10 of 234 results</p>
+          <div>
+            <label class="usa-label" for="sort">Sort by</label>
+            <select class="usa-select" id="sort" name="sort">
+              <option>Relevance</option>
+              <option>Date (Newest)</option>
+              <option>Date (Oldest)</option>
+              <option>Title (A-Z)</option>
+            </select>
+          </div>
+        </div>
+        
+        <ul class="usa-list usa-list--unstyled">
+          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+            <h3><a href="#" class="usa-link">Search Result Title 1</a></h3>
+            <p class="margin-y-1">Brief description of the search result with relevant keywords highlighted. This provides context for the user.</p>
+            <p class="text-base-dark text-italic">Category: Documents | Date: Jan 15, 2025</p>
+          </li>
+          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+            <h3><a href="#" class="usa-link">Search Result Title 2</a></h3>
+            <p class="margin-y-1">Another search result with description and relevant information for the user's query.</p>
+            <p class="text-base-dark text-italic">Category: Services | Date: Jan 14, 2025</p>
+          </li>
+          <li class="border-bottom-1px border-base-lighter padding-bottom-2 margin-bottom-2">
+            <h3><a href="#" class="usa-link">Search Result Title 3</a></h3>
+            <p class="margin-y-1">Additional search result showing how results are displayed in the interface.</p>
+            <p class="text-base-dark text-italic">Category: Resources | Date: Jan 13, 2025</p>
+          </li>
+        </ul>
+        
+        <nav role="navigation" aria-label="Pagination">
+          <ul class="usa-pagination">
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button usa-current" aria-label="Page 1" aria-current="page">1</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 2">2</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__page-no">
+              <a href="#" class="usa-pagination__button" aria-label="Page 3">3</a>
+            </li>
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="#" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@uswds/uswds@3.9.0/dist/js/uswds.min.js"></script>
+</body>
+</html>
