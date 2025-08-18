@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "concurrently -n \"showcase,plain,react,trussworks\" -c \"magenta,blue,green,yellow\" \"npm:dev:*\"",
+    "predev": "./kill-ports.sh",
+    "dev": "concurrently -n \"showcase,plain,react,trussworks,source\" -c \"magenta,blue,green,yellow,cyan\" \"npm:dev:*\"",
     "dev:showcase": "cd showcase && npm run dev",
+    "dev:source": "cd showcase && npm run source-server",
     "dev:plain": "cd templates/plain && npm run dev",
     "dev:react": "cd templates/react && npm run dev",
     "dev:trussworks": "cd templates/trussworks && npm run dev",
